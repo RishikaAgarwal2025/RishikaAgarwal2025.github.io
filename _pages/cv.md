@@ -44,53 +44,45 @@ Pursuing a Master’s in Business Analytics at the University of Warwick, profic
 
 ## 📊 Projects
 
-### 🔄 *BRTS Efficiency & Societal Impact*  
-**Simulated and evaluated interventions for Ahmedabad’s Bus Rapid Transit System (BRTS).**  
-- **Tools**: SUMO, Google Forms, SPSS, Excel  
-- **Skills**: Simulation modeling, survey analysis, presentation  
-- **Results**: Identified low adoption and proposed free ticketing for low-income groups.
+- **Simulation Analyst**, Ahmedabad BRTS Study — *2023–2024*  
+  - Simulated and evaluated interventions for the Bus Rapid Transit System using SUMO  
+  - Designed and analyzed surveys with SPSS and Excel to capture commuter behavior  
+  - Proposed free ticketing model for low-income groups based on adoption patterns
 
-### 📈 *Forecasting Tata Motors Stock Trends*  
-**Used Nifty 50 data to forecast Tata Motors’ stock using ARIMA models.**  
-- **Tools**: Excel, Word, Stata  
-- **Skills**: Time series forecasting, financial analytics  
-- **Results**: Detected a short-term dip in 2024, with an expected rebound.
+- **Financial Analyst**, Tata Motors Forecasting — *2023*  
+  - Built ARIMA models using Nifty 50 and Tata Motors data spanning 10+ years  
+  - Identified a short-term dip in 2024 followed by a potential recovery  
+  - Used Excel and Stata for trend analysis and model evaluation
 
-### 🧠 *SQL Data Product for Subscription Business*  
-**Built a data pipeline and analysis model for a synthetic magazine subscription dataset.**  
-- **Tools**: Python (Faker), SQL, Excel  
-- **Skills**: Data engineering, business insights  
-- **Results**: Revealed customer patterns and key revenue drivers.
+- **Data Engineer**, Subscription Business Simulation — *2023*  
+  - Designed SQL queries and ETL processes using Python (Faker) for synthetic data  
+  - Extracted insights on revenue and behavior from a simulated magazine business  
+  - Presented findings in Excel dashboards to simulate real-world reporting
 
-### 🧪 *A/B Testing in Lending Decisions*  
-**Designed an A/B test to measure improvement in a lending firm's AI decision model.**  
-- **Tools**: R  
-- **Skills**: Experimental design, statistical analysis  
-- **Results**: Reduced Type I/II errors; recommended expanded testing.
+- **Experiment Designer**, Lending Model A/B Test — *2023*  
+  - Designed and executed an A/B test to evaluate model improvement in lending decisions  
+  - Reduced Type I and II errors using statistical testing in R  
+  - Recommended increased control variables and larger sample sizes
 
-### 💰 *Pricing Optimization for BuildMax Rentals*  
-**Applied linear programming to optimize rental pricing and fleet strategy.**  
-- **Tools**: Python (Pyomo), Excel  
-- **Skills**: Revenue management, price optimization  
-- **Results**: Identified demand granularity and fleet size as key constraints.
+- **Revenue Strategist**, BuildMax Rentals — *2024*  
+  - Developed a linear programming model in Pyomo to optimize fleet pricing strategy  
+  - Analyzed demand constraints and proposed RM-based improvements  
+  - Delivered Excel reports for decision-making support
 
-### 🔍 *eCommerce Review Prediction (Nile Platform)*  
-**Built classification models to predict positive customer reviews.**  
-- **Tools**: Python (XGBoost, SVM, Logistic Regression), PowerPoint  
-- **Skills**: Predictive modeling, classification  
-- **Results**: Flagged underfitting; suggested feature engineering.
+- **ML Analyst**, Nile Review Prediction — *2024*  
+  - Built predictive models (XGBoost, SVM, Logistic Regression) to forecast positive reviews  
+  - Identified underfitting and suggested feature engineering strategies  
+  - Presented results to peers using PowerPoint slides
 
-### 📊 *Retail & Health Data Analytics*  
-**Analyzed relationships between health, retail access, and socioeconomic factors.**  
-- **Tools**: R, RMarkdown  
-- **Skills**: EDA, regression modeling  
-- **Results**: Delivered policy-relevant insights across three datasets.
+- **Statistical Analyst**, Health & Retail Datasets — *2023*  
+  - Conducted EDA and regression analysis using R across 3 large datasets  
+  - Uncovered socioeconomic drivers of health outcomes and retail satisfaction  
+  - Compiled results in RMarkdown reports for policy recommendations
 
-### 🏢 *MyProtein AI Strategy Case Study*  
-**Proposed a personalized AI fitness strategy for MyProtein.**  
-- **Tools**: Word, PowerPoint  
-- **Skills**: DELTA framework, stakeholder analysis  
-- **Results**: Suggested pilot and roadmap for personalization integration.
+- **Strategy Analyst**, MyProtein Case Study — *2024*  
+  - Evaluated MyProtein’s personalization strategy using the DELTA framework  
+  - Proposed an AI-based fitness and nutrition feature integration  
+  - Outlined pilot implementation plan in a stakeholder-friendly presentation
 
 ---
 
