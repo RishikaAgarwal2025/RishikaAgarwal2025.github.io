@@ -4,18 +4,18 @@
 title: "Rishika Agarwal"
 name: "Rishika Agarwal"
 description: "Postgraduate in Business Analytics | Data-Driven Solutions | University of Warwick"
-url: "https://rishikaagarwal2025.github.io" # GitHub Pages URL
-baseurl: "" # Keep empty if using username.github.io
-repository: "RishikaAgarwal2025/RishikaAgarwal2025.github.io"
-locale: "en-US"
-site_theme: "minimal"
+url: "https://rishikaagarwal2025.github.io" # Your GitHub Pages site
+baseurl: "" # Leave empty for user.github.io sites
 
-# Author settings
+# Use a GitHub Pages supported theme
+theme: jekyll-theme-minimal
+
+# Author info
 author:
   name: "Rishika Agarwal"
-  avatar: "/assets/images/profile.jpeg"
   email: "rishikaagarwal544@gmail.com"
   location: "United Kingdom"
+  avatar: "/assets/images/profile.jpeg"
   links:
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
@@ -24,7 +24,7 @@ author:
       icon: "fab fa-github"
       url: "https://github.com/RishikaAgarwal2025"
 
-# Navigation (will be used in header if supported by theme)
+# Navigation (manual, theme must support it in layout or use includes)
 nav:
   - title: "Home"
     url: /
@@ -45,85 +45,73 @@ nav:
 collections:
   teaching:
     output: true
-    permalink: /:collection/:path/
+    permalink: /teaching/:path/
   projects:
     output: true
-    permalink: /:collection/:path/
+    permalink: /projects/:path/
   dissertation:
     output: true
-    permalink: /:collection/:path/
+    permalink: /dissertation/:path/
 
 # Plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-paginate
   - jemoji
-  - jekyll-redirect-from
 
-# Defaults
+# Defaults for pages and collections
 defaults:
   - scope:
       path: ""
       type: pages
     values:
-      layout: single
-      author_profile: true
+      layout: page
   - scope:
       path: ""
       type: teaching
     values:
-      layout: single
-      author_profile: true
+      layout: page
   - scope:
       path: ""
       type: projects
     values:
-      layout: single
-      author_profile: true
+      layout: page
   - scope:
       path: ""
       type: dissertation
     values:
-      layout: single
-      author_profile: true
+      layout: page
 
-# Markdown and Permalink settings
+# Permalink and markdown settings
 markdown: kramdown
 highlighter: rouge
-permalink: /:categories/:title/
+permalink: pretty
+
 kramdown:
   input: GFM
-  hard_wrap: false
   auto_ids: true
   smart_quotes: lsquo,rsquo,ldquo,rdquo
 
-# Exclusions
+# Exclude unnecessary files
 exclude:
+  - Gemfile
+  - Gemfile.lock
   - README.md
   - node_modules
   - vendor
-  - Gemfile
-  - Gemfile.lock
 
-# Sitemap
-sitemap:
-  exclude:
-    - /assets/
-    - /images/
-
-# Analytics (disabled, optional)
-analytics:
-  provider: false
-
-# Comments (disabled)
-comments:
-  provider: false
-
-# Social metadata (optional)
+# Social links for SEO
 social:
   type: "Person"
   name: "Rishika Agarwal"
   links:
     - "https://github.com/RishikaAgarwal2025"
     - "https://www.linkedin.com/in/rishika-agarwal-uk"
+
+# Comments (disabled)
+comments:
+  provider: false
+
+# Analytics (optional, disabled)
+analytics:
+  provider: false
