@@ -1,253 +1,68 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve -l -H localhost`. If you change this file, please restart the 
-# server process.
+# _config.yml
 
-# Basic Site Settings
-locale        : "en-US"
-site_theme    : "default"
+# Site settings
+title: "Rishika Agarwal"
+name: "Rishika Agarwal"
+description: "Postgraduate in Business Analytics | Data-Driven Solutions | University of Warwick"
+url: "https://rishikaagarwal2025.github.io" # GitHub Pages URL
+baseurl: "" # Keep empty if using username.github.io
+repository: "RishikaAgarwal2025/RishikaAgarwal2025.github.io"
+locale: "en-US"
+site_theme: "minimal"
 
-title         : "Rishika Agarwal"
-title_separator: "|"
-name          : "Rishika Agarwal"
-description   : "Postgraduate in Business Analytics passionate about leveraging data to drive strategic business solutions."
-
-url           : "https://rishikaagarwal2025.github.io"  # Full URL of your GitHub Pages site
-baseurl       : ""  # Keep this blank if using username.github.io
-repository    : "RishikaAgarwal2025/RishikaAgarwal2025.github.io"
-
-
-
+# Author settings
 author:
   name: "Rishika Agarwal"
-  pronouns: "she/her"
   avatar: "/assets/images/profile.jpeg"
   email: "rishikaagarwal544@gmail.com"
   location: "United Kingdom"
-  bio: >
-    Postgraduate student at the University of Warwick, specializing in Business Analytics.
-    With a strong foundation in data analysis and a passion for translating complex insights into real-world impact,
-    I bring analytical thinking, strategic mindset, and storytelling through data to the forefront of every project.
-    Currently seeking opportunities to apply my skills in data-driven decision-making, consulting, or product strategy.
   links:
-    - label: "Website"
-      icon: "fas fa-globe"
-      url: "https://rishikaagarwal2025.github.io"
-    - label: "Email"
-      icon: "fas fa-envelope"
-      url: "mailto:rishikaagarwal544@gmail.com"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/rishika-agarwal-uk"
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/RishikaAgarwal2025"
 
-
-# Academic websites (use only usernames or profile IDs, not full URLs unless required)
-academia         : 
-arxiv            : 
-googlescholar    : 
-impactstory      : 
-orcid            : 
-semantic         : 
-pubmed           : 
-researchgate     : 
-scopus           : 
-
-# Repositories and software development
-bitbucket        : 
-codepen          : 
-dribbble         : 
-github           : "RishikaAgarwal2025"
-kaggle           : 
-stackoverflow    : 
-
-# Social media
-bluesky          : 
-facebook         : 
-flickr           : 
-foursquare       : 
-goodreads        : 
-google_plus      : 
-keybase          : 
-instagram        : 
-lastfm           : 
-linkedin         : "in/rishika-agarwal-uk"
-mastodon         : 
-medium           : 
-pinterest        : 
-soundcloud       : 
-steam            : 
-telegram         : 
-tumblr           : 
-twitter          : 
-vine             : 
-weibo            : 
-wikipedia        : 
-xing             : 
-youtube          : 
-zhihu            : 
-
-# Publication Categories
-publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'
-  conferences:
-    title: 'Conference Papers'
-
-# Site Settings
-teaser                   :  # Example: "500x300.png" (in /images/)
-breadcrumbs              : false
-words_per_minute         : 160
-future                   : true
-read_more                : "disabled"
-talkmap_link             : false
-
-# Comment system setup (set provider if you enable one)
-comments:
-  provider               : false
-  disqus:
-    shortname            : 
-  discourse:
-    server               : 
-  facebook:
-    appid                : 
-    num_posts            : 5
-    colorscheme          : "light"
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601"
-
-# RSS Feed
-atom_feed:
-  hide                   : false
-  path                   : 
-
-# SEO
-google_site_verification : 
-bing_site_verification   : 
-alexa_site_verification  : 
-yandex_site_verification : 
-
-# Social Sharing Metadata
-twitter:
-  username               : 
-facebook:
-  username               : 
-  app_id                 : 
-  publisher              : 
-og_image                 :  # Recommended size: 1200x630 for best previews
-
-# Schema.org Social Profiles
-social:
-  type                   : "Person"
-  name                   : "Rishika Agarwal"
-  links:
-    - "https://github.com/RishikaAgarwal2025"
-    - "https://www.linkedin.com/in/rishika-agarwal-uk"
-
-# Analytics
-analytics:
-  provider               : "false"
-  google:
-    tracking_id          : 
-
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-  - files
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .github
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
-  - CHANGELOG
-  - Capfile
-  - config
-  - Dockerfile
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - local
-  - log
-  - node_modules
-  - package.json*
-  - Rakefile
-  - README
-  - tmp
-  - vendor
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-# Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-
-# Markdown Processing
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
+# Navigation (will be used in header if supported by theme)
+nav:
+  - title: "Home"
+    url: /
+  - title: "About"
+    url: /about/
+  - title: "Academic Projects"
+    url: /projects/
+  - title: "Dissertation"
+    url: /dissertation/
+  - title: "Teaching"
+    url: /teaching/
+  - title: "CV"
+    url: /cv/
+  - title: "Contact"
+    url: /contact/
 
 # Collections
 collections:
   teaching:
     output: true
     permalink: /:collection/:path/
-  publications:
+  projects:
     output: true
     permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
+  dissertation:
     output: true
     permalink: /:collection/:path/
 
-# Page Defaults
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+  - jekyll-redirect-from
+
+# Defaults
 defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
   - scope:
       path: ""
       type: pages
@@ -260,68 +75,55 @@ defaults:
     values:
       layout: single
       author_profile: true
-      share: true
-      comments: true
   - scope:
       path: ""
-      type: publications
+      type: projects
     values:
       layout: single
       author_profile: true
-      share: true
-      comments: true
   - scope:
       path: ""
-      type: portfolio
+      type: dissertation
     values:
       layout: single
       author_profile: true
-      share: true
-      comment: true
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
 
-# Sass
-sass:
-  sass_dir: _sass
-  style: compressed
-
-# Permalinks
+# Markdown and Permalink settings
+markdown: kramdown
+highlighter: rouge
 permalink: /:categories/:title/
-timezone: Etc/UTC
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
 
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-redirect-from
-  - jemoji
+# Exclusions
+exclude:
+  - README.md
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
 
-whitelist:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-redirect-from
-  - jemoji
+# Sitemap
+sitemap:
+  exclude:
+    - /assets/
+    - /images/
 
-# Archive Pages
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
+# Analytics (disabled, optional)
+analytics:
+  provider: false
 
-# HTML Compression
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
+# Comments (disabled)
+comments:
+  provider: false
+
+# Social metadata (optional)
+social:
+  type: "Person"
+  name: "Rishika Agarwal"
+  links:
+    - "https://github.com/RishikaAgarwal2025"
+    - "https://www.linkedin.com/in/rishika-agarwal-uk"
