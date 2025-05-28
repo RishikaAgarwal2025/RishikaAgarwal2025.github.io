@@ -7,34 +7,41 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "en-US"
-site_theme               : "default"
-title                    : "Rishika Agarwal / Portfolio"
-title_separator          : "-"
-name                     : &name "Rishika Agarwal"
-description              : &description "Postgraduate in Business Analytics passionate about leveraging data to drive strategic business solutions."
-url                      : "https://rishikaagarwal2025.github.io"  # full URL of your GitHub Pages site
-baseurl                  : ""  # keep this blank if using username.github.io
-repository               : "RishikaAgarwal2025/RishikaAgarwal2025.github.io"
+locale        : "en-US"
+site_theme    : "default"
+
+title         : "Rishika Agarwal"
+title_separator: "|"
+name          : "Rishika Agarwal"
+description   : "Postgraduate in Business Analytics passionate about leveraging data to drive strategic business solutions."
+
+url           : "https://rishikaagarwal2025.github.io"  # Full URL of your GitHub Pages site
+baseurl       : ""  # Keep this blank if using username.github.io
+repository    : "RishikaAgarwal2025/RishikaAgarwal2025.github.io"
+
 
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
-  # Biographic information
-  avatar           : "images/profile.jpeg"
-  name             : "Rishika Agarwal"
-  pronouns         : "she/her"
-  bio              : >
+  name: "Rishika Agarwal"
+  pronouns: "she/her"
+  avatar: "/assets/images/profile.jpeg"
+  email: "rishikaagarwal544@gmail.com"
+  location: "United Kingdom"
+  bio: >
     Postgraduate student at the University of Warwick, specializing in Business Analytics.
     With a strong foundation in data analysis and a passion for translating complex insights into real-world impact,
     I bring analytical thinking, strategic mindset, and storytelling through data to the forefront of every project.
     Currently seeking opportunities to apply my skills in data-driven decision-making, consulting, or product strategy.
-  location         : "United Kingdom"
-  employer         : # (Left blank since you're a student)
-  uri              : "https://rishikaagarwal2025.github.io"
-  email            : "rishikaagarwal544@gmail.com"
+  links:
+    - label: "Website"
+      icon: "fas fa-globe"
+      url: "https://rishikaagarwal2025.github.io"
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:rishikaagarwal544@gmail.com"
 
 
 # Academic websites (use only usernames or profile IDs, not full URLs unless required)
