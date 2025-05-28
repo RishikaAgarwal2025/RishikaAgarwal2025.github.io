@@ -9,6 +9,8 @@ redirect_from:
 
 📄 [Download my CV (PDF)](/Rishika_Agarwal_CV.pdf)
 
+---
+
 ## 🎯 Summary
 
 Pursuing a Master’s in Business Analytics at the University of Warwick, proficient in Python, SQL, and data visualization tools. With experience in two Business Analyst internships and multiple research projects, I am actively seeking opportunities as a Business Analyst.
@@ -42,67 +44,53 @@ Pursuing a Master’s in Business Analytics at the University of Warwick, profic
 
 ## 📊 Projects
 
-### 🔄 Enhancing Efficiency and Societal Impact of Ahmedabad's BRTS
-Simulated and analyzed the impact of BRTS on travel time, emissions, and societal outcomes.  
-**Tools**: SUMO, Google Forms, SPSS, Excel  
-**Skills**: Simulation modeling, survey analysis, presentation  
-**Results**: Identified low BRTS adoption and proposed free ticketing as a solution for low-income groups.
+### 🔄 *BRTS Efficiency & Societal Impact*  
+**Simulated and evaluated interventions for Ahmedabad’s Bus Rapid Transit System (BRTS).**  
+- **Tools**: SUMO, Google Forms, SPSS, Excel  
+- **Skills**: Simulation modeling, survey analysis, presentation  
+- **Results**: Identified low adoption and proposed free ticketing for low-income groups.
 
----
+### 📈 *Forecasting Tata Motors Stock Trends*  
+**Used Nifty 50 data to forecast Tata Motors’ stock using ARIMA models.**  
+- **Tools**: Excel, Word, Stata  
+- **Skills**: Time series forecasting, financial analytics  
+- **Results**: Detected a short-term dip in 2024, with an expected rebound.
 
-### 📈 Forecasting Tata Motors' Stock Price Using Nifty 50 Data
-Used ARIMA models to predict stock price trends using 10+ years of historical data.  
-**Tools**: Excel, Word, Stata  
-**Skills**: Time series forecasting, financial analytics  
-**Results**: Found short-term dip in 2024 followed by upward trend using BIC-optimized models.
+### 🧠 *SQL Data Product for Subscription Business*  
+**Built a data pipeline and analysis model for a synthetic magazine subscription dataset.**  
+- **Tools**: Python (Faker), SQL, Excel  
+- **Skills**: Data engineering, business insights  
+- **Results**: Revealed customer patterns and key revenue drivers.
 
----
+### 🧪 *A/B Testing in Lending Decisions*  
+**Designed an A/B test to measure improvement in a lending firm's AI decision model.**  
+- **Tools**: R  
+- **Skills**: Experimental design, statistical analysis  
+- **Results**: Reduced Type I/II errors; recommended expanded testing.
 
-### 🧠 Data Management – SQL for Subscription Business
-Designed and implemented a data product for a simulated magazine business (BABA) using synthetic data.  
-**Tools**: Python (Faker), SQL, Excel  
-**Skills**: Data engineering, business insight generation  
-**Results**: Delivered insights on user behavior and revenue, based on realistic simulated datasets.
+### 💰 *Pricing Optimization for BuildMax Rentals*  
+**Applied linear programming to optimize rental pricing and fleet strategy.**  
+- **Tools**: Python (Pyomo), Excel  
+- **Skills**: Revenue management, price optimization  
+- **Results**: Identified demand granularity and fleet size as key constraints.
 
----
+### 🔍 *eCommerce Review Prediction (Nile Platform)*  
+**Built classification models to predict positive customer reviews.**  
+- **Tools**: Python (XGBoost, SVM, Logistic Regression), PowerPoint  
+- **Skills**: Predictive modeling, classification  
+- **Results**: Flagged underfitting; suggested feature engineering.
 
-### 🧪 Treatment Control Testing – A/B Testing
-Evaluated a computer model’s decision-making improvement in a lending firm using A/B testing.  
-**Tools**: R  
-**Skills**: Experimental design, statistical analysis  
-**Results**: Reduced Type I/II errors significantly; suggested a larger sample and more control for future tests.
+### 📊 *Retail & Health Data Analytics*  
+**Analyzed relationships between health, retail access, and socioeconomic factors.**  
+- **Tools**: R, RMarkdown  
+- **Skills**: EDA, regression modeling  
+- **Results**: Delivered policy-relevant insights across three datasets.
 
----
-
-### 💰 Pricing Analytics – Optimization for BuildMax Rentals
-Optimized pricing and fleet strategy using linear programming.  
-**Tools**: Python (Pyomo), Excel  
-**Skills**: Revenue management, price optimization  
-**Results**: Highlighted need for granularity in demand data and fleet constraints; proposed RM-based improvements.
-
----
-
-### 🔍 Analytics in Practice – Review Prediction for eCommerce
-Built ML models to predict customers likely to leave positive reviews for the Nile platform.  
-**Tools**: Python (XGB, SVM, Logistic Regression), PowerPoint  
-**Skills**: Classification, predictive modeling  
-**Results**: Identified underfitting issues; recommended feature engineering and data rebalancing.
-
----
-
-### 📊 Business Statistics – Retail, Health & Location Analytics
-Analyzed retail and health data using R across 3 datasets.  
-**Tools**: R, RMarkdown  
-**Skills**: EDA, regression modeling, socioeconomic analysis  
-**Results**: Found key health predictors and satisfaction drivers; delivered actionable insights.
-
----
-
-### 🏢 Understanding Business for Analysts – MyProtein Case Study
-Assessed MyProtein’s data strategy and proposed a personalized AI fitness solution.  
-**Tools**: Word, PowerPoint  
-**Skills**: DELTA framework, risk analysis, stakeholder analysis  
-**Results**: Proposed pilot project and integration into broader personalization strategy.
+### 🏢 *MyProtein AI Strategy Case Study*  
+**Proposed a personalized AI fitness strategy for MyProtein.**  
+- **Tools**: Word, PowerPoint  
+- **Skills**: DELTA framework, stakeholder analysis  
+- **Results**: Suggested pilot and roadmap for personalization integration.
 
 ---
 
@@ -114,38 +102,26 @@ Assessed MyProtein’s data strategy and proposed a personalized AI fitness solu
 
 ---
 
-## 📚 Publications
-
-<ul>{% for post in site.publications reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}</ul>
-
----
-
-## 🎤 Talks
-
-<ul>{% for post in site.talks reversed %}
-  {% include archive-single-talk-cv.html %}
-{% endfor %}</ul>
-
----
-
 ## 👩‍🏫 Teaching
 
 - **Teaching Assistant**, Ahmedabad University — *2023*  
-  Supported delivery and engagement for the undergraduate course **Political Psychology**.
-
-<ul>{% for post in site.teaching reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}</ul>
+  Supported instruction for the undergraduate course **Political Psychology**, assisting with grading, tutorial sessions, and student queries.
 
 ---
 
 ## 🤝 Service and Leadership
 
-- Collaborated with public health authorities for malaria and dengue mitigation projects in Ahmedabad
-- Conducted city-wide surveys and simulations for policy-relevant outcomes
-- Peer mentoring and academic guidance for MSc students
+- **Peer Mentor**, Ahmedabad University  
+  Mentored first-year undergraduate students in Economics and Analytics, helping them transition academically and socially into university life.
+  
+- **Research Collaborator – Public Health Projects**  
+  Contributed to two field research studies focusing on vector-borne diseases and healthcare infrastructure.  
+  - Designed and administered household-level surveys  
+  - Analyzed field data using SPSS and Excel  
+  - Presented findings to local public health authorities for actionable policy decisions
+
+- **Community Engagement via Simulation Modeling**  
+  Built an AnyLogic model to improve ambulance access in BRTS corridors, resulting in reduced emergency response time. The simulation informed urban transport policy discussions in Ahmedabad.
 
 ---
 
