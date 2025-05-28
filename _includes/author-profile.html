@@ -1,70 +1,42 @@
 {% include base_path %}
 
-{% if page.author and site.data.authors[page.author] %}
-  {% assign author = site.data.authors[page.author] %}
-{% else %}
-  {% assign author = site.author %}
-{% endif %}
+{% assign author = site.author %}
 
-<div itemscope itemtype="http://schema.org/Person" class="author">
+<div itemscope itemtype="http://schema.org/Person">
 
   <div class="author__avatar">
-    {% if author.avatar %}
-      {% if author.avatar contains "://" %}
-        <img src="{{ author.avatar }}" alt="{{ author.name }}">
-      {% else %}
-        <img src="{{ author.avatar | prepend: '/images/' | prepend: base_path }}" alt="{{ author.name }}">
-      {% endif %}
+    {% if author.avatar contains "://" %}
+      <img src="{{ author.avatar }}" alt="{{ author.name }}">
     {% else %}
-      <img src="{{ '/images/default-avatar.png' | prepend: base_path }}" alt="Default avatar">
+      <img src="{{ base_path }}{{ author.avatar }}" class="author__avatar" alt="{{ author.name }}">
     {% endif %}
   </div>
 
   <div class="author__content">
     <h3 class="author__name">{{ author.name }}</h3>
-    {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
-    {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    {% if author.pronouns %}
+      <p class="author__pronouns">{{ author.pronouns }}</p>
+    {% endif %}
+    {% if author.bio %}
+      <p class="author__bio">{{ author.bio }}</p>
+    {% endif %}
   </div>
 
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
-
       {% if author.location %}
-        <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right"></i>{{ author.location }}</li>
+        <li class="author__desktop">
+          <i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ author.location }}
+        </li>
       {% endif %}
-      {% if author.employer %}
-        <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right"></i>{{ author.employer }}</li>
-      {% endif %}
-      {% if author.uri %}
-        <li><a href="{{ author.uri }}" target="_blank" rel="noopener noreferrer" aria-label="Website of {{ author.name }}"><i class="fas fa-fw fa-link icon-pad-right"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
-      {% endif %}
-      {% if author.email %}
-        <li><a href="mailto:{{ author.email }}" aria-label="Email {{ author.name }}"><i class="fas fa-fw fa-envelope icon-pad-right"></i>{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
-      {% endif %}
-
-      {%- assign socials = 
-        "github:fab fa-github, linkedin:fab fa-linkedin, twitter:fab fa-x-twitter, orcid:ai ai-orcid, googlescholar:ai ai-google-scholar, researchgate:fab fa-researchgate, mastodon:fab fa-mastodon, bluesky:fab fa-bluesky, facebook:fab fa-facebook-f, instagram:fab fa-instagram, youtube:fab fa-youtube, medium:fab fa-medium, stackoverflow:fab fa-stack-overflow, kaggle:fab fa-kaggle, dribbble:fab fa-dribbble, codepen:fab fa-codepen, bitbucket:fab fa-bitbucket, pinterest:fab fa-pinterest, soundcloud:fab fa-soundcloud, steam:fab fa-steam, telegram:fab fa-telegram, tumblr:fab fa-tumblr, weibo:fab fa-weibo, wikipedia:fab fa-wikipedia-w, xing:fab fa-xing, goodreads:fab fa-goodreads, lastfm:fab fa-lastfm, keybase:fas fa-key, academia:ai ai-academia, arxiv:ai ai-arxiv, semantic:ai ai-semantic-scholar, impactstory:ai ai-impactstory, pubmed:ai ai-pubmed, scopus:ai ai-scopus, zhihu:fab fa-zhihu" 
-        | split: ", " -%}
-
-      {% for entry in socials %}
-        {% assign parts = entry | split: ":" %}
-        {% assign key = parts[0] %}
-        {% assign icon = parts[1] %}
-        {% if author[key] %}
-          {% assign url = author[key] %}
-          {% if key == "github" or key == "linkedin" or key == "twitter" or key == "stackoverflow" or key == "kaggle" or key == "dribbble" or key == "codepen" or key == "bitbucket" or key == "pinterest" or key == "soundcloud" or key == "steam" or key == "facebook" or key == "instagram" or key == "youtube" or key == "xing" or key == "goodreads" or key == "lastfm" or key == "zhihu" %}
-            {% assign base_urls = 
-              "github:https://github.com/, linkedin:https://www.linkedin.com/in/, twitter:https://twitter.com/, stackoverflow:https://www.stackoverflow.com/users/, kaggle:https://kaggle.com/, dribbble:https://dribbble.com/, codepen:https://codepen.io/, bitbucket:https://bitbucket.org/, pinterest:https://www.pinterest.com/, soundcloud:https://soundcloud.com/, steam:https://steamcommunity.com/id/, facebook:https://www.facebook.com/, instagram:https://instagram.com/, youtube:https://www.youtube.com/@, xing:https://www.xing.com/profile/, goodreads:https://www.goodreads.com/, lastfm:https://last.fm/user/, zhihu:https://www.zhihu.com/people/" | split: ", " %}
-            {% assign base_url = base_urls | where_exp: "item", "item contains key" | first | split: ":" | last %}
-            {% assign url = base_url | append: author[key] %}
-          {% endif %}
-          <li><a href="{{ url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ key | capitalize }} profile of {{ author.name }}"><i class="{{ icon }} icon-pad-right"></i>{{ key | replace: "_", " " | capitalize }}</a></li>
-        {% endif %}
+      {% for link in author.links %}
+        <li>
+          <a href="{{ link.url }}">
+            <i class="{{ link.icon }} icon-pad-right" aria-hidden="true"></i>{{ link.label }}
+          </a>
+        </li>
       {% endfor %}
-
     </ul>
   </div>
-
 </div>
-
