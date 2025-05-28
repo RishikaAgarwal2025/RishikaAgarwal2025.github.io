@@ -7,11 +7,7 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
-
 📄 [Download my CV (PDF)](/Rishika_Agarwal_CV.pdf)
-
----
 
 ## 🎯 Summary
 
