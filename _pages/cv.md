@@ -44,6 +44,8 @@ Pursuing a Master’s in Business Analytics at the University of Warwick, profic
 
 ## 📊 Projects
 
+## 📊 Projects
+
 ### 🔄 *BRTS Efficiency & Societal Impact*  
 - **Simulated and evaluated interventions for Ahmedabad’s Bus Rapid Transit System (BRTS).**  
   - **Tools**: SUMO, Google Forms, SPSS, Excel  
@@ -51,46 +53,46 @@ Pursuing a Master’s in Business Analytics at the University of Warwick, profic
   - **Results**: Identified low adoption and proposed free ticketing for low-income groups.
 
 ### 📈 *Forecasting Tata Motors Stock Trends*  
-**Used Nifty 50 data to forecast Tata Motors’ stock using ARIMA models.**  
-- **Tools**: Excel, Word, Stata  
-- **Skills**: Time series forecasting, financial analytics  
-- **Results**: Detected a short-term dip in 2024, with an expected rebound.
+- **Used Nifty 50 data to forecast Tata Motors’ stock using ARIMA models.**  
+  - **Tools**: Excel, Word, Stata  
+  - **Skills**: Time series forecasting, financial analytics  
+  - **Results**: Detected a short-term dip in 2024, with an expected rebound.
 
 ### 🧠 *SQL Data Product for Subscription Business*  
-**Built a data pipeline and analysis model for a synthetic magazine subscription dataset.**  
-- **Tools**: Python (Faker), SQL, Excel  
-- **Skills**: Data engineering, business insights  
-- **Results**: Revealed customer patterns and key revenue drivers.
+- **Built a data pipeline and analysis model for a synthetic magazine subscription dataset.**  
+  - **Tools**: Python (Faker), SQL, Excel  
+  - **Skills**: Data engineering, business insights  
+  - **Results**: Revealed customer patterns and key revenue drivers.
 
 ### 🧪 *A/B Testing in Lending Decisions*  
-**Designed an A/B test to measure improvement in a lending firm's AI decision model.**  
-- **Tools**: R  
-- **Skills**: Experimental design, statistical analysis  
-- **Results**: Reduced Type I/II errors; recommended expanded testing.
+- **Designed an A/B test to measure improvement in a lending firm's AI decision model.**  
+  - **Tools**: R  
+  - **Skills**: Experimental design, statistical analysis  
+  - **Results**: Reduced Type I/II errors; recommended expanded testing.
 
 ### 💰 *Pricing Optimization for BuildMax Rentals*  
-**Applied linear programming to optimize rental pricing and fleet strategy.**  
-- **Tools**: Python (Pyomo), Excel  
-- **Skills**: Revenue management, price optimization  
-- **Results**: Identified demand granularity and fleet size as key constraints.
+- **Applied linear programming to optimize rental pricing and fleet strategy.**  
+  - **Tools**: Python (Pyomo), Excel  
+  - **Skills**: Revenue management, price optimization  
+  - **Results**: Identified demand granularity and fleet size as key constraints.
 
 ### 🔍 *eCommerce Review Prediction (Nile Platform)*  
-**Built classification models to predict positive customer reviews.**  
-- **Tools**: Python (XGBoost, SVM, Logistic Regression), PowerPoint  
-- **Skills**: Predictive modeling, classification  
-- **Results**: Flagged underfitting; suggested feature engineering.
+- **Built classification models to predict positive customer reviews.**  
+  - **Tools**: Python (XGBoost, SVM, Logistic Regression), PowerPoint  
+  - **Skills**: Predictive modeling, classification  
+  - **Results**: Flagged underfitting; suggested feature engineering.
 
 ### 📊 *Retail & Health Data Analytics*  
-**Analyzed relationships between health, retail access, and socioeconomic factors.**  
-- **Tools**: R, RMarkdown  
-- **Skills**: EDA, regression modeling  
-- **Results**: Delivered policy-relevant insights across three datasets.
+- **Analyzed relationships between health, retail access, and socioeconomic factors.**  
+  - **Tools**: R, RMarkdown  
+  - **Skills**: EDA, regression modeling  
+  - **Results**: Delivered policy-relevant insights across three datasets.
 
 ### 🏢 *MyProtein AI Strategy Case Study*  
-**Proposed a personalized AI fitness strategy for MyProtein.**  
-- **Tools**: Word, PowerPoint  
-- **Skills**: DELTA framework, stakeholder analysis  
-- **Results**: Suggested pilot and roadmap for personalization integration.
+- **Proposed a personalized AI fitness strategy for MyProtein.**  
+  - **Tools**: Word, PowerPoint  
+  - **Skills**: DELTA framework, stakeholder analysis  
+  - **Results**: Suggested pilot and roadmap for personalization integration.
 
 ---
 
