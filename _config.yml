@@ -8,7 +8,7 @@ url: "https://rishikaagarwal2025.github.io"
 baseurl: ""  # Keep empty for user.github.io repository
 
 # Theme
-theme: jekyll-theme-minimal
+#theme: jekyll-theme-minimal
 
 # Author Info
 author:
