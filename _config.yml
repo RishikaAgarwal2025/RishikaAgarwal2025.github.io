@@ -25,17 +25,17 @@ nav:
   - title: "Home"
     url: /
   - title: "About Me"
-    url: /About-Me/
+    url: /about-me/
   - title: "Academic Projects"
-    url: /Projects/
+    url: /projects/
   - title: "Dissertation"
-    url: /Dissertation/
+    url: /dissertation/
   - title: "Teaching"
-    url: /Teaching/
+    url: /teaching/
   - title: "CV"
     url: /cv/
   - title: "Contact"
-    url: /Contact/
+    url: /contact/
 
 # Plugins
 plugins:
