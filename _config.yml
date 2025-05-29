@@ -4,8 +4,8 @@
 title: "Rishika Agarwal"
 name: "Rishika Agarwal"
 description: "Postgraduate in Business Analytics | Data-Driven Solutions | University of Warwick"
-url: "https://rishikaagarwal2025.github.io" # Your GitHub Pages site
-baseurl: "" # Leave empty for user.github.io sites
+url: "https://rishikaagarwal2025.github.io" # GitHub Pages user site
+baseurl: "" # Leave blank for user.github.io sites
 
 # Use a GitHub Pages supported theme
 theme: jekyll-theme-minimal
@@ -24,7 +24,7 @@ author:
       icon: "fab fa-github"
       url: "https://github.com/RishikaAgarwal2025"
 
-# Navigation (manual, theme must support it in layout or use includes)
+# Navigation
 nav:
   - title: "Home"
     url: /
@@ -65,22 +65,22 @@ defaults:
       path: ""
       type: pages
     values:
-      layout: page
+      layout: default  # ✅ Changed from "page" to "default"
   - scope:
       path: ""
       type: teaching
     values:
-      layout: page
+      layout: default
   - scope:
       path: ""
       type: projects
     values:
-      layout: page
+      layout: default
   - scope:
       path: ""
       type: dissertation
     values:
-      layout: page
+      layout: default
 
 # Permalink and markdown settings
 markdown: kramdown
@@ -92,7 +92,7 @@ kramdown:
   auto_ids: true
   smart_quotes: lsquo,rsquo,ldquo,rdquo
 
-# Exclude unnecessary files
+# Exclude unnecessary files from the site build
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -108,10 +108,9 @@ social:
     - "https://github.com/RishikaAgarwal2025"
     - "https://www.linkedin.com/in/rishika-agarwal-uk"
 
-# Comments (disabled)
+# Comments and Analytics (disabled)
 comments:
   provider: false
 
-# Analytics (optional, disabled)
 analytics:
   provider: false
