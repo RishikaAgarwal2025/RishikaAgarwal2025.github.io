@@ -24,22 +24,22 @@ author:
       icon: "fab fa-github"
       url: "https://github.com/RishikaAgarwal2025"
 
-# Navigation Tabs
 nav:
   - title: "Home"
     url: /
   - title: "About Me"
-    url: /about/
+    url: /About Me/
   - title: "Academic Projects"
-    url: /projects/
+    url: /Projects/
   - title: "Dissertation"
-    url: /dissertation/
+    url: /Dissertation/
   - title: "Teaching"
-    url: /teaching/
+    url: /Teaching/
   - title: "CV"
     url: /cv/
   - title: "Contact"
-    url: /contact/
+    url: /Contact/
+
 
 # Collections (optional, if using custom subpages)
 collections:
