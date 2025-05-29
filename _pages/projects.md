@@ -1,16 +1,8 @@
 ---
-layout: default
-title: Academic Projects
+layout: archive
+title: "Academic Projects"
 permalink: /projects/
+author_profile: true
 ---
 
-Details about my academic projects.
-
-
-{% include base_path %}
-
-
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
-
+Explore my portfolio of analytics projects — including forecasting, simulation modeling, pricing optimization, and more — on the [Projects](/projects/) page.
