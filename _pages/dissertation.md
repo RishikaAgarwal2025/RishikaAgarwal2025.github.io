@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: single
 title: "Dissertation"
 permalink: /dissertation/
 author_profile: true
