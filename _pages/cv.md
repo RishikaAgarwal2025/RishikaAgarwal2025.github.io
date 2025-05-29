@@ -4,11 +4,12 @@ title: "CV"
 permalink: /cv/
 author_profile: true
 redirect_from:
-  - /resume
+  - /resume/
 ---
 
-📄 [Download my CV (PDF)](/Rishika_Agarwal_CV.pdf)
+## 📄 Download My CV
 
+[Click here to download my CV (PDF)](/Rishika_Agarwal_CV.pdf)
 ---
 
 ## 🎯 Summary
