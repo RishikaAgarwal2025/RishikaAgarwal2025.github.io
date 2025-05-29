@@ -4,13 +4,13 @@
 title: "Rishika Agarwal"
 name: "Rishika Agarwal"
 description: "Postgraduate in Business Analytics | Data-Driven Solutions | University of Warwick"
-url: "https://rishikaagarwal2025.github.io" # GitHub Pages user site
-baseurl: "" # Leave blank for user.github.io sites
+url: "https://rishikaagarwal2025.github.io"
+baseurl: ""  # Keep empty for user.github.io repository
 
-# Use a GitHub Pages supported theme
+# Theme
 theme: jekyll-theme-minimal
 
-# Author info
+# Author Info
 author:
   name: "Rishika Agarwal"
   email: "rishikaagarwal544@gmail.com"
@@ -24,11 +24,11 @@ author:
       icon: "fab fa-github"
       url: "https://github.com/RishikaAgarwal2025"
 
-# Navigation
+# Navigation Tabs
 nav:
   - title: "Home"
     url: /
-  - title: "About"
+  - title: "About Me"
     url: /about/
   - title: "Academic Projects"
     url: /projects/
@@ -41,7 +41,7 @@ nav:
   - title: "Contact"
     url: /contact/
 
-# Collections
+# Collections (optional, if using custom subpages)
 collections:
   teaching:
     output: true
@@ -59,30 +59,30 @@ plugins:
   - jekyll-sitemap
   - jemoji
 
-# Defaults for pages and collections
+# Defaults for layouts
 defaults:
   - scope:
       path: ""
       type: pages
     values:
-      layout: default  # ✅ Changed from "page" to "default"
+      layout: page
   - scope:
       path: ""
       type: teaching
     values:
-      layout: default
+      layout: page
   - scope:
       path: ""
       type: projects
     values:
-      layout: default
+      layout: page
   - scope:
       path: ""
       type: dissertation
     values:
-      layout: default
+      layout: page
 
-# Permalink and markdown settings
+# Markdown & Permalink settings
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
@@ -92,7 +92,7 @@ kramdown:
   auto_ids: true
   smart_quotes: lsquo,rsquo,ldquo,rdquo
 
-# Exclude unnecessary files from the site build
+# Files to exclude from build
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -100,17 +100,10 @@ exclude:
   - node_modules
   - vendor
 
-# Social links for SEO
+# SEO Social Links
 social:
   type: "Person"
   name: "Rishika Agarwal"
   links:
     - "https://github.com/RishikaAgarwal2025"
-    - "https://www.linkedin.com/in/rishika-agarwal-uk"
-
-# Comments and Analytics (disabled)
-comments:
-  provider: false
-
-analytics:
-  provider: false
+    - "https://www.linkedin.com/in/r
