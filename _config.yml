@@ -1,26 +1,56 @@
-# _config.yml
-
+# Site settings
 title: "Rishika Agarwal"
-name: "Rishika Agarwal"
-description: "Postgraduate in Business Analytics | Data-Driven Solutions | University of Warwick"
-url: "https://rishikaagarwal2025.github.io"
-baseurl: ""
+subtitle: "Business Analytics Portfolio"
+description: "A portfolio website showcasing academic projects, teaching, CV, and contact information."
+baseurl: "" # Leave blank if deploying to username.github.io
+url: "https://rishikaagarwal2025.github.io" # Update to your actual GitHub Pages URL
+repository: "RishikaAgarwal2025/RishikaAgarwal2025.github.io"
 
-# Author Info
+# Author details
 author:
   name: "Rishika Agarwal"
+  avatar: "/assets/images/profile.jpg" # Add your profile picture here
+  bio: "MSc Business Analytics | Python, SQL, Tableau | Business Analyst Enthusiast"
+  location: "UK / India"
   email: "rishikaagarwal544@gmail.com"
-  location: "United Kingdom"
-  avatar: "/assets/images/profile.jpeg"
   links:
-    - label: "LinkedIn"
-      icon: "fab fa-linkedin"
-      url: "https://www.linkedin.com/in/rishika-agarwal-uk"
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:rishikaagarwal544@gmail.com"
     - label: "GitHub"
       icon: "fab fa-github"
-      url: "https://github.com/RishikaAgarwal2025"
+      url: "https://github.com/RishikaAgarwal2025/Business-Analysis-Portfolio"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://linkedin.com/in/rishika-agarwal-uk"
 
-# Navigation Tabs
+# Theme
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+# Collections
+collections:
+  teaching:
+    output: true
+  projects:
+    output: true
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "archive"
+      author_profile: true
+
+# Navigation
 nav:
   - title: "Home"
     url: /
@@ -37,33 +67,31 @@ nav:
   - title: "Contact"
     url: /contact/
 
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jemoji
+# Footer links (optional)
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/RishikaAgarwal2025"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://linkedin.com/in/rishika-agarwal-uk"
 
-# Layout Defaults
-defaults:
-  - scope:
-      path: "_pages"
-    values:
-      layout: default
-      permalink: /:name/
+# Optional settings
+atom_feed:
+  hide: true
 
-# Markdown
+permalink: /:categories/:title/
+paginate: 5
+paginate_path: /page:num/
+
 markdown: kramdown
 highlighter: rouge
-permalink: pretty
 
-kramdown:
-  input: GFM
-  auto_ids: true
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-
+# Build settings
 exclude:
+  - node_modules
+  - vendor
   - Gemfile
   - Gemfile.lock
   - README.md
-  - node_modules
-  - vendor
