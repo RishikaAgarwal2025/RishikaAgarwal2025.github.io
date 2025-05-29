@@ -1,14 +1,10 @@
 # _config.yml
 
-# Site settings
 title: "Rishika Agarwal"
 name: "Rishika Agarwal"
 description: "Postgraduate in Business Analytics | Data-Driven Solutions | University of Warwick"
 url: "https://rishikaagarwal2025.github.io"
-baseurl: ""  # Keep empty for user.github.io repository
-
-# Theme
-#theme: jekyll-theme-minimal
+baseurl: ""
 
 # Author Info
 author:
@@ -47,7 +43,7 @@ plugins:
   - jekyll-sitemap
   - jemoji
 
-# Page defaults (for files in _pages folder)
+# Layout Defaults
 defaults:
   - scope:
       path: "_pages"
@@ -55,7 +51,7 @@ defaults:
       layout: default
       permalink: /:name/
 
-# Markdown & Permalink settings
+# Markdown
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
@@ -65,7 +61,6 @@ kramdown:
   auto_ids: true
   smart_quotes: lsquo,rsquo,ldquo,rdquo
 
-# Files to exclude from build
 exclude:
   - Gemfile
   - Gemfile.lock
