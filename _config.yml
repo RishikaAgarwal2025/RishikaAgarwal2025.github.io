@@ -1,12 +1,10 @@
-# Site settings
 title: "Rishika Agarwal"
 subtitle: "Business Analytics Portfolio"
 description: "A portfolio website showcasing academic projects, teaching, CV, and contact information."
-baseurl: "" # Leave blank if deploying to username.github.io
+baseurl: "" 
 url: "https://rishikaagarwal2025.github.io"
 repository: "RishikaAgarwal2025/RishikaAgarwal2025.github.io"
 
-# Author details
 author:
   name: "Rishika Agarwal"
   avatar: "/assets/images/profile.jpg"
@@ -24,33 +22,22 @@ author:
       icon: "fab fa-linkedin"
       url: "https://linkedin.com/in/rishika-agarwal-uk"
 
-# Theme
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
-# Plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-include-cache
   - jekyll-remote-theme
 
-# Collections
-collections:
-  teaching:
-    output: true
-  projects:
-    output: true
-
-# Defaults
 defaults:
   - scope:
       path: ""
       type: "pages"
     values:
-      layout: "archive"
+      layout: single
       author_profile: true
 
-# Navigation
 nav:
   - title: "Home"
     url: /
@@ -67,7 +54,6 @@ nav:
   - title: "Contact"
     url: /contact/
 
-# Footer links
 footer:
   links:
     - label: "GitHub"
@@ -77,27 +63,20 @@ footer:
       icon: "fab fa-linkedin"
       url: "https://linkedin.com/in/rishika-agarwal-uk"
 
-# Optional settings
 atom_feed:
   hide: true
 
-# ✅ Fixed permalink issue
 permalink: /:title/
 
-paginate: 5
-paginate_path: /page:num/
+include:
+  - pages
 
 markdown: kramdown
 highlighter: rouge
 
-# Ensure GitHub Pages builds everything
 exclude:
   - node_modules
   - vendor
   - Gemfile
   - Gemfile.lock
   - README.md
-
-# ✅ Include pages folder for custom pages
-include:
-  - pages
