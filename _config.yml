@@ -24,11 +24,12 @@ author:
       icon: "fab fa-github"
       url: "https://github.com/RishikaAgarwal2025"
 
+# Navigation Tabs
 nav:
   - title: "Home"
     url: /
   - title: "About Me"
-    url: /About Me/
+    url: /About-Me/
   - title: "Academic Projects"
     url: /Projects/
   - title: "Dissertation"
@@ -40,47 +41,19 @@ nav:
   - title: "Contact"
     url: /Contact/
 
-
-# Collections (optional, if using custom subpages)
-collections:
-  teaching:
-    output: true
-    permalink: /teaching/:path/
-  projects:
-    output: true
-    permalink: /projects/:path/
-  dissertation:
-    output: true
-    permalink: /dissertation/:path/
-
 # Plugins
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jemoji
 
-# Defaults for layouts
+# Page defaults (for files in _pages folder)
 defaults:
   - scope:
-      path: ""
-      type: pages
+      path: "_pages"
     values:
-      layout: page
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: page
-  - scope:
-      path: ""
-      type: projects
-    values:
-      layout: page
-  - scope:
-      path: ""
-      type: dissertation
-    values:
-      layout: page
+      layout: default
+      permalink: /:name/
 
 # Markdown & Permalink settings
 markdown: kramdown
@@ -99,11 +72,3 @@ exclude:
   - README.md
   - node_modules
   - vendor
-
-# SEO Social Links
-social:
-  type: "Person"
-  name: "Rishika Agarwal"
-  links:
-    - "https://github.com/RishikaAgarwal2025"
-    - "https://www.linkedin.com/in/r
