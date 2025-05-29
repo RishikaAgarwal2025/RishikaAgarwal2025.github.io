@@ -1,7 +1,10 @@
 ---
-layout: default
-title: Contact
+layout: archive
+title: "Contact"
 permalink: /contact/
+author_profile: true
 ---
 
-How to get in touch with me.
+📧 **Email**: rishikaagarwal544@gmail.com  
+🔗 [**LinkedIn**](http://www.linkedin.com/in/rishika-agarwal-uk)  
+🐙 [**GitHub**](https://github.com/RishikaAgarwal2025/Business-Analysis-Portfolio)
