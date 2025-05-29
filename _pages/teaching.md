@@ -1,14 +1,10 @@
 ---
-layout: default
-title: Teaching
+layout: archive
+title: "Teaching"
 permalink: /teaching/
+author_profile: true
 ---
 
-Courses and teaching experience.
+### 👩‍🏫 Teaching Assistant – Political Psychology
 
-
-{% include base_path %}
-
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+At Ahmedabad University (2023), I supported undergraduate students through grading, tutorials, and academic mentoring in a Political Psychology course.
