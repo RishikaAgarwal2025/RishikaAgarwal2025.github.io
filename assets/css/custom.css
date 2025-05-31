@@ -1,0 +1,28 @@
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 4px 8px 4px 0;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.btn-primary {
+  background: #007bff;
+  color: white;
+}
+.btn-outline-primary {
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+.btn-outline-dark {
+  border: 2px solid #333;
+  color: #333;
+}
+.btn-outline-secondary {
+  border: 2px solid #6c757d;
+  color: #6c757d;
+}
+.btn:hover {
+  opacity: 0.85;
+}
