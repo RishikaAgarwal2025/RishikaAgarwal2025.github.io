@@ -8,7 +8,7 @@ title: Home
   <div>
     <h1>Rishika Agarwal</h1>
     <p>MSc Business Analytics | Python, SQL, Tableau | Business Analyst Enthusiast</p>
-    <p><strong>Actively seeking Business Analyst roles | Right to work in the UK</strong></p>
+    <p><strong>Actively seeking roles as a Business Analyst, Data Analyst, or Pricing Analyst</strong></p>
     <div class="links">
       <a href="/Rishika_Agarwal_CV.pdf" target="_blank">CV</a>
       <a href="https://www.linkedin.com/in/rishika-agarwal-uk" target="_blank">LinkedIn</a>
