@@ -1,3 +1,4 @@
+/* Button Styles */
 .btn {
   display: inline-block;
   padding: 8px 16px;
@@ -25,4 +26,17 @@
 }
 .btn:hover {
   opacity: 0.85;
+}
+
+/* Layout: Push footer to bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+  padding: 20px 0;
+  text-align: center;
 }
