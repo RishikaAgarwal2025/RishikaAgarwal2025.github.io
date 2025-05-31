@@ -4,26 +4,99 @@
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #333;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1em;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .profile img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 10px;
+      padding: 6px 12px;
+      background-color: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.95rem;
+    }
+
+    .links a:hover {
+      background-color: #005e99;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 3rem;
+      border-top: 1px solid #ddd;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>{{ site.title }}</h1>
-    <nav>
-      <ul>
-        {% for item in site.nav %}
-          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </header>
 
-  <main>
+  <nav>
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/about/' | relative_url }}">About Me</a>
+    <a href="{{ '/projects/' | relative_url }}">Academic Projects</a>
+    <a href="{{ '/dissertation/' | relative_url }}">Dissertation</a>
+    <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
+    <a href="{{ '/cv/' | relative_url }}">CV</a>
+    <a href="{{ '/contact/' | relative_url }}">Contact</a>
+  </nav>
+
+  <div class="container">
     {{ content }}
-  </main>
+  </div>
 
   <footer>
-    <p>&copy; {{ site.time | date: "%Y" }} {{ site.author.name }}</p>
+    © 2025 Rishika Agarwal
   </footer>
+
 </body>
 </html>
