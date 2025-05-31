@@ -6,12 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
+      font-family: 'Segoe UI', sans-serif;
       background: #fff;
       color: #333;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
     }
 
     nav {
@@ -36,6 +46,7 @@
       max-width: 900px;
       margin: 2rem auto;
       padding: 1rem;
+      flex: 1; /* This is the key to push footer down */
     }
 
     .profile {
@@ -73,7 +84,6 @@
       padding: 1em;
       font-size: 0.9rem;
       color: #666;
-      margin-top: 3rem;
       border-top: 1px solid #ddd;
     }
   </style>
