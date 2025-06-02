@@ -30,6 +30,17 @@ plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
 
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+  teaching:
+    output: true
+    permalink: /teaching/:path/
+  dissertation:
+    output: true
+    permalink: /dissertation/:path/
+
 defaults:
   - scope:
       path: "_pages"
@@ -47,6 +58,11 @@ defaults:
       type: "teaching"
     values:
       layout: archive
+  - scope:
+      path: ""
+      type: "dissertation"
+    values:
+      layout: single
 
 nav:
   - title: "Home"
@@ -76,6 +92,7 @@ footer:
 atom_feed:
   hide: true
 
+paginate: false
 permalink: /:title/
 
 include:
