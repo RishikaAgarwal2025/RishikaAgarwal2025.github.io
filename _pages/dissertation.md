@@ -2,7 +2,7 @@
 layout: single
 title: "Dissertation"
 permalink: /dissertation/
-author_profile: true
+author_profile: false
 ---
 
 ### Enhancing Efficiency and Societal Impact of Ahmedabad's BRTS
