@@ -29,4 +29,4 @@ I’m Rishika Agarwal, currently pursuing an MSc in Business Analytics at the Un
 
 Whether it's improving processes, uncovering trends, or driving data-backed decisions, I bring curiosity, structure, and a people-first mindset to every project.
 
-Explore my academic journey, analytical projects, teaching experience, and dissertation — all through the navigation bar above. I'm actively seeking full-time opportunities as a Business Analyst, Data Analyst, or Pricing Analyst in dynamic, problem-solving environments.
+Explore my academic journey, analytical projects, teaching experience, and dissertation, all through the navigation bar above. I'm actively seeking full-time opportunities as a Business Analyst, Data Analyst, or Pricing Analyst in dynamic, problem-solving environments.
