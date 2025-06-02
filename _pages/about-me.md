@@ -2,10 +2,8 @@
 layout: single
 title: "About Me"
 permalink: /about-me/
-author_profile: true
+author_profile: false
 ---
-
-
 
 Hi, I’m Rishika Agarwal, currently pursuing a Master’s in Business Analytics at the University of Warwick. I have a strong foundation in data analysis, forecasting, and optimization, built through both academic projects and internships.
 
