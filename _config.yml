@@ -47,7 +47,7 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: false   # ✅ Removed the sidebar profile box from all pages
+      author_profile: false  # ✅ disables sidebar profile on all pages
   - scope:
       path: ""
       type: projects
@@ -64,7 +64,6 @@ defaults:
     values:
       layout: single
 
-# ✅ Navigation
 nav:
   - title: "Home"
     url: /
@@ -81,7 +80,6 @@ nav:
   - title: "Contact"
     url: /contact/
 
-# ✅ Footer Links
 footer:
   links:
     - label: "GitHub"
@@ -94,11 +92,9 @@ footer:
 atom_feed:
   hide: true
 
-# ✅ Important for page rendering
 paginate: false
 permalink: /:title/
 
-# ✅ Includes _pages so it works
 include:
   - _pages
 
