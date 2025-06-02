@@ -14,10 +14,14 @@
     </div>
   </div>
 
-  ### 👋 Welcome!
-  Thank you for visiting my website. I’m Rishika Agarwal, currently pursuing an MSc in Business Analytics at the University of Warwick.
-
-  I’m passionate about solving real-world problems using data. My skillset spans Python, SQL, Tableau, and other analytical tools.
-
-  Explore my academic journey, projects, teaching experience, and dissertation through the navigation bar above.
+  <h3>👋 Welcome!</h3>
+  <p>
+    Thank you for visiting my website. I’m Rishika Agarwal, currently pursuing an MSc in Business Analytics at the University of Warwick.
+  </p>
+  <p>
+    I’m passionate about solving real-world problems using data. My skillset spans Python, SQL, Tableau, and other analytical tools.
+  </p>
+  <p>
+    Explore my academic journey, projects, teaching experience, and dissertation through the navigation bar above.
+  </p>
 </main>
