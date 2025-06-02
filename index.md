@@ -21,10 +21,12 @@ permalink: /
 
 ---
 
-### 👋 Welcome!!
+### 👋 Welcome!
 
-Thank you for visiting my website. I’m Rishika Agarwal, currently pursuing an MSc in Business Analytics at the University of Warwick.
+When I first discovered how a few lines of Python could automate hours of manual work, I knew I’d found my path. Since then, I’ve been driven by one question: how can data make smarter business decisions?
 
-I’m passionate about solving real-world problems using data. My skillset spans Python, SQL, Tableau, and other analytical tools.
+I’m Rishika Agarwal, currently pursuing an MSc in Business Analytics at the University of Warwick. With a background in Economics and Mathematics, and hands-on skills in Python, SQL, and Tableau, I’ve built solutions that turn messy data into powerful insights.
 
-Explore my academic journey, projects, teaching experience, and dissertation through the navigation bar above.
+Whether it's improving processes, uncovering trends, or driving data-backed decisions, I bring curiosity, structure, and a people-first mindset to every project.
+
+Explore my academic journey, analytical projects, teaching experience, and dissertation — all through the navigation bar above. I'm actively seeking full-time opportunities as a Business Analyst, Data Analyst, or Pricing Analyst in dynamic, problem-solving environments.
