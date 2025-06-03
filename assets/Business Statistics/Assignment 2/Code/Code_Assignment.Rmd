@@ -1,0 +1,687 @@
+---
+title: "IB94X0 Business Statistics individual assignment"
+author: '5635111'
+output:
+  html_document:
+    toc: yes
+    toc_depth: 3
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+  word_document:
+    toc: yes
+    toc_depth: '3'
+editor_options:
+  chunk_output_type: console
+---
+
+
+I declare that I used artificial intelligence (AI) to complete this assignment. The AI was employed as a tool for data interpretation, analysis, and the creation of explanatory content. However, all final edits, interpretations, and decisions regarding the content were reviewed and approved by me. The use of AI was in accordance with ethical guidelines and solely for academic purposes. 
+
+
+```{r setup, echo=FALSE}
+library(tidyverse)
+options(width=100)
+```
+
+
+#  **Question 1 - Cardio Vascular Disease in England** 
+## **Understanding business and data**
+
+### **Data Dictionary**
+Data is obtained from the various datasets from  the UK Office for National Statistics. Each row of the data represents one local authority region.
+
+Variable     | Description
+------------ | -------------------------------------------------------------
+`area_name`  | Name of the local authority region
+`area_code`  | Unique code representing the local authority region
+`Population` | The total population living in each area
+`Poverty`    | Proportion of people who meet the definition of living in poverty (percentage)
+`CVD`        | Proportion of people in the area who have recently experienced Cardiovascular Disease (CVD) (percentage)
+`overweight` | Proportion of people in the area classified as overweight (percentage)
+`smokers`    | Proportion of people in the area who smoke (percentage)
+`wellbeing`  | Average wellbeing score of people living in the area
+
+
+---
+
+### **Libraries needed**
+```{r setup-data, echo=FALSE}
+library(ggplot2)
+library(dplyr)
+library(tibble)
+library(knitr)
+library(Hmisc)
+library(car)
+library(gridExtra)
+```
+
+Uploaded the necessary libraries like ggplot2, dplyr, tibble, knitr, Hmisc, car and gridExtra for the analysis. 
+
+### **Business Understanding**
+
+The purpose of this analysis is to look at the prevalence of cardiovascular disease (CVD) in England and determine the factors that influence its frequency across local authority regions. The important factors of relevance are the percentage of persons living in poverty, those who are overweight, smokers, and the average wellbeing score. Furthermore, a visual representation of the association between poverty and CVD prevalence would illustrate the impact of economic inequality on health outcomes. This insight contributes to targeted efforts to reduce the burden of CVD in vulnerable populations.
+
+
+### **Importing the Data** 
+```{r}
+data <- read_csv("Cardio_Vascular_Disease.csv")
+View(data)
+
+```
+
+## **Data Preparation**
+
+### **Missing values detection**
+```{r}
+na_summary <- data %>% 
+  summarise_all(~sum(is.na(.))) %>% 
+  pivot_longer(cols = everything(), names_to = "Variable", values_to = "NA_Count")
+
+ggplot(na_summary, aes(x=Variable, y=NA_Count)) +
+  geom_bar(stat="identity", fill="black", color="black") +
+  labs(x="Variables", y="Count of Missing Values", title="Missing Values by all Variables") +
+  theme_minimal() + 
+theme(plot.title = element_text(hjust = 0.5))
+```
+
+```{r}
+# Calculate missing values for each column
+missing_summary <- data %>%
+  summarise_all(~sum(is.na(.))) %>%
+  pivot_longer(cols = everything(), names_to = "Variable", values_to = "NA_Count") %>%
+  mutate(Total_Rows = nrow(data),
+         Percentage_Missing = (NA_Count / Total_Rows) * 100) %>%
+  filter(NA_Count > 0)  # Filter only variables with missing values
+
+# View the summary table
+print(missing_summary)
+
+# Formatted table
+kable(missing_summary, col.names = c("Variable", "Count of Missing Values", "Total Rows", "Percentage Missing"), caption = "Summary of Missing Variables")
+
+```
+The above graph and table illustrates the missing values for each variable in the dataset. In the dataset, the variables for cardiovascular disease (CVD), poverty, and population exhibit an identical count of missing values, suggesting that for each area analyzed, all three variables may be concurrently absent. Given that the cardiovascular disease variable serves as the dependent variable in this analysis, it is crucial to address the missing values associated with it. 
+
+```{r}
+data <- data %>% 
+  filter(!is.na(CVD))
+
+```
+
+To maintain the robustness of our analysis, removing all instances where the CVD variable had missing values. By doing so we ensure a complete dataset for the dependent variable, we enhance the validity of our statistical models and improve our ability to draw meaningful insights from the data. 
+
+```{r}
+# Recalculate missing values for each column
+missing_summary <- data %>%
+  summarise_all(~sum(is.na(.))) %>%
+  pivot_longer(cols = everything(), names_to = "Variable", values_to = "NA_Count") %>%
+  mutate(
+    Total_Rows = nrow(data),
+    Percentage_Missing = (NA_Count / Total_Rows) * 100
+  ) %>%
+  filter(NA_Count > 0)  # Filter to show only columns with missing values
+
+# View the summary table
+print(missing_summary)
+
+# Optional: Save as a formatted table (if needed)
+kable(
+  missing_summary,
+  col.names = c("Variable", "Count of Missing Values", "Total Rows", "Percentage Missing"),
+  caption = "Summary of Missing Variables After Removing CVD variable NAs"
+)
+
+```
+
+### **Imputation and Outliners detection**
+### Histogram of smoking prevalence
+```{r}
+ggplot(data, aes(x=smokers)) + 
+  geom_histogram(binwidth=1, fill="black", color="white") + 
+  labs(x="Proporation of smokers", y="Frequency", title = "Frequency Distribution of Smoking Prevalence Across Local Authority Regions") + 
+  theme_minimal() + 
+theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+The histogram shows the distribution of smoking prevalence across local authority region. The tail is longer toward a higher percentage of smokers, the distribution seems to be slightly biased to the right (positively skewed). Outliers in the "smokers" variable are located at the higher end of the distribution, that is where the **number of smokers exceeds 22**. These extreme values represent regions or groups with unusually high smoking prevalence.
+
+**Retaining outliers** in the analysis of smokers is essential, as they reveal critical insights into extreme cases and their correlation with cardiovascular disease. 
+This heat map shows regional variation in the prevalence of smoking, from areas such as North Lanarkshire with 24.3%, Fenland with 27.8%, and Dover with 23.4%, all considerably higher than the UK average. These outliers are darker areas on the heat map (Office for National Statistics, 2021). This indicates key areas where smoking rates are radically different from the average. If these were removed, it would reduce the ability to focus on health inequalities and mask important patterns in smoking behavior. 
+
+### Imputation of variable "smoker" 
+```{r}
+data$smokers[is.na(data$smokers)] <- median(data$smokers, na.rm = TRUE)
+```
+
+In analyzing the “smokers” variable, which exhibits a roughly symmetric distribution with slight right skewness, it is appropriate to replace the three missing values with the median. The median serves as a robust measure of central tendency, remaining unaffected by extreme values or outliers, thereby ensuring data integrity.
+
+### Histogram of average wellbeing score 
+```{r}
+
+ggplot(data, aes(x=wellbeing)) + 
+  geom_histogram(binwidth=0.1, fill="black", color="white") + 
+  labs(x="Average wellbeing score of people", y="Frequency", title = "Frequency Distribution of Average Wellbeing Scores Across Local Authority Regions") + 
+  theme_minimal() + 
+theme(plot.title = element_text(hjust = 0.5))
+```
+
+The histogram displays the distribution of average wellbeing scores across local authority region. The distribution is approximately symmetric, with a slight tendency towards left skewness (negative skewness), as the tail on the lower end (scores below 7.0) appears marginally longer.
+
+Outliers are evident on the left side of the histogram, where **well-being values fall below 6.75 or above 8**. 
+
+It is essential to **retain outliers** when analyzing the distribution of average wellbeing scores across local authority regions. The importance of retaining these outliers is supported by data from Figure 1 in the  ONS (2024), which shows a rising trend in the percentage of people reporting low life satisfaction between October to December 2023 compared to five years earlier. Furthermore, as reported by the Office for National Statistics (n.d.), the statistic that approximately 1 in 20 UK adults reported low satisfaction in April to June 2024 underscores the growing prevalence of low satisfaction in certain pockets of the population.
+
+### Imputation of variable "wellbeing"
+```{r}
+data$wellbeing[is.na(data$wellbeing)] <- median(data$wellbeing, na.rm = TRUE)
+
+```
+
+The histogram of "well-being" appears to be slightly left-skewed and in such cases replacing the missing values with the median is the best option. The median remains stable against lower-end outliers ensuring a more accurate representation of central tendency.
+
+### Histogram of cardiovascular disease (%)
+```{r}
+ggplot(data, aes(x=CVD)) + 
+  geom_histogram(binwidth=1, fill="black", color="white") + 
+  labs(x="% of people having a Cardiovascular Disease (CVD)", y="Frequency", title = "Cardiovascular Disease % Across Local Authority Regions") +
+  theme_minimal() + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+The histogram of cardiovascular disease (CVD) indicates a roughly symmetric distribution with a slight right skewness. Most of the reporting regions fall within a prevalence rate ranging from 10% to 15%. Further, there were many low outliers below the lowest values of the histogram, which is **7.5%**, as well as extreme right outliers well **over 17.5%**. the overall distribution seems valid, and outliers enrich the data by pointing to unique regional factors that influence cardiovascular disease (CVD) prevalence. In this case, removing these outliers will reduce valuable insight into the epidemiology of cardiovascular diseases.
+
+### Histogram of poverty prevalence 
+```{r}
+ggplot(data, aes(x=Poverty)) + 
+  geom_histogram(binwidth=1, fill="black", color="white") + 
+  labs(x = "Proporation of people who have poverty", y="Frequency", title = "Frequency of People in Poverty Across Local Authority Regions") +
+  theme_minimal() + 
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+The histogram shows the frequency distribution of the proportion of people in poverty across local authority regions. The data sets have some minor right-skew, with most of the regions falling within a range between 15% to 25%. The highest number of frequencies fell within 15% to 20%. While there are several regions with **more than 30%**, these could well be considered the potential outliers of this data set. These will not be cleaned since this may reflect quite unique cases that are not error outliers and that might be relevant to retaining invaluable knowledge regarding regional disparities.
+
+
+
+```{r}
+ggplot(data, aes(x=overweight)) + 
+  geom_histogram(binwidth=1, fill="black", color="white") + 
+  labs(x = "Proporation of people who are overweight (%)", y="Frequency", title = "Frequency of People who are overweight Across Local Authority Regions") +
+  theme_minimal() + 
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+This histogram below is the frequency distribution of the range of overweight among people in each local authority region. The data is only near symmetrical, peaking near 25 to 30 percent, and demonstrates that the data may be normally distributed. There is no great skew—the data tails off very well on both sides; this informs us that the values spread across the well-known regions. The majority of regions of local authority fall within a range of overweight prevalence between 20% and 35%, outliers, **above 40% and below 10%.**
+
+This might indicate that, due to the demographic pattern, including concentration of older adults, the prevalence is higher in some regions. As indicated, overweight prevalence peaks in the 55-64 age group at 72.8%, which could drive spikes in some regions depending on the population makeup (UK Government, 2024). On the other hand, the low outliers may correlate with regions having younger populations or better access to healthy lifestyles and public health initiatives. Besides, the gender inequality in overweight prevalence could be a reason for the difference in various regions, as the prevalence is 69.2% for men and 58.6% for women (UK Government, 2024). 
+
+
+### Scatter Plot for cardiovascular diseases with poverty, overweight, smokers and wellbeing across regions
+```{r}
+ggplot(data, aes(y=CVD, x=Poverty)) + geom_point() + geom_smooth() + labs(x="Proporation of people who live in poverty", y="Proporation of people who have cardiovascular disease", title ="Relationship Between Poverty Prevalence and Cardiovascular Disease")
+ggplot(data, aes(y=CVD, x=overweight)) + geom_point() + geom_smooth() + labs(x="Proporation of people who are overweight", y="Proporation of people who have cardiovascular disease", title ="Relationship Between Overweight Prevalence and Cardiovascular Disease")
+ggplot(data, aes(y=CVD, x=smokers)) + geom_point() + geom_smooth() + labs(x="Proporation of people who are smokers", y="Proporation of people who have cardiovascular disease", title ="Relationship Between Smoking Prevalence and Cardiovascular Disease")
+ggplot(data, aes(y=CVD, x=wellbeing)) + geom_point() + geom_smooth() + labs(x="Proporation of people who have a wellbeing", y="Proporation of people who have cardiovascular disease", title ="Relationship Between wellbeing Prevalence and Cardiovascular Diseases")
+```
+
+The scatter plots reveal **no bimodal patterns or extreme outliers**; however, the identified outliers warrant further investigation due to potential deviations from expected trends.
+
+### **Duplication detection**
+```{r}
+if (any(duplicated(data))) {
+  # Extract duplicate rows (excluding the first occurrence)
+  duplicates <- data[duplicated(data), ]
+  print("Duplicate Rows Found:")
+  print(duplicates)
+} else {
+  # No duplicates found
+  print("No Duplicates Found in the Dataset")
+}
+```
+### **Descriptive Statistics**
+```{r}
+data_numeric <- data %>% select(-area_name, -area_code, - Population)
+
+# Summarize the dataset
+summary_table <- data_numeric %>%
+  summarise(
+    Variable = names(.),
+    Count = sapply(., function(x) sum(!is.na(x))),
+    Unique_Values = sapply(., function(x) length(unique(x))),
+    Mean = sapply(., function(x) if(is.numeric(x)) mean(x, na.rm = TRUE) else NA),
+    Std_Dev = sapply(., function(x) if(is.numeric(x)) sd(x, na.rm = TRUE) else NA),
+    Min = sapply(., function(x) if(is.numeric(x)) min(x, na.rm = TRUE) else NA),
+    Q1 = sapply(., function(x) if(is.numeric(x)) quantile(x, 0.25, na.rm = TRUE) else NA),
+    Median = sapply(., function(x) if(is.numeric(x)) median(x, na.rm = TRUE) else NA),
+    Q3 = sapply(., function(x) if(is.numeric(x)) quantile(x, 0.75, na.rm = TRUE) else NA),
+    Max = sapply(., function(x) if(is.numeric(x)) max(x, na.rm = TRUE) else NA),
+    Missing_Values = sapply(., function(x) sum(is.na(x)))
+  )
+
+# Convert the summary table to a data frame for presentation
+summary_table <- as.data.frame(summary_table)
+
+# Present the summary table using knitr for a neat format
+kable(summary_table, digits = 2, caption = "Summary of Dataset (Excluding Area Name and Area Code)")
+```
+The dataset contains 309 observations across the variables Poverty, CVD, Overweight, Smokers, and Wellbeing, with no missing values. The mean values for these variables range from 7.42 (Wellbeing) to 25.55 (Overweight), and their standard deviations indicate varying levels of variability, with Overweight having the highest (5.61). Minimum and maximum values highlight the range of data, such as Poverty (12.90 to 30.70) and Smokers (3.20 to 27.80). 
+
+## **Correlation analysis**
+### **Correlation with NHST approach**
+```{r}
+rcorr(as.matrix(select_if(data, is.numeric)))
+```
+
+```{r}
+# Create a data frame with the data
+correlation_data <- data.frame(
+  Relationship = c("Smoking vs Poverty", "Smoking vs Overweight", "Overweight vs Poverty", 
+                   "Wellbeing vs Poverty", "Wellbeing vs Smoking", "Overweight vs Wellbeing"),
+  `P-value` = c("< 0.0001", "< 0.0001", "0.0103", "< 0.0001", "< 0.0005", "0.482"),
+  r = c(0.36, 0.39, 0.15, -0.34, -0.20, -0.04),
+  `Shared Variance (%)` = c(12.96, 15.21, 2.25, 11.56, 4.00, NA)
+)
+
+# Format the table
+kable(correlation_data, 
+      col.names = c("Relationship", "P-value", "Correlation (r)", "Shared Variance (%)"), 
+      caption = "Summary of Correlations, P-values, and Shared Variances")
+
+
+```
+
+The analysis shows significant correlations among most variable pairs, except for Overweight vs Wellbeing, which lacks strong evidence of correlation. The relationships, including moderate correlations between smoking, poverty, and overweight, are suitable for regression modeling **without multicollinearity concerns.**
+
+## **Modelling**
+### **Multi linear regression**
+```{r}
+m.cvd.by.smokers.overweight.poverty.wellbeing <- lm(CVD ~ Poverty + smokers + overweight + wellbeing , data=data)
+summary(m.cvd.by.smokers.overweight.poverty.wellbeing)
+cbind(coef(m.cvd.by.smokers.overweight.poverty.wellbeing), confint(m.cvd.by.smokers.overweight.poverty.wellbeing))
+```
+
+**Poverty**: A 1-unit increase in poverty predicts a decrease in CVD prevalence of 0.180, holding other variables constant (t(304) = -5.13, p < 0.001, 95% CI [-0.2497, -0.1113]).
+**Smokers**: For every 1-unit increase in the percentage of smokers, CVD prevalence is expected to increase by 0.108 (t(304) = 3.27, p = 0.001, 95% CI [0.0732, 0.1732]), ceteris paribus.
+**Overweight**: A one-unit increase in overweight prevalence is predictive of a 0.113 increment in the prevalence of CVD, t(304) = 5.38, p < 0.001, 95% CI [0.0716, 0.1542], when adjusted for the rest of the predictors.
+**Wellbeing**: For every 1-unit increase in the wellbeing score, the prevalence of CVD is predicted to increase by 1.759 (t(304) = 3.57, p < 0.001, 95% CI [0.7893, 2.7296]), while holding all other factors constant.
+
+This analysis therefore shows that poverty, smokers, overweight, and wellbeing are all significant factors in the prevalence of CVD. Overweight, wellbeing, and smokers are positively associated while poverty is negatively associated.
+
+The multiple R-squared value of 0.2394 indicates that approximately 23.94% of the variance in the dependent variable is explained by the independent variables in your model. There would be more variables which could affect cardiovascular disease. 
+
+### **Multicollinearity check**
+```{r}
+vif(m.cvd.by.smokers.overweight.poverty.wellbeing)
+```
+
+All VIF values are below 5, indicating low multicollinearity among predictors. This suggests that **multicollinearity is not a concern in the model**.
+
+
+## **Effect of Poverty on Cardiovascular disease**
+```{r}
+ggplot(data = data, aes(x = Poverty, y = CVD)) +
+  geom_point(color = "black", size = 2, alpha = 0.7) + 
+  geom_smooth(method = "lm", color = "red", se = TRUE) + 
+  labs(
+    title = "Effect of Poverty on Cardiovascular diseases",
+    x = "Poverty (%)",
+    y = "Cardiovascular Disease (CVD) Rate"
+  ) +
+  theme_minimal() + 
+  theme(
+    plot.title = element_text(size = 14, face = "bold", hjust = 0.5),
+    axis.title = element_text(size = 12)
+  )
+```
+
+This graph shows the relationship between Poverty (%) and Cardiovascular Disease Rate. The scatterplot depicts a **negative trend**, as represented by the red regression line, showing that increasing rates of poverty correspond to very slight decreases in rates of Cardiovascular diseases. The shaded gray area represents the 95% confidence interval for the trend line. The trend is downwards, but very weak due to the wide spread of data points. These points are very dispersed, indicating that there is **large variability**. Thus, this suggests that only a small portion of the variation in Cardiovascular disease rates is explained by poverty and other factors explain a larger amount of it.
+
+## **Conclusion**
+The analysis reveals that poverty, smoking, overweight prevalence, and wellbeing are significant predictors of cardiovascular disease (CVD).  Poverty has a negative connection with CVD, indicating that as poverty levels rise, CVD prevalence falls. In contrast, smoking, overweight prevalence, and wellness are positively associated with increased CVD prevalence. While these factors play an important role in explaining the heterogeneity in CVD prevalence, other variables may also contribute, necessitating future investigation.
+
+
+#  **Question 2 - Customer satisfaction for a furniture reatil company** 
+## **Understanding business and data**
+
+### **Data Dictionary**
+Data is obtained from a furniture retail company. Each row of the data represents one store. 
+
+Variable                 | Description
+----------               | -------------------------------------------------------------
+`SES_category`           | The socio-economic status category of the store's location (Low, Medium, or High)
+`customer.satisfaction`  | Average customer satisfaction score for the store
+`staff.satisfaction`     | Average staff job satisfaction score
+`delivery.time`          | Average delivery time for large and custom items
+`new_range      `        | Whether the store carried a new range of products (True or False)
+
+### **Libraries needed**
+```{r setup-data1, echo=FALSE}
+library(ggplot2)
+library(dplyr)
+library(tibble)
+library(knitr)
+library(Hmisc)
+library(car)
+library(gridExtra)
+```
+
+Uploaded the necessary libraries like ggplot2, dplyr, tibble, knitr, Hmisc, car and gridExtra for the analysis. 
+
+### **Business Understanding**
+
+The problem statement revolves around understanding the factors influencing customer satisfaction in a furniture retail company. The dataset contains factors such as average customer satisfaction, staff job satisfaction, delivery time, store type, and whether new product lines were offered. The major goal is to investigate how these parameters, particularly delivery delays, influence customer satisfaction and whether these impacts differ between stores classified as high, medium, or low socioeconomic status (SES). This analysis will help the organization optimize methods to improve customer satisfaction across various shop types.
+
+
+### **Importing the Data** 
+```{r}
+data1 <- read_csv("cust_satisfaction.csv")
+View(data1)
+```
+
+
+## **Data Preparation**
+
+### **Missing values detection**
+```{r}
+# Load necessary libraries
+library(dplyr)
+library(tidyr)
+library(knitr)
+
+# Calculate missing values for each column
+missing_summary <- data1 %>%
+  summarise_all(~sum(is.na(.))) %>%
+  pivot_longer(cols = everything(), names_to = "Variable", values_to = "NA_Count") %>%
+  mutate(Total_Rows = nrow(data1),
+         Percentage_Missing = (NA_Count / Total_Rows) * 100) %>%
+  filter(NA_Count > 0)  # Filter only variables with missing values
+
+# Check if there are missing values
+if (nrow(missing_summary) == 0) {
+  cat("No missing values found in the dataset.\n")
+} else {
+  # Display the summary table
+  kable(missing_summary, col.names = c("Variable", "Count of Missing Values", "Total Rows", "Percentage Missing"), 
+        caption = "Summary of Missing Variables")
+}
+
+```
+
+There are **no missing values** in the dataset, customer satisfaction. 
+
+### **Imputation and Outliners detection**
+### Histogram of average customer satisfaction
+```{r}
+ggplot(data1, aes(x=customer.satisfaction)) + 
+  geom_histogram(binwidth=0.5, fill="black", color="white") + 
+  labs(x="Average customer satisfaction score", y="Frequency", title = "Frequency Distribution of average customer satisfaction score across each store") + 
+  theme_minimal() + 
+theme(plot.title = element_text(hjust = 0.5))
+```
+
+This histogram represents the frequency distribution of the average customer satisfaction score across the stores. The data follows a distribution that is roughly symmetric and **centered at 7**, which would be the normal trend in satisfaction scores. There are **no obvious extreme outliers**; the scores are well-distributed between 4 and 10, with no values far outside the range. This supports data integrity, suggesting the scores are reasonable and consistent with expectations.
+
+### Histogram of average staff satisfaction
+```{r}
+ggplot(data1, aes(x=staff.satisfaction)) + 
+  geom_histogram(binwidth=0.5, fill="black", color="white") + 
+  labs(x="Average staff satisfaction score", y="Frequency", title = "Frequency Distribution of average staff satisfaction score across each store") + 
+  theme_minimal() + 
+theme(plot.title = element_text(hjust = 0.5))
+```
+
+This histogram illustrates the distribution of average staff satisfaction scores across various stores.The central concentration is that the scores between 6 and 7 dominate, showing moderately high staff satisfaction. The roughly bell-shaped curve peaking around 7 suggests an **approximately normal distribution**. The **scores below 5.25 and above 8.75** which could be considered as outliners. Retaining high and low outliers of staff satisfaction, as they more likely reflect meaningful variations that could affect customer satisfaction. 
+
+### Histogram of delivery time
+```{r}
+ggplot(data1, aes(x=delivery.time)) + 
+  geom_histogram(binwidth=3, fill="black", color="white") + 
+  labs(x="Average delivery time of large and custom items", y="Frequency", title = "Frequency Distribution of delivery time across each store") + 
+  theme_minimal() + 
+theme(plot.title = element_text(hjust = 0.5))
+```
+
+This histogram represents the frequency distribution of delivery times, which is approximately normal, with its peak **between 55 to 65 minutes**. The range is from about 35 to over 85 minutes, including a few values **above 80 minutes**. The data in this set are consistent, with no major gaps or anomalies in the data, indicating integrity that is good. The outliers should be retained because they provide valuable insights into extreme cases that may negatively impact customer satisfaction. Analyzing the outliers could help in identify specific issues, such as inefficiencies or unique challenges, allowing targeted improvements to enhance overall performance and satisfaction.
+
+
+### Converting the new range column to 1, 0
+```{r}
+data1$new_range <- ifelse(data1$new_range, 1, 0)
+```
+
+
+### Visualisation for new range
+```{r}
+ggplot(data1, aes(x = factor(new_range))) +
+  geom_bar(fill = "steelblue", color = "black") +
+  labs(
+    title = "Distribution of New Range",
+    x = "New Range (0 or 1)",
+    y = "Count"
+  ) +
+  theme_minimal() + theme(plot.title = element_text(hjust = 0.5))
+
+```
+```{r}
+summary_table <- table(data1$new_range)
+summary_data1 <- data.frame(
+  New_Range = names(summary_table),
+  Count = as.vector(summary_table),
+  Percentage = round(100 * summary_table / sum(summary_table), 2)
+)
+
+print(summary_data1)
+```
+
+
+###Table to show the count and percentage of SES category
+```{r}
+# Ensure SES_category is a factor or character
+data1$SES_category <- as.character(data1$SES_category)
+
+# Create a frequency table
+summary_table <- table(data1$SES_category, useNA = "ifany") 
+
+# Convert to a data frame with counts and percentages
+summary_df <- data.frame(
+  SES_Category = names(summary_table),
+  Count = as.vector(summary_table),
+  Percentage = round(100 * summary_table / sum(summary_table), 2)
+)
+
+print(summary_df)
+
+```
+
+
+### Scatter Plot for average customer satisfaction over average staff satisfaction and delivery time
+```{r}
+ggplot(data1, aes(y=customer.satisfaction, x=staff.satisfaction)) + geom_point() + geom_smooth() + labs(x="Average staff satisfaction", y="Average customer satisfaction", title ="Relationship Between average customer satisfaction and average staff satisfaction")
+ggplot(data1, aes(y=customer.satisfaction, x= delivery.time)) + geom_point() + geom_smooth() + labs(x="Average delivery time", y="Average customer satisfaction", title ="Relationship Between average customer satisfaction and average delivery time")
+```
+
+The scatter plots show **no evidence of strong skewness, bimodal patterns, or extreme outliers** in the data. However, the presence of some outliers warrants further investigation to assess potential deviations from expected relationships, particularly in customer satisfaction trends relative to delivery time and staff satisfaction.
+
+### Box plot for the SES category 
+```{r}
+
+p2 <- ggplot(data1, aes(x = SES_category, y = customer.satisfaction, fill = SES_category)) +
+  geom_boxplot() +
+  theme_minimal() +
+  labs(title = "Customer Satisfaction by SES Category", x = "SES Category", y = "Customer Satisfaction") +
+  scale_fill_brewer(palette = "Pastel1") +
+  theme(plot.title = element_text(hjust = 0.5))  
+print(p2)
+```
+
+The boxplot shows that Medium SES stores have the highest and most consistent customer satisfaction, while Low SES stores have the widest variability despite a similar median to High SES stores. High SES stores exhibit narrower satisfaction ranges, with one extreme outlier indicating exceptionally high satisfaction.
+
+### Descriptive Statistics
+```{r}
+data1_numeric <- data1 %>% select(-SES_category, -new_range)
+
+# Summarize the dataset
+summary_table1 <- data1_numeric %>%
+  summarise(
+    Variable = names(.),
+    Count = sapply(., function(x) sum(!is.na(x))),
+    Unique_Values = sapply(., function(x) length(unique(x))),
+    Mean = sapply(., function(x) if(is.numeric(x)) mean(x, na.rm = TRUE) else NA),
+    Std_Dev = sapply(., function(x) if(is.numeric(x)) sd(x, na.rm = TRUE) else NA),
+    Min = sapply(., function(x) if(is.numeric(x)) min(x, na.rm = TRUE) else NA),
+    Q1 = sapply(., function(x) if(is.numeric(x)) quantile(x, 0.25, na.rm = TRUE) else NA),
+    Median = sapply(., function(x) if(is.numeric(x)) median(x, na.rm = TRUE) else NA),
+    Q3 = sapply(., function(x) if(is.numeric(x)) quantile(x, 0.75, na.rm = TRUE) else NA),
+    Max = sapply(., function(x) if(is.numeric(x)) max(x, na.rm = TRUE) else NA),
+    Missing_Values = sapply(., function(x) sum(is.na(x)))
+  )
+
+# Convert the summary table to a data frame for presentation
+summary_table1 <- as.data.frame(summary_table1)
+
+# Present the summary table using knitr for a neat format
+kable(summary_table1, digits = 2, caption = "Summary of Dataset (Excluding SES category and new range)")
+```
+
+The descriptive statistics summarize three variables: customer satisfaction, staff satisfaction, and delivery time, excluding SES category and new range. Both customer and staff satisfaction have a mean score of approximately 6.93 and 6.75, respectively, with a small standard deviation, indicating relatively consistent satisfaction levels across the dataset. Delivery time has a mean of 59.60 days with a larger standard deviation of 11.56, highlighting greater variability in delivery durations. All variables show no missing values, ensuring complete data for analysis.
+
+## **Correlation analysis**
+### **Correlation with NHST approach**
+```{r}
+rcorr(as.matrix(select_if(data1, is.numeric)))
+```
+
+```{r}
+# Create a data frame with the extracted data
+correlation_data <- data.frame(
+  Relationship = c("Customer Satisfaction vs Staff Satisfaction", 
+                   "Customer Satisfaction vs Delivery Time", 
+                   "Customer Satisfaction vs New Range", 
+                   "Staff Satisfaction vs Delivery Time", 
+                   "Staff Satisfaction vs New Range", 
+                   "Delivery Time vs New Range"),
+  `P-value` = c("0.0000", "0.0000", "0.3858", "0.2602", "0.6010", "0.4267"),
+  `Correlation (r)` = c(0.45, -0.26, 0.05, -0.07, 0.03, -0.05),
+  `Shared Variance (%)` = c(0.45^2 * 100, (-0.26)^2 * 100, 0.05^2 * 100, 
+                            (-0.07)^2 * 100, 0.03^2 * 100, (-0.05)^2 * 100)
+)
+
+# Format the table using kable
+library(knitr)
+kable(correlation_data, 
+      col.names = c("Relationship", "P-value", "Correlation (r)", "Shared Variance (%)"), 
+      caption = "Summary of Correlations, P-values, and Shared Variances")
+
+```
+
+The table highlights a moderate positive correlation (r = 0.45, shared variance = 20.25%) between customer satisfaction and staff satisfaction, with a significant p-value, indicating a meaningful relationship. A weak negative correlation (r = -0.26, shared variance = 6.76%) between customer satisfaction and delivery time suggests that quicker delivery slightly improves satisfaction. Other variables show negligible correlations (|r| < 0.1) with insignificant p-values and minimal shared variances, emphasizing that customer satisfaction is primarily influenced by staff satisfaction.
+
+
+## **Modelling**
+### **Multi linear regression**
+```{r}
+data1$SES_category <- factor(data1$SES_category, levels = c("High", "Medium", "Low"))
+
+model.cs.by.ss.ses.time <- lm(customer.satisfaction ~ staff.satisfaction + delivery.time + new_range + SES_category, data = data1)
+
+summary(model.cs.by.ss.ses.time )
+cbind(coef(model.cs.by.ss.ses.time), confint(model.cs.by.ss.ses.time))
+```
+
+The regression analysis reveals several significant predictors of customer satisfaction. Staff satisfaction has a positive and significant effect, with a 1-unit increase predicting an increase of 0.351 units in customer satisfaction t(294)=4.36,p<0.001, 95% CI [0.1909, 0.5113]). Delivery time, on the other hand, has a significant negative association, where a 1-unit increase leads to a decrease in customer satisfaction by 0.017 units (t(294) = −3.48,p<0.001, 95% CI [-0.0270, -0.0072]). The new range variable shows a small positive effect (β=0.094), but this effect is not statistically significant (t(294)=0.83,p=0.404, 95% CI [-0.1274, 0.3147]). SES category also plays a crucial role: customers in the Medium SES category report significantly higher satisfaction scores, averaging 1.209 units more than those in the High SES category (t(294)=8.18,p<0.001, 95% CI [0.9185, 1.5001]). Conversely, customers in the Low SES category report marginally lower satisfaction levels compared to the High SES group, with a decrease of 0.256 units (t(294)=−1.83,p=0.067, 95% CI [-0.5284, 0.0169]).
+
+The model explains approximately **44.7% of the variance in customer satisfaction**, as indicated by the multiple R-squared value of 0.447. Overall, the analysis highlights that staff satisfaction, delivery time, and SES category (especially Medium) are strong predictors of customer satisfaction, while the effect of the new range and Low SES category is less pronounced.
+
+### **Effect of delivery time and SES category on customer satisfaction **
+```{r}
+
+data1$SES_category <- factor(data1$SES_category, levels = c("High", "Medium", "Low"))
+model.cs.by.ses.time.interaction <- lm(customer.satisfaction ~ delivery.time * SES_category, data = data1)
+summary(model.cs.by.ses.time.interaction)
+cbind(coef(model.cs.by.ses.time.interaction), confint(model.cs.by.ses.time.interaction))
+
+```
+
+The regression analysis explores the relationship between delivery time and customer satisfaction across different socio-economic status (SES) categories (High, Medium, Low), including an interaction term to assess whether the effect of delivery time varies by SES category. Delivery time has a statistically significant negative effect on customer satisfaction overall, as indicated by the coefficient for delivery time (-0.0347, t(294) = -3.669, p = 0.00028, 95% CI [-0.0533, -0.0160]). This suggests that for every one-unit increase in delivery time, customer satisfaction decreases by 0.0347 units. The interaction term for delivery time and SES category (Low SES) is statistically significant (0.0298, t(294) = 2.374, p = 0.01822, 95% CI [0.0051, 0.0544]), implying that the negative effect of delivery time is weaker for Low SES stores. For Medium SES stores, the interaction term is not significant (0.0194, t(294) = 1.505, p = 0.13336, 95% CI [-0.0059, 0.0447]), indicating no substantial difference in the effect of delivery time compared to High SES stores.
+
+Baseline customer satisfaction (intercept) is highest for High SES stores (8.62, t(294) = 15.072, p < 0.001, 95% CI [7.50, 9.75]). Medium SES stores show a small, non-significant increase in satisfaction (0.296, t(294) = 0.388, p = 0.69831, 95% CI [-1.06, 1.79]). However, Low SES stores have a significantly lower baseline satisfaction compared to High SES stores (-2.122, t(294) = -2.740, p = 0.00652, 95% CI [-3.65, -0.60]). The adjusted R-squared value of 0.4107 indicates that the model explains **41.07% of the variance in customer satisfaction.**
+
+Overall, these results demonstrate that delivery time negatively impacts satisfaction across all SES categories, but the effect is less pronounced in Low SES. These results suggest that the company should prioritize reducing delivery times in High and Medium SES stores, where delays more significantly reduce satisfaction, while addressing baseline satisfaction in Low SES stores. The regression model explains 42% of the variation in customer satisfaction, which is statistically significant, suggesting that delivery time, SES category, and their interaction are important predictors. 
+
+### **Visualization for modelling**
+```{r}
+
+new_data <- expand.grid(
+  delivery.time = seq(min(data1$delivery.time), max(data1$delivery.time), length.out = 100),
+  SES_category = c("High", "Medium", "Low")
+)
+
+new_data$predicted_satisfaction <- predict(model.cs.by.ses.time.interaction, newdata = new_data)
+
+ggplot(new_data, aes(x = delivery.time, y = predicted_satisfaction, color = SES_category)) +
+  geom_line(size = 1.2) +
+  labs(
+    title = "Interaction of Delivery Time and SES Category on Customer Satisfaction",
+    x = "Delivery Time",
+    y = "Predicted Customer Satisfaction",
+    color = "SES Category"
+  ) +
+  theme_minimal()
+
+
+data1$fitted <- fitted(model.cs.by.ses.time.interaction)
+
+plot.residuals.delivery <- ggplot(data1, aes(y = customer.satisfaction, x = delivery.time)) + 
+    geom_point() + 
+    geom_smooth(method = lm, formula = y ~ x) + 
+    labs(
+        x = "Delivery Time",
+        y = "Customer Satisfaction",
+        subtitle = "Effect of Delivery Time on Customer Satisfaction"
+    )
+
+plot.residuals.ses <- ggplot(data1, aes(y = customer.satisfaction, x = delivery.time, color = SES_category)) + 
+    geom_point() + 
+    geom_smooth(method = lm, aes(fill = SES_category), formula = y ~ x, alpha = 0.2) + 
+    scale_color_manual(values = c("red", "blue", "green")) + 
+    scale_fill_manual(values = c("red", "blue", "green")) + 
+    labs(
+        x = "Delivery Time",
+        y = "Customer Satisfaction",
+        subtitle = "Effect of Delivery Time on Customer Satisfaction by SES Category",
+        color = "SES Category",
+        fill = "SES Category"
+    )
+
+# Arrange the two plots in a grid
+grid.arrange(plot.residuals.delivery, plot.residuals.ses, ncol = 1)
+
+```
+
+The relationship between delivery time and SES category and expected customer satisfaction is seen in the first graph. It demonstrates that across **all SES categories, consumer happiness declines as delivery times increase**. SES, however, affects this effect's amplitude differently. While low SES stores show a considerably less noticeable reduction, suggesting a lower negative effect of delivery time, high SES stores show the biggest decline in satisfaction with delivery delays. Between these two extremes are stores with a medium SES.
+
+The second set of graphs provides a more detailed view. The top graph displays the overall negative effect of delivery time on customer satisfaction, regardless of SES category. The bottom graph separates this effect by SES category and includes scatterplots of actual data points with regression lines. It reinforces the earlier finding: **High SES stores show a sharper decline in satisfaction as delivery time increases, Medium SES stores experience a moderate decline, and Low SES stores show minimal sensitivity to delivery time.**
+
+## **Conclusion**
+The analysis shows that customer satisfaction is strongly influenced by staff satisfaction, delivery time, and SES category, with Medium SES stores experiencing the greatest positive impact. Prioritizing delivery time reductions and improving staff satisfaction, especially in High and Medium SES stores, is key to enhancing overall satisfaction.
+
+# **References**
+
+References 
+
+Office for National Statistics. (2021). Adult smoking habits in Great Britain: 2021 (Figure 3). Retrieved from https://www.ons.gov.uk/peoplepopulationandcommunity/healthandsocialcare/healthandlifeexpectancies/bulletins/adultsmokinghabitsingreatbritain/2021
+
+Office for National Statistics. (n.d.). UK measures of national well-being: Dashboard. Approximately 1 in 20 UK adults reported low satisfaction with their lives in April to June 2024. Retrieved January 12, 2025, from https://www.ons.gov.uk/peoplepopulationandcommunity/wellbeing/articles/ukmeasuresofnationalwellbeing/dashboard
+
+Office for National Statistics. (2024, May). Measuring progress: Well-being and beyond GDP in the UK. Retrieved January 12, 2025, from https://www.ons.gov.uk/peoplepopulationandcommunity/wellbeing/bulletins/measuringprogresswellbeingandbeyondgdpintheuk/may2024
+
+UK Government. (2024, May). Obesity profile: Short statistical commentary (Figure 1). Retrieved January 12, 2025, from https://www.gov.uk/government/statistics/update-to-the-obesity-profile-on-fingertips/obesity-profile-short-statistical-commentary-may-2024
+
+
+
+
+

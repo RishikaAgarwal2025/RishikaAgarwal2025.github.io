@@ -1,0 +1,243 @@
+---
+title: "Business Statistics Mid-Term Assessment IB94X0 2024-2025"
+author: "Rishika Agarwal"
+date: '2024-10-31'
+output:
+  html_document: default
+  pdf_document: default
+---
+#Data dictionary 
+
+Variable | Description
+------------- | -------------
+Date | Date on which the footfall has been measured
+SiteName | Location of the measurement of data (all values are "York")
+LocationName | Specific location within York where footfall has been recorded 
+WeekDay | Day of the week on which footfall has been measured
+TotalCount | Number of people recorded by footfall counter on a given day
+Recording_ID | Unique identifier for each recording
+
+```{r setup, message=FALSE}
+
+library(tidyverse)
+options(width=100)
+
+```
+
+#Section 1
+
+```{r}
+library(readxl)
+data <- read_csv("C:/Users/Admin/Downloads/York_Footfall_data.csv")
+View(data)
+
+```
+Load the data as a CSV file into a variable name 'data' 
+
+```{r}
+spec(data)
+```
+
+The dataset comprises a total of 8,204 observations across six distinct variables. Among these variables, *Site Name*, *Location Name* and *Weekday* are categorized as character variables, indicating that they contain textual data. The variable *Total Count* and *Recording ID* are classified as col_double, which signifies that they are represented as floating-point numbers capable of accommodating decimal values. Additionally, the dataset includes a variable for “Date,” which is formatted in the date type. 
+
+```{r}
+summary(data)
+```
+
+In the analysis of the summary table, it is noteworthy that both the “total count” and “recording_id” columns exhibit a total of 10 missing values (NA). This observation is derived from a dataset comprising 8,204 total observations. The presence of these missing values represents approximately 0.12% of the overall dataset. Such a low percentage of missing data may not significantly impact the integrity of the analysis; however, it is essential to consider potential implications on data interpretation and subsequent analyses.
+
+
+
+```{r}
+summary_table <- data %>%
+  group_by(LocationName) %>%
+  summarise(
+    first_date = min(Date),
+    last_date = max(Date),
+    mean_daily_footfall = mean(TotalCount, na.rm = TRUE),
+    sd_daily_footfall = sd(TotalCount, na.rm = TRUE),
+    highest_daily_footfall = max(TotalCount, na.rm = TRUE),
+    lowest_daily_footfall = min(TotalCount, na.rm = TRUE)
+  )
+print(summary_table)
+```
+
+The application of the argument na.rm = TRUE serves to exclude any missing values (NA) from the analysis. As previously indicated, the proportion of NA values within the dataset is a mere 0.12% of the total observations. This negligible percentage suggests that the presence of missing data will not significantly compromise the integrity or validity of the statistical results obtained. Therefore, it is justifiable to disregard these missing values in order to enhance the clarity of the descriptive statistical outcomes.
+
+The time period coverage of footfall data across various locations indicates a need for careful consideration when analyzing trends and making comparisons. For the majority of locations, the dataset spans from January 1, 2015, to December 31, 2019. However, notable exceptions exist; for instance, *Parliament Street at M&S* has a significantly abbreviated data range, commencing on June 8, 2015, and concluding on June 7, 2016. Similarly, *Church Street* presents an incomplete dataset that terminates on June 18, 2017. This disparity in coverage indicates potential biases in analysis due to the varying lengths of observation periods. Specifically, shorter datasets may fail to adequately capture long-term trends and patterns. The inconsistency in starting and ending points further underscores the challenges associated with data integrity and reliability.
+
+The mean daily footfall figures reveal significant disparities among locations: *Coney Street* and *Parliament Street* exhibit high average daily footfalls of approximately 23,507 and 22,631 respectively. These figures suggest these areas are likely commercial hubs with higher visitor engagement. In contrast, *Church Street* with an average daily footfall of only 4,352, indicates lower traffic levels. *Stonegate* exhibits the highest standard deviation in daily footfall (17,826), indicating significant variability likely influenced by seasonal events or irregular visitor patterns. In contrast, *Church Street* shows a low standard deviation (1,389), reflecting stable daily foot traffic.“Stonegate” also recorded the highest single-day footfall (328,310), suggesting potential anomalies or significant events. Conversely, *Church Street* had the lowest daily footfall (402), aligning with its lower mean and consistent visitor numbers.
+
+The footfall data indicates that *Coney Street*, *Parliament Street*, and *Stonegate* are the most frequented areas, suggesting a strong attraction for visitors. In contrast, *Church Street* maintains a low yet stable visitor count, while *Stonegate* and *Micklegate* show significant variability, likely due to periodic events or seasonal fluctuations. These patterns highlight the influence of external factors such as local events, accessibility, and tourism trends on visitor numbers. Understanding these dynamics is crucial for urban planning and economic development strategies in these areas.
+
+```{r}
+summary_table <- data %>%
+  mutate(LocationName = ifelse(LocationName %in% c("Parliament Street", "Parliament Street at M&S
+"), 
+                                "parliament_street", 
+                                LocationName)) %>%
+  group_by(LocationName) %>%
+  summarise(
+    first_date = min(Date),
+    last_date = max(Date),
+    mean_daily_footfall = mean(TotalCount, na.rm = TRUE),
+    sd_daily_footfall = sd(TotalCount, na.rm = TRUE),
+    highest_daily_footfall = max(TotalCount, na.rm = TRUE),
+    lowest_daily_footfall = min(TotalCount, na.rm = TRUE)
+  )
+
+print(summary_table)
+```
+The merged footfall data for *Parliament Street* and *Parliament Street at M&S* reveals a mean daily footfall of 22,631, which closely mirrors the original *Parliament Street* figure of 22,631 but is lower than the 24,432 recorded for *Parliament Street at M&S*. The standard deviation of 6,610 indicates moderate variability in foot traffic, consistent with the original *Parliament Street* data. The highest and lowest daily footfalls recorded were 53,749 and 1,227, respectively, aligning with the broader dataset from *Parliament Street*. Notably, the total number of observations for *Parliament Street* was significantly higher at 1,826 compared to just 158 for *Parliament Street at M&S*, representing only 8.6% of the total data. This disparity suggests that the larger sample size from *Parliament Street* may skew results in its favor, potentially diluting the impact of the smaller dataset from M&S. 
+
+
+There is no significant difference in results after combining the dataset of Parliament Street
+
+
+```{r}
+summary_table <- data %>%
+  filter(format(Date, "%Y") == "2019") %>% # Step 1: Filter for year 2019
+  group_by(LocationName) %>%                
+  summarise(
+    first_date = min(Date),               
+    last_date = max(Date),                 
+    mean_daily_footfall = mean(TotalCount, na.rm = TRUE), 
+    sd_daily_footfall = sd(TotalCount, na.rm = TRUE),     
+    highest_daily_footfall = max(TotalCount, na.rm = TRUE), 
+    lowest_daily_footfall = min(TotalCount, na.rm = TRUE)   
+  )
+
+print(summary_table)
+```
+
+The analysis of footfall data for the year 2019 indicates that *Micklegate* consistently exhibits the lowest mean daily footfall among the evaluated locations. Consequently, omitting *Micklegate* from subsequent analyses may enhance the focus on areas with higher pedestrian traffic.
+
+
+```{r}
+library(ggplot2)
+```
+
+```{r}
+data_2019 <- data %>%
+  filter(format(as.Date(Date), "%Y") == "2019")
+```
+
+```{r}
+View(data_2019)
+```
+
+
+```{r}
+ggplot(data_2019, aes(x = LocationName, y = TotalCount)) +
+  geom_boxplot() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), 
+        plot.title = element_text(size = 20),           
+        axis.title.y = element_text(size = 15)) +
+  ggtitle("Footfall for Every Location")
+```
+
+The boxplot analysis indicates that *Micklegate* can be disregarded in this context due to its comparatively lower footfall counts. In contrast, *Stonegate* exhibits notable outliers, with the highest footfall count observed among these outliers. This suggests that while the majority of data points may fall within a certain range, there are exceptional instances which should be investigated further. 
+
+Regarding *Coney Street*, it is important to note the presence of numerous outliers beyond the maximum value indicated in the boxplot. These outliers appear to cluster together and maintain consistency within a specific range, which could imply a pattern or trend worth exploring further.
+
+For *all* locations except *Micklegate*, there exists a significant difference between the median and the third quartile (Q3), estimated to be between 18,000 and 25,000. This substantial gap indicates a healthy distribution of footfall data, suggesting that these areas experience robust activity levels.
+
+
+
+```{r}
+scatter_plot <- ggplot(data_2019, aes(x = Date, y = TotalCount, color = LocationName)) +
+  geom_point(size = 2) +                     
+  labs(title = "Scatter Plot of Counts by Date and Location",
+       x = "Date",
+       y = "Count") +                        
+  theme_minimal()    
+print(scatter_plot)
+```
+
+The observed upward trend across all four locations indicates a general increase in the footfall, which could be indicative of growing interest or activity in these areas. Notably, *Stonegate* exhibits outliers at the end of December, suggesting that specific events may have influenced data points during this period. Outliers are critical in statistical analysis as they can skew results or indicate anomalies that warrant further investigation. In contrast, *Parliament Street* demonstrates high variance, characterized by a wide spread of data points. This variability suggests fluctuating conditions or activities that differ significantly over time, making it essential to analyze the underlying factors contributing to this dispersion. Conversely, *Coney Street* shows a more concentrated distribution of data points, indicating stability and consistency in the footfall. 
+
+Disclaimer: In x axis, one of them is named as 'Jan 2020' but in the data, no records is available of January 2020. 
+
+```{r}
+#Plotting the distribution of football across all in days 
+
+ggplot(data_2019, aes(x = WeekDay, y = TotalCount, color = LocationName)) + 
+  geom_point() + 
+  labs(title = "Total Count by weekday in different locations", x = "Weekday", y = "Total Count") + 
+  theme_minimal() + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+*Stonegate* stands out as the busiest location overall, exhibiting the highest foot traffic counts on most weekdays, with a notable peak on Saturdays. This suggests that Stonegate may be a popular destination for leisure activities or shopping during the weekend. In contrast, *Coney Street* experiences a significant spike in activity specifically on *Mondays*, indicating that this area might cater to work-related or business activities, possibly attracting professionals starting their week. *Parliament Street* shows a more stable and consistent pattern of activity throughout the week, which could imply it serves as a hub for various services or amenities that draw visitors regularly without significant fluctuations. Lastly, Micklegate records the lowest overall activity levels, suggesting it may be smaller in size, less frequented by the general public, or serve a specialized niche purpose that limits its appeal compared to the other locations.
+
+
+#T- test 
+
+```{r}
+t_test_data <- data_2019 %>%
+  filter(LocationName %in% c("Coney Street", "Stonegate"))
+```
+
+
+```{r}
+coney_footfall <- t_test_data$TotalCount[t_test_data$LocationName == "Coney Street"]
+stonegate_footfall <- t_test_data$TotalCount[t_test_data$LocationName == "Stonegate"]
+```
+
+```{r}
+t_test_result <- t.test(coney_footfall, stonegate_footfall)
+print(t_test_result)
+```
+
+Null Hypothesis: True Difference in mean is zero 
+P value is less than 0.05 that means we reject the null hypothesis. This suggests that there is indeed a statistically significant difference in footfall between *Coney Street* and *Stonegate*. 
+
+
+```{r}
+t_test_weekend_data <- t_test_data %>%
+  filter(WeekDay %in% c("Saturday", "Sunday"))
+
+# Extract footfall data for each location
+coney_weekend_footfall <- t_test_weekend_data$TotalCount[t_test_weekend_data$LocationName == "Coney Street"]
+stonegate_weekend_footfall <- t_test_weekend_data$TotalCount[t_test_weekend_data$LocationName == "Stonegate"]
+
+# Perform the t-test
+t_test_weekend_result <- t.test(coney_weekend_footfall, stonegate_weekend_footfall)
+print(t_test_weekend_result)
+```
+
+Null Hypothesis: True Difference in mean is zero 
+P value is more than 0.05 that means we do not reject the null hypothesis. The results indicate no significant difference in weekend footfalls between *Coney Street* and *Stonegate*. 
+
+During weekends, both *Coney Street* and *Stonegate* present comparable options for individuals seeking leisure or social activities. The lack of significant differences in offerings or experiences at these locations suggests that personal preference and proximity play a crucial role in decision-making. Therefore, any coney street or stonegate is accepatble. 
+
+Conversely, during weekdays, a distinct difference emerges between the two locations. A higher mean suggests that, on average, visitors to *Coney Street* report more favorable experiences compared to those visiting *Stonegate*. Furthermore, a lower standard deviation implies that experiences at Coney Street are more consistent among visitors, indicating reliability in the quality of offerings available.
+
+**Section 2**
+
+The analysis of activity levels across different days of the week reveals a pronounced increase during weekends, particularly on Saturdays and Sundays. This trend indicates that individuals engage in more leisure activities during these days, likely due to the absence of work commitments. However, location-specific patterns emerge when examining weekdays versus weekends. For instance, *Coney Street* and *Micklegate* exhibit heightened activity during weekdays while *Stonegate* experiences its peak activity on weekends. *Parliament Street* maintains a relatively stable level of activity throughout the week, indicating its role as a consistent thoroughfare rather than a destination for specific activities. These variations underscore the importance of understanding local demographics and the unique functions of each location in shaping activity patterns.
+
+In evaluating the optimal location for a stall, it is essential to consider the consistency and variance of foot traffic across different streets. *Coney Street* emerges as the most consistent option compared to *Stonegate* and *Parliament Street*. The analysis indicates that *Coney Street* exhibits a stable flow of visitors, making it a reliable choice for maximizing sales potential.
+
+In contrast, *Parliament Street* shows high variance and standard deviation in foot traffic, indicating that visitor numbers are widely spread out and less predictable. This inconsistency could lead to periods of low customer engagement, which is not ideal for business operations. Furthermore, while *Stonegate* has a lower mean foot traffic than others, it also presents greater variance. This combination suggests that *Stonegate* may not provide the steady stream of customers necessary for sustained success.
+
+Given these considerations, placing the stall on *Coney Street* is recommended due to its superior consistency and reliability in attracting visitors. This strategic choice will likely enhance business performance by ensuring a more predictable customer base.
+
+*I used generative AI (Chapt gpt) to assist in analyzing and visualizing footfall data efficiently. The AI model employed was ChatGPT, which provided guidance on data filtering, plotting techniques, and code optimization throughout the project.*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
