@@ -1,10 +1,10 @@
+
 ---
 layout: archive
 title: "Academic Projects"
 permalink: /projects/
 author_profile: false
 ---
-
 
 Below is a curated list of academic and applied projects, covering data analytics, forecasting, optimization, simulation modeling, A/B testing, and business analysis. Each project includes code, datasets, reports, and insights gained.
 
@@ -15,13 +15,17 @@ Below is a curated list of academic and applied projects, covering data analytic
 **Description**: This project applies ARIMA modeling to predict Tata Motors’ average annual closing price using historical Nifty 50 data (2012–2022).
 
 **Files**:
-- [Forecasting Code](../assets/Time_series_econometrics/Forecasting-code.txt)
-- [Research Paper (PDF)](../assets/Time_series_econometrics/Forecasting_stock_market.pdf)
-- [Dataset](../assets/Time_series_econometrics/Tata-motors-nifty50.xlsx)
+- [Forecasting Code](../assets/Time%20series%20econometrics/Forecasting%20code.txt)
+- [Stata Do File](../assets/Time%20series%20econometrics/Forecasting%20do%20file.do)
+- [Research Paper (PDF)](../assets/Time%20series%20econometrics/Forecasting.stock%20market.pdf)
+- [Dataset](../assets/Time%20series%20econometrics/Tata_motors_Nifty50.xlsx)
 
 **Skills**: Forecasting, time series modeling  
 **Tools**: Excel, Word, Stata  
 **Key Insights**: The ARIMA model suggests a decline in 2024, followed by increases. BIC was used for model selection; double differencing proved most effective.
+
+---
+
 
 ---
 
