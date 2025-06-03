@@ -5,12 +5,6 @@ permalink: /projects/
 author_profile: false
 ---
 
----
-title: "Projects"
-layout: page
----
-
-## Projects
 
 This section contains a list of projects with brief descriptions.
 
