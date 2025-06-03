@@ -5,133 +5,112 @@ permalink: /projects/
 author_profile: false
 ---
 
-Explore my portfolio of analytics projects — including forecasting, simulation modeling, pricing optimization, and more — on the [Projects](/projects/) page.
+Below is a curated list of academic and applied projects, covering data analytics, forecasting, optimization, simulation modeling, A/B testing, and business analysis. Each project includes code, datasets, reports, and insights gained.
 
-<section id="academic-projects" class="px-6 py-10 bg-gray-100">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-4xl font-bold mb-8 text-center">Academic Projects</h2>
+---
 
-    <!-- Project Template -->
-    <div class="space-y-10">
+## 1. Forecasting Tata Motors' Stock Price using Nifty 50
 
-      <!-- Forecasting Tata Motors -->
-      <div class="bg-white p-6 rounded-2xl shadow">
-        <h3 class="text-2xl font-semibold mb-2">Forecasting Tata Motors' Closing Stock Price Using Nifty 50 Data</h3>
-        <p class="text-gray-700 mb-2">Developed an ARIMA model using yearly average closing prices (2012–2022) to forecast future trends for Tata Motors.</p>
-        <ul class="list-disc list-inside text-gray-700 mb-2">
-          <li><strong>Skills:</strong> Forecasting, data analysis, data cleaning</li>
-          <li><strong>Tools:</strong> Stata, Excel, Word</li>
-          <li><strong>Results:</strong> Identified double differencing as optimal; forecast indicates a drop in 2024 followed by growth.</li>
-        </ul>
-        <div class="flex flex-wrap gap-4 text-blue-600">
-          <a href="Forecasting-code.txt" target="_blank">📁 Code</a>
-          <a href="PDF" target="_blank">📄 Paper</a>
-          <a href="Tata-motors-nifty50.xlsx" target="_blank">📊 Dataset</a>
-        </div>
-      </div>
+**Description**: This project applies ARIMA modeling to predict Tata Motors’ average annual closing price using historical Nifty 50 data (2012–2022).
 
-      <!-- Data Management SQL -->
-      <div class="bg-white p-6 rounded-2xl shadow">
-        <h3 class="text-2xl font-semibold mb-2">Data Management – SQL</h3>
-        <p class="text-gray-700 mb-2">Simulated a magazine subscription company's data system to extract insights using synthetic data and SQL queries.</p>
-        <ul class="list-disc list-inside text-gray-700 mb-2">
-          <li><strong>Skills:</strong> SQL, data analysis, visualization</li>
-          <li><strong>Tools:</strong> Python (pandas, faker), SQL, PowerPoint</li>
-          <li><strong>Results:</strong> Derived actionable insights about engagement and revenue despite synthetic limitations.</li>
-        </ul>
-        <div class="flex flex-wrap gap-4 text-blue-600">
-          <a href="Faker-code.py" target="_blank">📁 Code</a>
-          <a href="PDF" target="_blank">📄 Report</a>
-        </div>
-      </div>
+**Files**:
+- [Forecasting Code](../assets/Time_series_econometrics/Forecasting-code.txt)
+- [Research Paper (PDF)](../assets/Time_series_econometrics/Forecasting_stock_market.pdf)
+- [Dataset](../assets/Time_series_econometrics/Tata-motors-nifty50.xlsx)
 
-      <!-- A/B Testing -->
-      <div class="bg-white p-6 rounded-2xl shadow">
-        <h3 class="text-2xl font-semibold mb-2">Treatment Control Testing</h3>
-        <p class="text-gray-700 mb-2">A/B testing in a lending firm's loan department to compare decision models.</p>
-        <ul class="list-disc list-inside text-gray-700 mb-2">
-          <li><strong>Skills:</strong> Experimental design, A/B testing</li>
-          <li><strong>Tools:</strong> R, Word</li>
-          <li><strong>Results:</strong> New model reduced Type I & II errors; recommendations made for better experiment design.</li>
-        </ul>
-        <div class="flex flex-wrap gap-4 text-blue-600">
-          <a href="A/B testing.html" target="_blank">📁 Code</a>
-          <a href="PDF" target="_blank">📄 Report</a>
-          <a href="Testing-data.csv" target="_blank">📊 Dataset</a>
-        </div>
-      </div>
+**Skills**: Forecasting, time series modeling  
+**Tools**: Excel, Word, Stata  
+**Key Insights**: The ARIMA model suggests a decline in 2024, followed by increases. BIC was used for model selection; double differencing proved most effective.
 
-      <!-- Pricing Analytics -->
-      <div class="bg-white p-6 rounded-2xl shadow">
-        <h3 class="text-2xl font-semibold mb-2">Pricing Analytics for BuildMax Rentals</h3>
-        <p class="text-gray-700 mb-2">Linear programming-based revenue optimization using equipment rental data.</p>
-        <ul class="list-disc list-inside text-gray-700 mb-2">
-          <li><strong>Skills:</strong> Pricing, optimization, data analysis</li>
-          <li><strong>Tools:</strong> Python (Pyomo), PowerPoint</li>
-          <li><strong>Results:</strong> Enhanced strategic planning for equipment pricing and fleet usage.</li>
-        </ul>
-        <div class="flex flex-wrap gap-4 text-blue-600">
-          <a href="Pricing-analytics.py" target="_blank">📁 Code</a>
-          <a href="PDF" target="_blank">📄 Report</a>
-          <a href="Pricing-analytics-BuildMax.xlsx" target="_blank">📊 Dataset</a>
-        </div>
-      </div>
+---
 
-      <!-- Analytics in Practice -->
-      <div class="bg-white p-6 rounded-2xl shadow">
-        <h3 class="text-2xl font-semibold mb-2">Analytics in Practice – Nile eCommerce</h3>
-        <p class="text-gray-700 mb-2">Built a model to predict customers likely to leave positive reviews on an eCommerce platform.</p>
-        <ul class="list-disc list-inside text-gray-700 mb-2">
-          <li><strong>Skills:</strong> ML, feature engineering, classification</li>
-          <li><strong>Tools:</strong> Python (GBDT, XGBDT, SVM, Logistic Regression), PowerPoint</li>
-          <li><strong>Results:</strong> Gradient boosting model selected; suggested data rebalancing for better performance.</li>
-        </ul>
-        <div class="flex flex-wrap gap-4 text-blue-600">
-          <a href="Analytics-in-practice-code.py" target="_blank">📁 Code</a>
-          <a href="PDF" target="_blank">📄 Report</a>
-          <a href="Nike-dataset.csv" target="_blank">📊 Dataset</a>
-        </div>
-      </div>
+## 2. Data Management – SQL Simulation for Subscription Business
 
-      <!-- Business Statistics -->
-      <div class="bg-white p-6 rounded-2xl shadow">
-        <h3 class="text-2xl font-semibold mb-2">Business Statistics</h3>
-        <p class="text-gray-700 mb-2">Statistical analysis on footfall, cardiovascular health, and customer satisfaction using R.</p>
-        <ul class="list-disc list-inside text-gray-700 mb-2">
-          <li><strong>Skills:</strong> Regression, exploratory analysis</li>
-          <li><strong>Tools:</strong> R</li>
-          <li><strong>Results:</strong> Identified reliable locations, key health predictors, and satisfaction drivers.</li>
-        </ul>
-        <div class="flex flex-wrap gap-4 text-blue-600">
-          <a href="business-statistics-code1.rmd" target="_blank">📁 Code 1</a>
-          <a href="business-statistics-code2.rmd" target="_blank">📁 Code 2</a>
-          <a href="York-football.csv" target="_blank">📊 York Dataset</a>
-          <a href="Cardio-vascular-disease.csv" target="_blank">📊 CVD Dataset</a>
-          <a href="customer-satisfaction.csv" target="_blank">📊 Customer Dataset</a>
-        </div>
-      </div>
+**Description**: Simulates a subscription-based magazine company (BABA) by designing a schema, generating synthetic data, and extracting insights using SQL.
 
-      <!-- Business Understanding -->
-      <div class="bg-white p-6 rounded-2xl shadow">
-        <h3 class="text-2xl font-semibold mb-2">Understanding Business for Analysts – Myprotein Case Study</h3>
-        <p class="text-gray-700 mb-2">Applied the DELTA framework to Myprotein's data strategy and proposed an AI-driven personalization project.</p>
-        <ul class="list-disc list-inside text-gray-700 mb-2">
-          <li><strong>Skills:</strong> Business analysis, risk analysis, stakeholder mapping</li>
-          <li><strong>Tools:</strong> Word, PowerPoint</li>
-          <li><strong>Results:</strong> Recommended pilot launch and iterative development for scalable AI personalization.</li>
-        </ul>
-        <div class="flex flex-wrap gap-4 text-blue-600">
-          <a href="PDF" target="_blank">📄 Report</a>
-        </div>
-      </div>
+**Files**:
+- [Faker Python Code](../assets/Data_Management/Code/Fake_data_code.py)
+- [Project Report (PDF)](../assets/Data_Management/Report/Data_Management_Report.pdf)
 
-    </div>
+**Skills**: SQL database design, synthetic data generation, analytics  
+**Tools**: Python (pandas, faker), SQL, PowerPoint  
+**Key Insights**: Demonstrates the utility of database simulation in identifying trends in customer behavior, revenue, and engagement, despite synthetic constraints.
 
-    <!-- Portfolio Link -->
-    <div class="text-center mt-10">
-      <a href="https://github.com/RishikaAgarwal2025/Business-Analysis-Portfolio" class="text-blue-700 font-semibold text-lg hover:underline" target="_blank">
-        🔗 View Full Portfolio on GitHub
-      </a>
-    </div>
-  </div>
-</section>
+---
+
+## 3. Treatment Control Testing (A/B Test)
+
+**Description**: Evaluates the effectiveness of a new loan review model vs. existing model in a consumer lending company via an A/B test.
+
+**Files**:
+- [HTML Output](../assets/Treatment_Control_Testing/Code/Treatment_control_testing.html)
+- [Report (PDF)](../assets/Treatment_Control_Testing/Report/Treatment_Control_Testing_Report.pdf)
+- [Dataset](../assets/Treatment_Control_Testing/Data/Data.csv)
+
+**Skills**: A/B testing, statistical inference  
+**Tools**: R, MS Word  
+**Key Insights**: The new model reduces Type I/II errors. Improvements in experiment design and dataset size are recommended for stronger inference.
+
+---
+
+## 4. Pricing Analytics for BuildMax Rentals
+
+**Description**: Uses linear programming to optimize equipment pricing and fleet allocation for BuildMax Rentals based on historical rental data.
+
+**Files**:
+- [Python Code](../assets/Pricing_Analytics/Copy.py)
+- [Report (PDF)](../assets/Pricing_Analytics/Report.pdf)
+- [Dataset](../assets/Pricing_Analytics/BuildMax_Rentals_Updated.xlsx)
+
+**Skills**: Optimization modeling, pricing strategy  
+**Tools**: Python (Pyomo), MS PowerPoint  
+**Key Insights**: Recommends balancing short- and long-term rentals, improving demand granularity, and refining maintenance & pricing strategies for revenue gain.
+
+---
+
+## 5. Analytics in Practice – Brazilian E-commerce Dataset
+
+**Description**: Builds predictive models to identify customers likely to leave positive reviews for the e-commerce platform Nile.
+
+**Files**:
+- [Python Code](../assets/Analysis_in_Practice/AIP_code.ipynb)
+- [Report (PDF)](../assets/Analysis_in_Practice/AIP_report.pdf)
+- [Presentation](../assets/Analysis_in_Practice/AIP_presentation.pdf)
+- [Dataset Sample](../assets/Analysis_in_Practice/brazilian-ecommerce-dataset/olist_orders_dataset.csv)
+
+**Skills**: Machine learning, customer analytics  
+**Tools**: Python (XGBoost, Logistic Regression, SVM), PowerPoint  
+**Key Insights**: Gradient Boosting performed best. Recommended further feature engineering and class balancing to improve predictive power.
+
+---
+
+## 6. Business Statistics with R
+
+**Description**: Analyzes datasets on street foot traffic, cardiovascular disease, and retail customer satisfaction to derive actionable insights.
+
+**Files**:
+- [RMarkdown Code 1](../assets/Business_Statistics/Assignment_1/Code/Business_Statistics_Assignment1.md)
+- [RMarkdown Code 2](../assets/Business_Statistics/Assignment_2/Code/Code_Assignment.Rmd)
+- [Datasets](../assets/Business_Statistics/Assignment_2/Dataset/cust_satisfaction.csv)
+
+**Skills**: Statistical modeling, data visualization, reproducible reporting  
+**Tools**: R  
+**Key Insights**:
+  - Consistent footfall observed in Coney Street.
+  - Smoking, weight, and wellness are key CVD predictors.
+  - Customer satisfaction linked strongly to staff service, delivery time, and SES.
+
+---
+
+## 7. Understanding Business for Analysts – Case Study on MyProtein
+
+**Description**: Uses the DELTA framework to assess MyProtein’s data strategy. Includes stakeholder analysis, risk planning, and AI-driven personalization proposals.
+
+**Files**:
+- [Report (PDF)](../assets/Understanding_Business_for_Analysts/Report-UBFA.pdf)
+
+**Skills**: Strategic analysis, stakeholder evaluation, business interpretation  
+**Tools**: MS Word, MS PowerPoint  
+**Key Insights**: MyProtein shows strong data use but needs better scalability. Recommends small-scale AI pilot programs with feedback loops to reduce bias and enhance customer engagement.
+
+---
