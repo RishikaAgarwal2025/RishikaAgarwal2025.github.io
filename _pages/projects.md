@@ -12,7 +12,17 @@ Below is a curated list of academic and applied projects, covering data analytic
 
 ## 1. Forecasting Tata Motors' Stock Price using Nifty 50
 
-**Description**: This project applies ARIMA modeling to predict Tata Motors’ average annual closing price using historical Nifty 50 data (2012–2022).
+**Objective**:
+This project investigates the predictive relationship between the Nifty 50 index and the average annual closing price of Tata Motors using ARIMA (AutoRegressive Integrated Moving Average) modeling techniques. The primary goal is to identify long-term trends and forecast the company's future stock performance over a 6-year horizon, based on historical data from 2012 to 2022.
+
+**Overview**:
+The study utilizes average annual closing prices to apply time series econometric methods, focusing on the dynamic interaction between Tata Motors’ stock price and the broader market represented by the Nifty 50 index. Model selection is guided by the Bayesian Information Criterion (BIC), which helped identify the most suitable ARIMA specification. The analysis revealed that double differencing provided the most stable and accurate model. The resulting forecast predicts a decline in Tata Motors' stock price in 2024, followed by a gradual upward trend in the years ahead.
+
+**Technical Skills and Tools**:
+This project demonstrates strong capabilities in time series forecasting, data transformation, model evaluation, and economic trend analysis. Specific skills include ARIMA modeling, stationarity testing, model selection using BIC, and time series visualization. The tools employed for this analysis include Stata for statistical modeling and forecasting, Excel for data preprocessing and aggregation, and Microsoft Word for academic documentation and report writing.
+
+**Key Findings**:
+The ARIMA model incorporating double differencing offered the best fit for forecasting Tata Motors’ stock price, based on model selection criteria. The forecast indicates a short-term decline in 2024, followed by a recovery and consistent upward trajectory in subsequent years. The study also reinforces the significance of macroeconomic indicators—such as the Nifty 50 index—as effective predictors of individual stock performance.
 
 **Files**:
 - [Forecasting Code](../assets/Time%20series%20econometrics/Forecasting%20code.txt)
@@ -20,9 +30,6 @@ Below is a curated list of academic and applied projects, covering data analytic
 - [Research Paper (PDF)](../assets/Time%20series%20econometrics/Forecasting.stock%20market.pdf)
 - [Dataset](../assets/Time%20series%20econometrics/Tata_motors_Nifty50.xlsx)
 
-**Skills**: Forecasting, time series modeling  
-**Tools**: Excel, Word, Stata  
-**Key Insights**: The ARIMA model suggests a decline in 2024, followed by increases. BIC was used for model selection; double differencing proved most effective.
 
 
 ---
