@@ -29,7 +29,8 @@ Based on my findings, I proposed several low-cost, high-impact strategies to inc
 - Introduce free or discounted BRTS rides for students and women
 - Raise parking fees near university areas
 - Add electric carts or rickshaws for last-mile connectivity
-- Convert existing AMTS buses to electric and integrate them into BRTS corridors                                                                                                                                                                                           
+- Convert existing AMTS buses to electric and integrate them into BRTS corridors
+                                                                                                                                                                            
 These recommendations align with Sustainable Development Goals (SDG 11 and SDG 13) by promoting equitable, low-emission urban transportation.
 
 **🧠 Tools & Skills Used**
