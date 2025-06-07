@@ -74,9 +74,17 @@ This project aimed to build a predictive model for Nile, a South American eComme
 
 ---
 
-## 6. Business Statistics with R
+## 6. Business Statistics
 
-**Description**: Analyzes datasets on street foot traffic, cardiovascular disease, and retail customer satisfaction to derive actionable insights.
+**Assignment 1: York Footfall Analysis** 
+
+**Tool used**: R 
+
+This assignment involved analyzing foot traffic data from three prominent streets in York to identify the most suitable location for setting up a retail stall. The analysis included data cleaning, exploratory analysis, and visual comparisons of footfall patterns across the locations. The results indicated that one street showed the most consistent and stable foot traffic, making it the most reliable option for a business stall. In contrast, the other two streets displayed greater variability, suggesting they may be less predictable for business planning. The analysis applied statistical techniques and visualizations in R to support evidence-based decision-making related to location selection.
+
+**Files**: 
+[Cust Satisfaction Dataset](../assets/Business_Statistics/Assignment_1/Dataset/cust_satisfaction.csv)
+[Business Statistics Assignment 1 Code](../assets/Business_Statistics/Assignment_1/Code/Business_Statistics_Assignment1.md)
 
 **Files**:
 - [RMarkdown Code 1](../assets/Business_Statistics/Assignment_1/Code/Business_Statistics_Assignment1.md)
