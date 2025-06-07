@@ -100,7 +100,7 @@ Both analyses were conducted using R, applying data cleaning, statistical techni
 
 
 **Files**:
-- [RMarkdown Code 2](../assets/Business%20Statistics/Assignment%202/Code%20-%20Code_Assignment.Rmd)
+- [Business Statistics Assignment_2 Code](../assets/Business%20Statistics/Assignment%202/Code/Code_Assignment.Rmd)
 - [Customer Satisfaction Dataset](../assets/Business%20Statistics/Assignment%202/Dataset/cust_satisfaction.csv)
 - [Cardiovascular Disease Dataset](../assets/Business%20Statistics/Assignment%202/Dataset/Cardio_Vascular_Disease.csv)
 
