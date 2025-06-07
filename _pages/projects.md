@@ -105,12 +105,14 @@ Both analyses used R for data cleaning, analysis, and visualization, offering us
 
 ---
 
-## 8. Understanding Business for Analysts – Case Study on MyProtein
+## 7. Understanding Business for Analysts – Case Study on MyProtein
+
+**Tools used**: MS word, Latex, MS PowerPoint
 
 **Description**: Uses the DELTA framework to assess MyProtein’s data strategy. Includes stakeholder analysis, risk planning, and AI-driven personalization proposals.
 
 **Files**:
-- [Report (PDF)](../assets/Understanding_Business_for_Analysts/Report-UBFA.pdf)
+- [Report (PDF)](../assets/Understanding_Business_for_Analysts/Repoort%20-%20UBFA.pdf)
 
 **Skills**: Strategic analysis, stakeholder evaluation, business interpretation  
 **Tools**: MS Word, MS PowerPoint  
