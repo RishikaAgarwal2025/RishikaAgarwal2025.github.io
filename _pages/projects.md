@@ -62,18 +62,15 @@ This project focuses on revenue management and dynamic pricing for BuildMax Rent
 
 ## 5. Analytics in Practice – Brazilian E-commerce Dataset
 
-**Description**: Builds predictive models to identify customers likely to leave positive reviews for the e-commerce platform Nile.
+**Tools used**: Python, PowerPoint  
+
+This project aimed to build a predictive model for Nile, a South American eCommerce platform, to identify customers likely to leave positive reviews. Using Python and machine learning techniques such as Logistic Regression, SVM, XGBoost, and Gradient Boosting, customer and order data were analyzed to support targeted engagement strategies. After evaluating multiple models, the Gradient Boosting model was selected for its performance, though issues with underprediction and underfitting were identified. Recommendations included improving data balance and expanding feature sets to enhance predictive accuracy. Visual insights and results were presented using PowerPoint. This project highlights practical skills in data cleaning, analysis, model building, and performance tuning, with the goal of improving customer retention and platform reputation.
 
 **Files**:
 - [Python Code](../assets/Analysis%20in%20Practice/AIP_code.ipynb)
 - [Report (PDF)](../assets/Analysis%20in%20Practice/AIP_report.pdf)
 - [Presentation](../assets/Analysis%20in%20Practice/AIP_presentation.pdf)
-- [Dataset Sample](../assets/Analysis%20in%20Practice/brazilian-ecommerce-dataset)
-
-
-**Skills**: Machine learning, customer analytics  
-**Tools**: Python (XGBoost, Logistic Regression, SVM), PowerPoint  
-**Key Insights**: Gradient Boosting performed best. Recommended further feature engineering and class balancing to improve predictive power.
+- [Dataset](../assets/Analysis%20in%20Practice/brazilian-ecommerce-dataset)
 
 ---
 
