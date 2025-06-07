@@ -16,7 +16,7 @@ This project involved building a time series forecasting model to predict Tata M
 
 **Files**:
 - [Forecasting Code](../assets/Time%20series%20econometrics/Forecasting%20code.txt)
-- [Research Paper (PDF)](/assets/Time%20series%20econometrics/Forecasting_stock_market.pdf)
+- [Research Paper (PDF)](../assets/Time%20series%20econometrics/Forecasting_stock_market.pdf)
 - [Dataset](../assets/Time%20series%20econometrics/Tata_motors_Nifty50.xlsx)
 
 
