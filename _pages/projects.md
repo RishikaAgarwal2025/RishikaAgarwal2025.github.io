@@ -76,7 +76,7 @@ This project aimed to build a predictive model for Nile, a South American eComme
 
 ## 6. Business Statistics
 
-**Assignment 1: York Footfall Analysis** 
+**Assignment 1: Analysis of New York Footfall Data** 
 
 **Tool used**: R 
 
