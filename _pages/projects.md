@@ -9,48 +9,41 @@ author_profile: false
 Below is a curated list of academic and applied projects, covering data analytics, forecasting, optimization, simulation modeling, A/B testing, and business analysis. Each project includes code, datasets, reports, and insights gained.
 
 ---
-
 ## 1. Forecasting Tata Motors' Stock Price using Nifty 50
 
-Tools: Stata, Excel
+**Tools used**: Stata, Excel
 
-This project involved building a time series forecasting model to analyze the relationship between Tata Motors’ stock price and the Nifty 50 index. I performed stationarity testing, applied double differencing, and selected the optimal ARIMA model using the Bayesian Information Criterion (BIC). The model, based on annual average closing prices from 2012 to 2022, forecasts a temporary decline in 2024 followed by a long-term upward trend.
-This work highlights my ability to use statistical modeling techniques to understand macroeconomic influences on firm-level performance.
+This project involved building a time series forecasting model to analyze the relationship between Tata Motors’ stock price and the Nifty 50 index. I performed stationarity testing, applied double differencing, and selected the optimal ARIMA model using the Bayesian Information Criterion (BIC). The model, based on annual average closing prices from 2012 to 2022, forecasts a temporary decline in 2024 followed by a long-term upward trend. This work highlights my ability to use statistical modeling techniques to understand macroeconomic influences on firm-level performance.
 
 **Files**:
 - [Forecasting Code](../assets/Time%20series%20econometrics/Forecasting%20code.txt)
 - [Research Paper (PDF)](../assets/Time%20series%20econometrics/Forecasting_stock_market.pdf)
 - [Dataset](../assets/Time%20series%20econometrics/Tata_motors_Nifty50.xlsx)
 
-
 ---
 
 ## 2. Data Management – SQL Simulation for Subscription Business
 
-**Tools**: Python (faker, pandas), SQL
+**Tools used**: Python (faker, pandas), SQL
 
-To simulate real-world business scenarios, I designed a relational database for a fictional magazine subscription company. The schema captured customer demographics, subscriptions, payments, and engagement data. Using Python, I generated realistic synthetic data and used SQL to perform complex queries mimicking actual business questions.
-Insights derived include churn rates, revenue trends, and customer lifetime value across different regions and product tiers. This project combines data engineering and business analytics to derive actionable insights in data-constrained environments.
+To simulate real-world business scenarios, I designed a relational database for a fictional magazine subscription company. The schema captured customer demographics, subscriptions, payments, and engagement data. Using Python, I generated realistic synthetic data and used SQL to perform complex queries mimicking actual business questions. Insights derived include churn rates, revenue trends, and customer lifetime value across different regions and product tiers. This project combines data engineering and business analytics to derive actionable insights in data-constrained environments.
 
 **Files**: 
 - [Faker Python Code](/assets/Data%20Management/Code/Fake%20data%20code.py)
 - [Project Report (PDF)](/assets/Data%20Management/Report/Data%20Management_Report.pdf)
 
-
 ---
 
 ## 3. Evaluating a Loan Review Model via A/B Testing
 
-**Tools**: R
+**Tools used**: R
 
-This project evaluated a new loan review model using an A/B testing framework within a consumer lending firm. By comparing error rates (Type I and II) between treatment (new model) and control (existing system) groups, the analysis showed that the new model significantly reduced both false approvals and rejections.
-The project also identifies areas for improving the experimental design like better group balancing and increasing sample size. It demonstrates practical use of hypothesis testing, experimental data analysis, and clear interpretation of results for business impact.
+This project evaluated a new loan review model using an A/B testing framework within a consumer lending firm. By comparing error rates (Type I and II) between treatment (new model) and control (existing system) groups, the analysis showed that the new model significantly reduced both false approvals and rejections. The project also identifies areas for improving the experimental design like better group balancing and increasing sample size. It demonstrates practical use of hypothesis testing, experimental data analysis, and clear interpretation of results for business impact.
 
 **Files**: 
 - [HTML Output](/assets/Treatment%20control%20testing/Code/Treatment%20control%20testing.html)
 - [Report (PDF)](/assets/Treatment%20control%20testing/Report/Treatment%20Control%20Testing%20Report.pdf)
 - [Dataset](/assets/Treatment%20control%20testing/Data/Data.csv)
-
 
 ---
 
