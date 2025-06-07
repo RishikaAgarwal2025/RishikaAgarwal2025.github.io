@@ -10,7 +10,6 @@ Below is a curated list of academic and applied projects, covering data analytic
 
 ---
 
-## 1. Forecasting Tata Motors' Stock Price using Nifty 50
 <h3>1. Forecasting Tata Motors' Stock Price using Nifty 50</h3>
 <p style="margin-top: -10px;"><strong>Tools:</strong> Stata, Excel</p>
 
