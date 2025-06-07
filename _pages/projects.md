@@ -84,7 +84,7 @@ This assignment involved analyzing foot traffic data from three prominent street
 
 **Files**:
 - [York Footfall Dataset](../assets/Business%20Statistics/Assignment%201/York_Footfall_data.csv)
-- [Business Statistics Assignment 1 Code](../assets/Business%20Statistics/Assignment%201/Code%20-%20Business%20Statistic_Assignment1.rmd)
+- [Business Statistics Assignment 1 Code](../assets/Business%20Statistics/Assignment%201/Code/Business%20Statistic_Assignment1.rmd)
 
 **Assignment 2: Analysis of Cardiovascular Disease and Customer Satisfaction**
 
