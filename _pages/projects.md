@@ -13,6 +13,7 @@ Below is a curated list of academic and applied projects, covering data analytic
 ## 1. Forecasting Tata Motors' Stock Price using Nifty 50
 
 **Tools**: Stata, Excel
+
 This project involved building a time series forecasting model to analyze the relationship between Tata Motors’ stock price and the Nifty 50 index. I performed stationarity testing, applied double differencing, and selected the optimal ARIMA model using the Bayesian Information Criterion (BIC). The model, based on annual average closing prices from 2012 to 2022, forecasts a temporary decline in 2024 followed by a long-term upward trend.
 This work highlights my ability to use statistical modeling techniques to understand macroeconomic influences on firm-level performance.
 
@@ -27,6 +28,7 @@ This work highlights my ability to use statistical modeling techniques to unders
 ## 2 Data Management – SQL Simulation for Subscription Business
 
 **Tools**: Python (faker, pandas), SQL
+
 To simulate real-world business scenarios, I designed a relational database for a fictional magazine subscription company. The schema captured customer demographics, subscriptions, payments, and engagement data. Using Python, I generated realistic synthetic data and used SQL to perform complex queries mimicking actual business questions.
 Insights derived include churn rates, revenue trends, and customer lifetime value across different regions and product tiers. This project combines data engineering and business analytics to derive actionable insights in data-constrained environments.
 
@@ -40,6 +42,7 @@ Insights derived include churn rates, revenue trends, and customer lifetime valu
 ## 3. Evaluating a Loan Review Model via A/B Testing
 
 **Tools**: R
+
 This project evaluated a new loan review model using an A/B testing framework within a consumer lending firm. By comparing error rates (Type I and II) between treatment (new model) and control (existing system) groups, the analysis showed that the new model significantly reduced both false approvals and rejections.
 The project also identifies areas for improving the experimental design like better group balancing and increasing sample size. It demonstrates practical use of hypothesis testing, experimental data analysis, and clear interpretation of results for business impact.
 
