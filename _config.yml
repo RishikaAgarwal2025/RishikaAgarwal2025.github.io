@@ -47,7 +47,7 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: false  # ✅ disables sidebar profile on all pages
+      author_profile: false  
   - scope:
       path: ""
       type: projects
@@ -73,7 +73,7 @@ nav:
     url: /projects/
   - title: "Dissertation"
     url: /dissertation/
-  - title: "Teaching"
+  - title: "Teaching & Volunteering"
     url: /teaching/
   - title: "CV"
     url: /cv/
