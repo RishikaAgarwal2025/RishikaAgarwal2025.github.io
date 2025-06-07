@@ -26,7 +26,7 @@ This project involved building a time series forecasting model to predict Tata M
 
 This project models a fictional subscription-based magazine company (BABA) to simulate real-world business operations using synthetic data. I designed a relational database schema to capture customer demographics, subscription details, payment activity, and engagement behavior. Using Python libraries like faker and pandas, I generated realistic fake data for thousands of records, enabling robust SQL querying and analysis.
 
-The goal was to demonstrate how even simulated data can be used to derive actionable insights—such as revenue trends, churn behavior, and high-value customer segments. SQL was used to write complex queries that mimic real business questions, including customer retention metrics, cohort analysis, and engagement patterns across regions and product types. This project highlights my ability to integrate data engineering (schema design, data simulation) with business analytics (insight extraction, KPI generation), even in data-constrained environments.
+The goal was to demonstrate how even simulated data can be used to derive actionable insights such as revenue trends, churn behavior, and high-value customer segments. SQL was used to write complex queries that mimic real business questions, including customer retention metrics, cohort analysis, and engagement patterns across regions and product types. This project highlights my ability to integrate data engineering (schema design, data simulation) with business analytics (insight extraction, KPI generation), even in data-constrained environments.
 
 **Files**: 
 - [Faker Python Code](/assets/Data%20Management/Code/Fake%20data%20code.py)
