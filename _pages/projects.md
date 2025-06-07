@@ -60,15 +60,16 @@ This project focuses on revenue management and dynamic pricing for BuildMax Rent
 
 ---
 
-## 6. Analytics in Practice – Brazilian E-commerce Dataset
+## 5. Analytics in Practice – Brazilian E-commerce Dataset
 
 **Description**: Builds predictive models to identify customers likely to leave positive reviews for the e-commerce platform Nile.
 
 **Files**:
-- [Python Code](../assets/Analysis_in_Practice/AIP_code.ipynb)
-- [Report (PDF)](../assets/Analysis_in_Practice/AIP_report.pdf)
-- [Presentation](../assets/Analysis_in_Practice/AIP_presentation.pdf)
-- [Dataset Sample](../assets/Analysis_in_Practice/brazilian-ecommerce-dataset/olist_orders_dataset.csv)
+- [Python Code](../assets/Analysis%20in%20Practice/AIP_code.ipynb)
+- [Report (PDF)](../assets/Analysis%20in%20Practice/AIP_report.pdf)
+- [Presentation](../assets/Analysis%20in%20Practice/AIP_presentation.pdf)
+- [Dataset Sample](../assets/Analysis%20in%20Practice/brazilian-ecommerce-dataset/olist_orders_dataset.csv)
+
 
 **Skills**: Machine learning, customer analytics  
 **Tools**: Python (XGBoost, Logistic Regression, SVM), PowerPoint  
