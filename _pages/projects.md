@@ -26,7 +26,7 @@ This project involved building a time series forecasting model to analyze the re
 
 **Tools used**: Python (faker, pandas), SQL
 
-To simulate real-world business scenarios, I designed a relational database for a fictional magazine subscription company. The schema captured customer demographics, subscriptions, payments, and engagement data. Using Python, I generated realistic synthetic data and used SQL to perform complex queries mimicking actual business questions. Insights derived include churn rates, revenue trends, and customer lifetime value across different regions and product tiers. This project combines data engineering and business analytics to derive actionable insights in data-constrained environments.
+To simulate real-world business scenarios, I designed a relational database for a fictional magazine subscription company. The schema captured customer demographics, subscriptions, payments, and engagement data. Using Python, realistic synthetic data was generated to simulate rental patterns, while SQL was used to perform complex queries reflecting real business scenarios.  Insights derived include churn rates, revenue trends, and customer lifetime value across different regions and product tiers. This project combines data engineering and business analytics to derive actionable insights in data-constrained environments.
 
 **Files**: 
 - [Faker Python Code](/assets/Data%20Management/Code/Fake%20data%20code.py)
