@@ -11,8 +11,9 @@ Below is a curated list of academic and applied projects, covering data analytic
 ---
 
 ## 1. Forecasting Tata Motors' Stock Price using Nifty 50
+<h3>1. Forecasting Tata Motors' Stock Price using Nifty 50</h3>
+<p style="margin-top: -10px;"><strong>Tools:</strong> Stata, Excel</p>
 
-**Tools**: Stata, Excel
 
 This project involved building a time series forecasting model to analyze the relationship between Tata Motors’ stock price and the Nifty 50 index. I performed stationarity testing, applied double differencing, and selected the optimal ARIMA model using the Bayesian Information Criterion (BIC). The model, based on annual average closing prices from 2012 to 2022, forecasts a temporary decline in 2024 followed by a long-term upward trend.
 This work highlights my ability to use statistical modeling techniques to understand macroeconomic influences on firm-level performance.
