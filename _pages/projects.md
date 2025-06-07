@@ -86,19 +86,22 @@ This assignment involved analyzing foot traffic data from three prominent street
 - [York Footfall Dataset](../assets/Business_Statistics/Assignment_1/Dataset/York-footfall.csv)
 - [Business Statistics Assignment 1 Code](../assets/Business_Statistics/Assignment_1/Code/Business_Statistics_Assignment1.md)
 
+**Assignment 2: Analysis of Cardiovascular Disease and Customer Satisfaction**
+
+**Tool used**: R 
+
+This assignment analyzed two datasets to identify key factors affecting cardiovascular disease (CVD) prevalence in England and customer satisfaction in retail stores.
+
+The cardiovascular disease analysis revealed that poverty, smoking, overweight prevalence, and wellbeing significantly influence CVD rates. Interestingly, poverty was negatively associated with CVD prevalence, suggesting that higher poverty levels correspond to lower CVD rates. In contrast, smoking, overweight prevalence, and poorer wellbeing were positively linked to higher CVD prevalence. Although these factors explained much of the variation, other influences may also be important and require further study.
+
+The customer satisfaction analysis explored how delivery time, staff satisfaction, and socio-economic status (SES) impact overall satisfaction. The results showed that customer satisfaction is strongly affected by staff satisfaction and delivery efficiency. Medium SES stores experienced the greatest positive impact on satisfaction levels. These findings emphasize the need for retail managers to focus on reducing delivery times and improving staff satisfaction, especially in Medium and High SES areas, to enhance customer experience.
+
+Both analyses were conducted using R, applying data cleaning, statistical techniques, and visualization. The insights provide valuable guidance for public health initiatives and retail business strategies.
 
 **Files**:
 - [RMarkdown Code 2](../assets/Business_Statistics/Assignment_2/Code/Code_Assignment.Rmd)
 - [Customer Satisfaction Dataset](../assets/Business_Statistics/Assignment_2/Dataset/cust_satisfaction.csv)
 - [Cardiovascular Disease Dataset](../assets/Business_Statistics/Assignment_2/Dataset/Cardio_Vascular_Disease.csv)
-
-
-**Skills**: Statistical modeling, data visualization, reproducible reporting  
-**Tools**: R  
-**Key Insights**:
-  - Consistent footfall observed in Coney Street.
-  - Smoking, weight, and wellness are key CVD predictors.
-  - Customer satisfaction linked strongly to staff service, delivery time, and SES.
 
 ---
 
