@@ -98,10 +98,12 @@ The customer satisfaction analysis explored how delivery time, staff satisfactio
 
 Both analyses were conducted using R, applying data cleaning, statistical techniques, and visualization. The insights provide valuable guidance for public health initiatives and retail business strategies.
 
+
 **Files**:
-- [RMarkdown Code 2](../assets/Business_Statistics/Assignment_2/Code/Code_Assignment.Rmd)
-- [Customer Satisfaction Dataset](../assets/Business_Statistics/Assignment_2/Dataset/cust_satisfaction.csv)
-- [Cardiovascular Disease Dataset](../assets/Business_Statistics/Assignment_2/Dataset/Cardio_Vascular_Disease.csv)
+- [RMarkdown Code 2](../assets/Business%20Statistics/Assignment%202/Code%20-%20Code_Assignment.Rmd)
+- [Customer Satisfaction Dataset](../assets/Business%20Statistics/Assignment%202/Dataset/cust_satisfaction.csv)
+- [Cardiovascular Disease Dataset](../assets/Business%20Statistics/Assignment%202/Dataset/Cardio_Vascular_Disease.csv)
+
 
 ---
 
