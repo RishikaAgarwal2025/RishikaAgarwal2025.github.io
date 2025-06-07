@@ -47,11 +47,11 @@ This project evaluated a new loan review model using an A/B testing framework wi
 
 ---
 
-## 5. Pricing Analytics for BuildMax Rentals
+## 4. Pricing Analytics for BuildMax Rentals
 
 **Tools used**: Python (Pyomo), MS PowerPoint  
 
-This project focuses on developing a revenue management solution for BuildMax Rentals to enhance equipment pricing and fleet allocation strategies. By using historical rental data and linear programming in Python with the pyomo library, the model supports decision-making under operational constraints and shifting customer demand. The goal is to maximize revenue through optimized pricing, while considering real-world limitations such as maintenance schedules and fleet availability. The project also explores dynamic pricing methods, allowing BuildMax to adjust rates based on rental duration, sector-specific demand, and market conditions. Key challenges addressed include limited data granularity, inconsistencies in pricing strategy, and the need to balance short-term and long-term rentals. The analysis highlights the value of adopting a flexible pricing framework that reacts to demand trends and operational constraints. Implementing these strategies can help BuildMax stay competitive, unlock new revenue opportunities, and improve overall business performance in a rapidly evolving equipment rental market.
+This project focuses on revenue management and dynamic pricing for BuildMax Rentals to improve equipment pricing and fleet allocation. Using historical rental data and a linear programming model built in Python, we optimized pricing strategies to maximize revenue. The approach considers factors like rental duration, sector-specific demand, and maintenance schedules. By addressing pricing gaps and demand variability, the solution helps BuildMax make smarter, data-driven decisions, stay competitive, and enhance overall business performance.
 
 **Files**:
 - [Python Code](https://github.com/RishikaAgarwal2025/RishikaAgarwal2025.github.io/blob/master/assets/Pricing%20Analytics/Code.py)
