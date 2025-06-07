@@ -37,16 +37,14 @@ The goal was to demonstrate how even simulated data can be used to derive action
 
 ## 4. Treatment Control Testing (A/B Test)
 
-**Description**: Evaluates the effectiveness of a new loan review model vs. existing model in a consumer lending company via an A/B test.
+This project evaluates the performance of a newly developed loan review model through an A/B test conducted in the Loan Review Department of a consumer lending company. The goal was to assess whether the new model could improve decision-making accuracy compared to the existing system used by loan officers. Using experimental data, the analysis measured the rates of Type I and Type II errors in both treatment and control groups.
 
-**Files**:
-- [HTML Output](../assets/Treatment_Control_Testing/Code/Treatment_control_testing.html)
-- [Report (PDF)](../assets/Treatment_Control_Testing/Report/Treatment_Control_Testing_Report.pdf)
-- [Dataset](../assets/Treatment_Control_Testing/Data/Data.csv)
+The results indicate that the new model significantly reduces incorrect loan approvals (Type I errors) and unnecessary rejections (Type II errors), suggesting improved classification accuracy. However, the report also recommends refining the experimental design for more reliable conclusions. Key suggestions include better balancing between control and treatment groups, ensuring loan officers complete all stages of review, and increasing the dataset size to improve statistical power. This project demonstrates my ability to apply statistical inference techniques in real world experimental setups. It involves data cleaning, explanatory analysis, and hypothesis testing using R. 
 
-**Skills**: A/B testing, statistical inference  
-**Tools**: R, MS Word  
-**Key Insights**: The new model reduces Type I/II errors. Improvements in experiment design and dataset size are recommended for stronger inference.
+- [HTML Output](/assets/Treatment%20control%20testing/Code/Treatment%20control%20testing.html)
+- [Report (PDF)](/assets/Treatment%20control%20testing/Report/Treatment%20Control%20Testing%20Report.pdf)
+- [Dataset](/assets/Treatment%20control%20testing/Data/Data.csv)
+
 
 ---
 
