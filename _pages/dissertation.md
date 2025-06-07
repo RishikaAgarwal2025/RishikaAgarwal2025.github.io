@@ -7,7 +7,7 @@ author_profile: false
 
 ***🎓 Dissertation***
 
-**Enhancing Efficiency and Societal Impact of Ahmedabad’s BRTS**
+**Enhancing Efficiency and Societal Impact of Ahmedabad’s BRTS**                                                                                                                                                                                                           
 My final-year dissertation focused on making Ahmedabad’s Bus Rapid Transit System (BRTS) more efficient, inclusive, and environmentally sustainable. Although BRTS was introduced as a rapid and eco-friendly public transport option, it remains significantly underutilized—especially among students and urban professionals.
 
 **🔍 Research Objective**
