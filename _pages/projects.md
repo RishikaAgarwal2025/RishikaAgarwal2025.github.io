@@ -74,7 +74,7 @@ This project aimed to build a predictive model for Nile, a South American eComme
 
 ---
 
-## 7. Business Statistics with R
+## 6. Business Statistics with R
 
 **Description**: Analyzes datasets on street foot traffic, cardiovascular disease, and retail customer satisfaction to derive actionable insights.
 
