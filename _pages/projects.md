@@ -109,11 +109,7 @@ Both analyses used R for data cleaning, analysis, and visualization, offering us
 
 **Tools used**: MS word, Latex, MS PowerPoint
 
-**Description**: Uses the DELTA framework to assess MyProtein’s data strategy. Includes stakeholder analysis, risk planning, and AI-driven personalization proposals.
+For this project, I focused on Myprotein and applied the DELTA framework to evaluate its data strategy. I developed an analytical project that included risk analysis, PIDD questions, and a CATWOE analysis to understand business challenges and stakeholder perspectives. The personalised diet and fitness plan proposed leverages Myprotein’s strengths to boost customer engagement through AI-driven personalisation. The DELTA framework revealed that while the company effectively utilises data, it needs to improve integration and scalability for broader impact. Visualising the problem helped clarify project goals, and the risk analysis identified challenges such as AI bias and data privacy concerns. To ensure success, a small-scale pilot with user feedback is recommended before full deployment. This project’s insights aim to guide Myprotein in enhancing its AI initiatives, fostering innovation, and maintaining its position as a leader in the health and fitness industry.
 
 **Files**:
 - [Report (PDF)](../assets/Understanding%20Business%20for%20Analysts/Repoort%20-%20UBFA.pdf)
-
-**Skills**: Strategic analysis, stakeholder evaluation, business interpretation  
-**Tools**: MS Word, MS PowerPoint  
-**Key Insights**: MyProtein shows strong data use but needs better scalability. Recommends small-scale AI pilot programs with feedback loops to reduce bias and enhance customer engagement.
