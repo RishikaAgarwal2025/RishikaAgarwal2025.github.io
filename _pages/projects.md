@@ -22,17 +22,16 @@ This project involved building a time series forecasting model to predict Tata M
 
 ---
 
-## 3. Data Management – SQL Simulation for Subscription Business
+## 2 Data Management – SQL Simulation for Subscription Business
 
-**Description**: Simulates a subscription-based magazine company (BABA) by designing a schema, generating synthetic data, and extracting insights using SQL.
+This project models a fictional subscription-based magazine company (BABA) to simulate real-world business operations using synthetic data. I designed a relational database schema to capture customer demographics, subscription details, payment activity, and engagement behavior. Using Python libraries like faker and pandas, I generated realistic fake data for thousands of records, enabling robust SQL querying and analysis.
 
-**Files**:
-- [Faker Python Code](../assets/Data_Management/Code/Fake_data_code.py)
-- [Project Report (PDF)](../assets/Data_Management/Report/Data_Management_Report.pdf)
+The goal was to demonstrate how even simulated data can be used to derive actionable insights—such as revenue trends, churn behavior, and high-value customer segments. SQL was used to write complex queries that mimic real business questions, including customer retention metrics, cohort analysis, and engagement patterns across regions and product types. This project highlights my ability to integrate data engineering (schema design, data simulation) with business analytics (insight extraction, KPI generation), even in data-constrained environments.
 
-**Skills**: SQL database design, synthetic data generation, analytics  
-**Tools**: Python (pandas, faker), SQL, PowerPoint  
-**Key Insights**: Demonstrates the utility of database simulation in identifying trends in customer behavior, revenue, and engagement, despite synthetic constraints.
+**Files**: 
+- [Faker Python Code](/assets/Data%20Management/Code/Fake%20data%20code.py)
+- [Project Report (PDF)](/assets/Data%20Management/Report/Data%20Management_Report.pdf)
+
 
 ---
 
