@@ -112,7 +112,7 @@ Both analyses used R for data cleaning, analysis, and visualization, offering us
 **Description**: Uses the DELTA framework to assess MyProtein’s data strategy. Includes stakeholder analysis, risk planning, and AI-driven personalization proposals.
 
 **Files**:
-- [Report (PDF)](../assets/Understanding_Business_for_Analysts/Repoort%20-%20UBFA.pdf)
+- [Report (PDF)](../assets/Understanding%20Business%20for%20Analysts/Repoort%20-%20UBFA.pdf)
 
 **Skills**: Strategic analysis, stakeholder evaluation, business interpretation  
 **Tools**: MS Word, MS PowerPoint  
