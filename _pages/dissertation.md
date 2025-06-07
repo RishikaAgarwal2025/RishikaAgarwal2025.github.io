@@ -41,5 +41,6 @@ This project helped me combine urban planning, human behavior, and data-driven s
 
 **📘 Full Dissertation Document**                                                                                                                                                                                                                                         
 For a detailed review of the methodology, data, and simulations, you can access the complete research below:
-👉 [**View Full Dissertation (PDF)**](assets/Final_dissertation.pdf)
+👉 [**View Full Dissertation (PDF)**](./assets/Final_dissertation.pdf)
+
 
