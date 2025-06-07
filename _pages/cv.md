@@ -7,11 +7,6 @@ redirect_from:
   - /resume/
 ---
 
-## 📄 Download My CV
-
-[Click here to download my CV (PDF)](/Rishika_Agarwal_CV.pdf)
----
-
 **Work Experience**
 
 **Business Analysis Intern**
@@ -32,6 +27,7 @@ WageIndicator Foundation, Amsterdam (Remote) | Apr 2023 – Jun 2023
 - Collected and organized regional data on living conditions—including food, rent, and transport costs—to support wage benchmarking efforts.
 - Designed and built interactive Tableau dashboards to visualize cost-of-living patterns across geographies, improving data accessibility for policy and public use.
 
+---
 **Skills**
 Languages & Tools: Python, SQL, R, Excel, SPSS, Tableau, Power BI, Pyomo
 Data Techniques: ARIMA, Linear Programming, Regression, A/B Testing, Classification, Pricing Analysis, Optimization Models
@@ -39,5 +35,7 @@ Visualization: Seaborn, Matplotlib, Tableau, Power BI
 Languages: English (Proficient), Hindi (Intermediate), Gujarati (Native), Sanskrit (Basic)
 Certifications: Google App Developer, Google Scratch Programming, Five-Year Arts Proficiency Certificate
 
-**Download CV**
+---
+
+**Download CV**                                                                                                                                                                                                                                                              
 [Click here to download my CV (PDF)](/Rishika_Agarwal_CV.pdf)
