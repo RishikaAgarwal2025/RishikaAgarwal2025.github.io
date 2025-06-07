@@ -39,7 +39,7 @@ I worked with SUMO for traffic simulation and mobility modeling, SPSS for survey
 **✅ Conclusion**                                                                                                                                                                                                                                                          
 This project helped me combine urban planning, human behavior, and data-driven simulation to design practical transport solutions. It strengthened my passion for mobility systems that are sustainable, inclusive, and smart—and deepened my skills in research, policy design, and urban mobility planning.
 
-**📘 Full Dissertation Document**
+**📘 Full Dissertation Document**                                                                                                                                                                                                                                         
 For a detailed review of the methodology, data, and simulations, you can access the complete research below:
-👉 View Full Dissertation (PDF)
+👉 [**View Full Dissertation (PDF)**](assets/Final_dissertation.pdf)
 
