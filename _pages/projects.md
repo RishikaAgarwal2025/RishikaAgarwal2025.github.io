@@ -68,7 +68,7 @@ This project focuses on revenue management and dynamic pricing for BuildMax Rent
 - [Python Code](../assets/Analysis%20in%20Practice/AIP_code.ipynb)
 - [Report (PDF)](../assets/Analysis%20in%20Practice/AIP_report.pdf)
 - [Presentation](../assets/Analysis%20in%20Practice/AIP_presentation.pdf)
-- [Dataset Sample](../assets/Analysis%20in%20Practice/brazilian-ecommerce-dataset/olist_orders_dataset.csv)
+- [Dataset Sample](../assets/Analysis%20in%20Practice/brazilian-ecommerce-dataset)
 
 
 **Skills**: Machine learning, customer analytics  
