@@ -7,6 +7,7 @@ redirect_from:
   - /resume/
 ---
 
+---
 **Work Experience**
 
 **Business Analysis Intern**
