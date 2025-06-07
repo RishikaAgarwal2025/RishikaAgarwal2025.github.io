@@ -90,20 +90,18 @@ This assignment involved analyzing foot traffic data from three prominent street
 
 **Tool used**: R 
 
-This assignment analyzed two datasets to identify key factors affecting cardiovascular disease (CVD) prevalence in England and customer satisfaction in retail stores.
+This assignment analyzed two datasets to understand factors influencing cardiovascular disease (CVD) prevalence in England and customer satisfaction in retail stores.
 
-The cardiovascular disease analysis revealed that poverty, smoking, overweight prevalence, and wellbeing significantly influence CVD rates. Interestingly, poverty was negatively associated with CVD prevalence, suggesting that higher poverty levels correspond to lower CVD rates. In contrast, smoking, overweight prevalence, and poorer wellbeing were positively linked to higher CVD prevalence. Although these factors explained much of the variation, other influences may also be important and require further study.
+The CVD analysis found that poverty, smoking, overweight prevalence, and wellbeing significantly affect disease rates. Notably, poverty showed a negative association with CVD, meaning higher poverty corresponded to lower disease rates, while smoking, overweight, and lower wellbeing were linked to higher CVD prevalence. Other factors may also play a role and need further investigation.
 
-The customer satisfaction analysis explored how delivery time, staff satisfaction, and socio-economic status (SES) impact overall satisfaction. The results showed that customer satisfaction is strongly affected by staff satisfaction and delivery efficiency. Medium SES stores experienced the greatest positive impact on satisfaction levels. These findings emphasize the need for retail managers to focus on reducing delivery times and improving staff satisfaction, especially in Medium and High SES areas, to enhance customer experience.
+The customer satisfaction study showed that staff satisfaction and delivery time strongly impact overall satisfaction. Medium SES stores saw the greatest positive effect. These results highlight the importance of improving delivery efficiency and employee satisfaction, especially in Medium and High SES areas.
 
-Both analyses were conducted using R, applying data cleaning, statistical techniques, and visualization. The insights provide valuable guidance for public health initiatives and retail business strategies.
-
+Both analyses used R for data cleaning, analysis, and visualization, offering useful insights for public health and retail management strategies.
 
 **Files**:
 - [Business Statistics Assignment_2 Code](../assets/Business%20Statistics/Assignment%202/Code/Code_Assignment.Rmd)
 - [Customer Satisfaction Dataset](../assets/Business%20Statistics/Assignment%202/Dataset/cust_satisfaction.csv)
 - [Cardiovascular Disease Dataset](../assets/Business%20Statistics/Assignment%202/Dataset/Cardio_Vascular_Disease.csv)
-
 
 ---
 
