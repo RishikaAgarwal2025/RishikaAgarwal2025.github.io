@@ -6,32 +6,69 @@ author_profile: false
 ---
 
 <style>
-  .contact-container {
-    max-width: 600px;
-    margin: 3rem auto;
-    background: #fff;
+  body {
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+  }
+
+  .contact-wrapper {
+    max-width: 700px;
+    margin: 2rem auto;
     padding: 2rem;
+    background-color: white;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+
+  .contact-form button {
+    background-color: white;
+    color: #007BFF;
+    border: 1px solid #007BFF;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .contact-form button:hover {
+    background-color: #007BFF;
+    color: white;
+  }
+
+  .contact-links {
+    margin-top: 2rem;
   }
 
   .contact-item {
     display: flex;
     align-items: center;
-    margin-bottom: 1.2rem;
     font-size: 18px;
+    margin-bottom: 1rem;
   }
 
   .contact-item i {
+    margin-right: 12px;
     font-size: 22px;
-    margin-right: 10px;
-    color: #333;
   }
 
   .contact-item a {
-    color: #007BFF;
     text-decoration: none;
+    color: #007BFF;
   }
 
   .contact-item a:hover {
@@ -39,23 +76,30 @@ author_profile: false
   }
 </style>
 
-<div class="contact-container">
-
+<div class="contact-wrapper">
   <h1>Contact</h1>
 
-  <div class="contact-item">
-    <i>📧</i>
-    <a href="mailto:rishikaagarwal544@gmail.com">rishikaagarwal544@gmail.com</a>
+  <div class="contact-form">
+    <input type="text" placeholder="Name" required />
+    <input type="email" placeholder="Email" required />
+    <textarea rows="5" placeholder="Message" required></textarea>
+    <button>Send</button>
   </div>
 
-  <div class="contact-item">
-    <i>🔗</i>
-    <a href="https://www.linkedin.com/in/rishika-agarwal-uk" target="_blank">LinkedIn</a>
-  </div>
+  <div class="contact-links">
+    <div class="contact-item">
+      <i>📧</i>
+      <a href="mailto:rishikaagarwal544@gmail.com">rishikaagarwal544@gmail.com</a>
+    </div>
 
-  <div class="contact-item">
-    <i>🐙</i>
-    <a href="https://github.com/RishikaAgarwal2025/Business-Analysis-Portfolio" target="_blank">GitHub</a>
-  </div>
+    <div class="contact-item">
+      <i>🔗</i>
+      <a href="https://www.linkedin.com/in/rishika-agarwal-uk" target="_blank">LinkedIn</a>
+    </div>
 
+    <div class="contact-item">
+      <i>🐙</i>
+      <a href="https://github.com/RishikaAgarwal2025/Business-Analysis-Portfolio" target="_blank">GitHub</a>
+    </div>
+  </div>
 </div>
