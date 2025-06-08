@@ -5,52 +5,57 @@ permalink: /contact/
 author_profile: false
 ---
 
-📧 **Email**: rishikaagarwal544@gmail.com  
-🔗 [**LinkedIn**](http://www.linkedin.com/in/rishika-agarwal-uk)  
-🐙 [**GitHub**](https://github.com/RishikaAgarwal2025/Business-Analysis-Portfolio) 
-
-
 <style>
-  .contact-form {
-    max-width: 500px;
+  .contact-container {
+    max-width: 600px;
     margin: 3rem auto;
+    background: #fff;
     padding: 2rem;
-    background: #fafafa;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
   }
 
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 12px 0;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    font-size: 18px;
   }
 
-  .contact-form button {
-    padding: 10px 20px;
-    border: 1px solid #007BFF;
-    background-color: #fff;
+  .contact-item i {
+    font-size: 22px;
+    margin-right: 10px;
+    color: #333;
+  }
+
+  .contact-item a {
     color: #007BFF;
-    font-size: 16px;
-    border-radius: 6px;
-    cursor: pointer;
+    text-decoration: none;
   }
 
-  .contact-form button:hover {
-    background-color: #007BFF;
-    color: #fff;
+  .contact-item a:hover {
+    text-decoration: underline;
   }
 </style>
 
-<div class="contact-form">
-  <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" rows="6" placeholder="Message" required></textarea>
-    <button type="submit">Send</button>
-  </form>
+<div class="contact-container">
+
+  <h1>Contact</h1>
+
+  <div class="contact-item">
+    <i>📧</i>
+    <a href="mailto:rishikaagarwal544@gmail.com">rishikaagarwal544@gmail.com</a>
+  </div>
+
+  <div class="contact-item">
+    <i>🔗</i>
+    <a href="https://www.linkedin.com/in/rishika-agarwal-uk" target="_blank">LinkedIn</a>
+  </div>
+
+  <div class="contact-item">
+    <i>🐙</i>
+    <a href="https://github.com/RishikaAgarwal2025/Business-Analysis-Portfolio" target="_blank">GitHub</a>
+  </div>
+
 </div>
