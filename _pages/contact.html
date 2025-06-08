@@ -86,16 +86,18 @@ author_profile: false
   <div class="contact-wrapper">
     <h1>Contact</h1>
 
-    <form action="https://formsubmit.co/rishikaagarwal544@gmail.com" method="POST" class="contact-form">
-      <!-- Optional: Disable CAPTCHA -->
-      <input type="hidden" name="_captcha" value="false">
+    <!-- ✅ Updated form using Formspree -->
+    <form action="https://formspree.io/f/xwpblkdg" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
 
-      <!-- Optional: Redirect to thank you page -->
-      <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> -->
+      <!-- Anti-spam honeypot -->
+      <input type="text" name="_honey" style="display:none">
 
-      <input type="text" name="name" placeholder="Name" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <textarea name="message" rows="5" placeholder="Message" required></textarea>
+      <!-- Optional: Redirect after submit -->
+      <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you.html" />
+
       <button type="submit">Send</button>
     </form>
 
