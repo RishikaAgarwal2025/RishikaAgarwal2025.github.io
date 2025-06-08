@@ -5,67 +5,52 @@ permalink: /contact/
 author_profile: false
 ---
 
+📧 **Email**: rishikaagarwal544@gmail.com  
+🔗 [**LinkedIn**](http://www.linkedin.com/in/rishika-agarwal-uk)  
+🐙 [**GitHub**](https://github.com/RishikaAgarwal2025/Business-Analysis-Portfolio) 
+
+
 <style>
-  .contact-container {
-    max-width: 600px;
-    margin: 2rem auto;
+  .contact-form {
+    max-width: 500px;
+    margin: 3rem auto;
     padding: 2rem;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    background: #fafafa;
+    border-radius: 10px;
     font-family: Arial, sans-serif;
   }
 
-  .contact-container h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 1.5rem;
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
   }
 
-  .contact-info {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #444;
-  }
-
-  .contact-info a {
+  .contact-form button {
+    padding: 10px 20px;
+    border: 1px solid #007BFF;
+    background-color: #fff;
     color: #007BFF;
-    text-decoration: none;
-    font-weight: 500;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
   }
 
-  .contact-info a:hover {
-    text-decoration: underline;
-  }
-
-  .contact-icon {
-    margin-right: 8px;
-    vertical-align: middle;
+  .contact-form button:hover {
+    background-color: #007BFF;
+    color: #fff;
   }
 </style>
 
-<div class="contact-container">
-  <h2>Get in Touch</h2>
-
-  <div class="contact-info">
-    <p>
-      <img src="https://img.icons8.com/material-outlined/24/000000/new-post.png" class="contact-icon" alt="email" />
-      <strong>Email:</strong>
-      <a href="mailto:rishikaagarwal544@gmail.com">rishikaagarwal544@gmail.com</a>
-    </p>
-
-    <p>
-      <img src="https://img.icons8.com/ios-filled/24/000000/linkedin.png" class="contact-icon" alt="LinkedIn" />
-      <strong>LinkedIn:</strong>
-      <a href="http://www.linkedin.com/in/rishika-agarwal-uk" target="_blank">linkedin.com/in/rishika-agarwal-uk</a>
-    </p>
-
-    <p>
-      <img src="https://img.icons8.com/ios-filled/24/000000/github.png" class="contact-icon" alt="GitHub" />
-      <strong>GitHub:</strong>
-      <a href="https://github.com/RishikaAgarwal2025/Business-Analysis-Portfolio" target="_blank">
-        RishikaAgarwal2025
-      </a>
-    </p>
-  </div>
+<div class="contact-form">
+  <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" rows="6" placeholder="Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
 </div>
