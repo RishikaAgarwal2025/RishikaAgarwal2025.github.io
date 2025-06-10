@@ -29,17 +29,70 @@
       padding: 1em;
       display: flex;
       justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 1em;
+      margin: 0.5em 1em;
       font-weight: 500;
     }
 
     nav a:hover {
       text-decoration: underline;
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+    }
+
+    .nav-toggle span {
+      background-color: white;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     .container {
@@ -91,13 +144,20 @@
 <body>
 
   <nav>
-    <a href="{{ '/' | relative_url }}">Home</a>
-    <a href="{{ '/about-me/' | relative_url }}">About Me</a>
-    <a href="{{ '/projects/' | relative_url }}">Academic Projects</a>
-    <a href="{{ '/dissertation/' | relative_url }}">Dissertation</a>
-    <a href="{{ '/teaching/' | relative_url }}">Teaching & Volunteering</a>
-    <a href="{{ '/cv/' | relative_url }}">CV</a>
-    <a href="{{ '/contact/' | relative_url }}">Contact</a>
+    <button class="nav-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-links" id="navMenu">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/about-me/' | relative_url }}">About Me</a>
+      <a href="{{ '/projects/' | relative_url }}">Academic Projects</a>
+      <a href="{{ '/dissertation/' | relative_url }}">Dissertation</a>
+      <a href="{{ '/teaching/' | relative_url }}">Teaching & Volunteering</a>
+      <a href="{{ '/cv/' | relative_url }}">CV</a>
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
+    </div>
   </nav>
 
   <div class="container">
@@ -107,6 +167,13 @@
   <footer>
     © 2025 Rishika Agarwal
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('show');
+    }
+  </script>
 
 </body>
 </html>
