@@ -54,8 +54,10 @@
       border: none;
       cursor: pointer;
       position: absolute;
-      right: 1rem;
+      left: 1rem;
       top: 1rem;
+      z-index: 2;
+      padding: 0.5rem;
     }
 
     .nav-toggle span {
@@ -79,6 +81,7 @@
         flex-direction: column;
         width: 100%;
         text-align: center;
+        margin-top: 3rem;
       }
 
       .nav-links.show {
@@ -91,7 +94,7 @@
 
       nav {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
       }
     }
 
