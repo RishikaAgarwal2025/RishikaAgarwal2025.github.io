@@ -26,7 +26,7 @@
 
     nav {
       background-color: #333;
-      padding: 1em 1em 1em 3.5em; /* extra left padding to make room */
+      padding: 1em 1em 1em 3.5em; /* space for the hamburger */
       display: flex;
       justify-content: center;
       position: relative;
@@ -36,24 +36,25 @@
     .nav-toggle {
       display: none;
       position: absolute;
-      top: 0.7em;
+      top: 1em;
       left: 1em;
       flex-direction: column;
       background: none;
       border: none;
       cursor: pointer;
       z-index: 2;
-      height: 30px;
-      width: 30px;
+      height: 40px;
+      width: 40px;
       justify-content: center;
       align-items: center;
+      padding: 0;
     }
 
     .nav-toggle span {
       background-color: white;
       height: 3px;
       width: 25px;
-      margin: 3px 0;
+      margin: 4px 0;
       display: block;
     }
 
