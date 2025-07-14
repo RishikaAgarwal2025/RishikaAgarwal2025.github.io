@@ -5,7 +5,7 @@ permalink: /
 ---
 
 <div class="profile" style="display: flex; align-items: center; gap: 20px; margin-bottom: 30px;">
-  <img src="assets/images/me.jpeg" alt="Rishika Agarwal" style="width: 150px; border-radius: 50%;">
+  <img src="assets/images/ME.jpeg" alt="Rishika Agarwal" style="width: 150px; border-radius: 50%;">
   <div>
     <h1 style="margin-bottom: 0;">Rishika Agarwal</h1>
     <p style="margin-top: 5px;">MSc Business Analytics | Python, SQL, Tableau | Business Analyst Enthusiast</p>
