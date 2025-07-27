@@ -13,11 +13,7 @@ Below is a curated list of academic and applied projects, covering data analytic
 
 **Tools used**: Stata, Excel
 
-- Built a time series forecasting model to analyze the relationship between Tata Motors’ stock price and the Nifty 50 index.
-- Conducted stationarity testing and applied double differencing to ensure a stable series.
-- Selected the optimal ARIMA model using Bayesian Information Criterion (BIC).
-- Model forecasts a short-term dip in 2024 followed by a long-term upward trend (based on data from 2012–2022).
-- Demonstrates strong understanding of macroeconomic factors and statistical modeling in firm-level analysis.
+This project involved building a time series forecasting model to analyze the relationship between Tata Motors’ stock price and the Nifty 50 index. I performed stationarity testing, applied double differencing, and selected the optimal ARIMA model using the Bayesian Information Criterion (BIC). The model, based on annual average closing prices from 2012 to 2022, forecasts a temporary decline in 2024 followed by a long-term upward trend. This work highlights my ability to use statistical modeling techniques to understand macroeconomic influences on firm-level performance.
 
 **Files**:
 - [Forecasting Code](../assets/Time%20series%20econometrics/Forecasting%20code.txt)
@@ -30,10 +26,7 @@ Below is a curated list of academic and applied projects, covering data analytic
 
 **Tools used**: Python (faker, pandas), SQL
 
-- Designed a relational database schema for a fictional magazine subscription company.
-- Generated synthetic customer, subscription, payment, and engagement data using Python.
-- Wrote complex SQL queries to derive business insights such as churn rates, revenue trends, and customer lifetime value.
-- Demonstrated ability to simulate real-world data and solve business problems using data engineering and analytics.
+To simulate real-world business scenarios, I designed a relational database for a fictional magazine subscription company. The schema captured customer demographics, subscriptions, payments, and engagement data. Using Python, realistic synthetic data was generated to simulate rental patterns, while SQL was used to perform complex queries reflecting real business scenarios.  Insights derived include churn rates, revenue trends, and customer lifetime value across different regions and product tiers. This project combines data engineering and business analytics to derive actionable insights in data-constrained environments.
   
 **Files**: 
 - [Faker Python Code](/assets/Data%20Management/Code/Fake%20data%20code.py)
