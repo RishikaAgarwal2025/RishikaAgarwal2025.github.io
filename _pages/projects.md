@@ -13,7 +13,7 @@ Below is a curated list of academic and applied projects, covering data analytic
 
 **Tools used**: Python (faker, pandas), SQL
 
-To simulate real-world business scenarios, I designed a relational database for a fictional magazine subscription company. The schema captured customer demographics, subscriptions, payments, and engagement data. Using Python, realistic synthetic data was generated to simulate rental patterns, while SQL was used to perform complex queries reflecting real business scenarios.  Insights derived include churn rates, revenue trends, and customer lifetime value across different regions and product tiers. This project combines data engineering and business analytics to derive actionable insights in data-constrained environments.
+To simulate real-world business scenarios, I designed a **relational database** for a fictional magazine subscription company. The schema captured customer demographics, subscriptions, payments, and engagement data. Using Python, **realistic synthetic data was generated** to simulate rental patterns, while SQL was used to perform complex queries reflecting real business scenarios.  Insights derived include **churn rates, revenue trends, and customer lifetime value** across different regions and product tiers. This project combines **data engineering and business analytics** to derive actionable insights in data-constrained environments.
   
 **Files**: 
 - [Faker Python Code](/assets/Data%20Management/Code/Fake%20data%20code.py)
@@ -25,7 +25,7 @@ To simulate real-world business scenarios, I designed a relational database for 
 
 **Tools used**: R
 
-This project evaluated a new loan review model using an A/B testing framework within a consumer lending firm. By comparing error rates (Type I and II) between treatment (new model) and control (existing system) groups, the analysis showed that the new model significantly reduced both false approvals and rejections. The project also identifies areas for improving the experimental design like better group balancing and increasing sample size. It demonstrates practical use of hypothesis testing, experimental data analysis, and clear interpretation of results for business impact.
+This project evaluated a new **loan review model** using an **A/B testing framework** within a consumer lending firm. By comparing **error rates (Type I and II)** between treatment (new model) and control (existing system) groups, the analysis showed that the new model significantly **reduced both false approvals and rejections**. The project also identifies areas for improving the experimental design like better group balancing and increasing sample size. It demonstrates practical use of hypothesis testing, experimental data analysis, and clear interpretation of results for business impact.
 
 **Files**: 
 - [HTML Output](/assets/Treatment%20control%20testing/Code/Treatment%20control%20testing.html)
@@ -37,7 +37,7 @@ This project evaluated a new loan review model using an A/B testing framework wi
 
 **Tools used**: Python, PowerPoint  
 
-This project aimed to build a predictive model for Nile, a South American eCommerce platform, to identify customers likely to leave positive reviews. Using Python and machine learning techniques such as Logistic Regression, SVM, XGBoost, and Gradient Boosting, customer and order data were analyzed to support targeted engagement strategies. After evaluating multiple models, the Gradient Boosting model was selected for its performance, though issues with underprediction and underfitting were identified. Recommendations included improving data balance and expanding feature sets to enhance predictive accuracy. Visual insights and results were presented using PowerPoint. This project highlights practical skills in data cleaning, analysis, model building, and performance tuning, with the goal of improving customer retention and platform reputation.
+This project aimed to build a predictive model for Nile, a South American eCommerce platform, to identify customers likely to leave positive reviews. Using Python and machine learning techniques such as **Logistic Regression, SVM, XGBoost, and Gradient Boosting**, customer and order data were analyzed to **support targeted engagement strategies**. After evaluating multiple models, **the Gradient Boosting model** was selected for its performance, though issues with **underprediction and underfitting** were identified. Recommendations included improving data balance and expanding feature sets to enhance predictive accuracy. Visual insights and results were presented using PowerPoint. This project highlights practical skills in **data cleaning, analysis, model building, and performance tuning, with the goal of improving customer retention and platform reputation**. 
 
 **Files**:
 - [Python Code](../assets/Analysis%20in%20Practice/AIP_code.ipynb)
@@ -50,7 +50,9 @@ This project aimed to build a predictive model for Nile, a South American eComme
 
 **Tools used**: Python (Pyomo), MS PowerPoint  
 
-This project focuses on revenue management and dynamic pricing for BuildMax Rentals to improve equipment pricing and fleet allocation. Using historical rental data and a linear programming model built in Python, we optimized pricing strategies to maximize revenue. The approach considers factors like rental duration, sector-specific demand, and maintenance schedules. By addressing pricing gaps and demand variability, the solution helps BuildMax make smarter, data-driven decisions, stay competitive, and enhance overall business performance.
+This project focuses on revenue management and dynamic pricing for BuildMax Rentals to improve equipment pricing and fleet allocation. Using **historical rental data and a linear programming model** built in Python, we **optimized pricing strategies to maximize revenue**. The approach considers factors like **rental duration, sector-specific demand, and maintenance schedules**.
+
+By addressing pricing gaps and demand variability, the solution helps BuildMax make smarter, data-driven decisions, stay competitive, and enhance overall business performance.
 
 **Files**:
 - [Python Code](https://github.com/RishikaAgarwal2025/RishikaAgarwal2025.github.io/blob/master/assets/Pricing%20Analytics/Code.py)
@@ -62,7 +64,7 @@ This project focuses on revenue management and dynamic pricing for BuildMax Rent
 
 **Tools used**: Stata, Excel
 
-This project involved building a time series forecasting model to analyze the relationship between Tata Motors’ stock price and the Nifty 50 index. I performed stationarity testing, applied double differencing, and selected the optimal ARIMA model using the Bayesian Information Criterion (BIC). The model, based on annual average closing prices from 2012 to 2022, forecasts a temporary decline in 2024 followed by a long-term upward trend. This work highlights my ability to use statistical modeling techniques to understand macroeconomic influences on firm-level performance.
+This project involved building a **time series forecasting model** to analyze the relationship between **Tata Motors’ stock price and the Nifty 50 index**. I performed **stationarity testing, applied double differencing, and selected the optimal ARIMA model using the Bayesian Information Criterion (BIC)**. The model, based on annual average closing prices from 2012 to 2022, forecasts a temporary decline in 2024 followed by a long-term upward trend. This work highlights my ability to use statistical modeling techniques to understand macroeconomic influences on firm-level performance.
 
 **Files**:
 - [Forecasting Code](../assets/Time%20series%20econometrics/Forecasting%20code.txt)
@@ -74,7 +76,7 @@ This project involved building a time series forecasting model to analyze the re
 
 **Tools used**: MS word, Latex, MS PowerPoint
 
-For this project, I focused on Myprotein and applied the DELTA framework to evaluate its data strategy. I developed an analytical project that included risk analysis, PIDD questions, and a CATWOE analysis to understand business challenges and stakeholder perspectives. The personalised diet and fitness plan proposed leverages Myprotein’s strengths to boost customer engagement through AI-driven personalisation. The DELTA framework revealed that while the company effectively utilises data, it needs to improve integration and scalability for broader impact. Visualising the problem helped clarify project goals, and the risk analysis identified challenges such as AI bias and data privacy concerns. To ensure success, a small-scale pilot with user feedback is recommended before full deployment. This project’s insights aim to guide Myprotein in enhancing its AI initiatives, fostering innovation, and maintaining its position as a leader in the health and fitness industry.
+For this project, I focused on **Myprotein** and applied the **DELTA framework** to evaluate its data strategy. I developed an analytical project that included **risk analysis, PIDD questions, and a CATWOE analysis** to understand business challenges and stakeholder perspectives. **The personalised diet and fitness plan** proposed leverages Myprotein’s strengths to **boost customer engagement through AI-driven personalisation**. The DELTA framework revealed that while the company effectively utilises data, it needs to improve integration and scalability for broader impact. Visualising the problem helped clarify project goals, and the risk analysis identified challenges such as AI bias and data privacy concerns. To ensure success, a small-scale pilot with user feedback is recommended before full deployment. This project’s insights aim to guide Myprotein in enhancing its **AI initiatives, fostering innovation, and maintaining its position as a leader in the health and fitness industry.**
 
 **Files**:
 - [Report (PDF)](../assets/Understanding%20Business%20for%20Analysts/Repoort%20-%20UBFA.pdf)
@@ -86,7 +88,7 @@ For this project, I focused on Myprotein and applied the DELTA framework to eval
 
 **Tool used**: R 
 
-This assignment involved analyzing foot traffic data from three prominent streets in York to identify the most suitable location for setting up a retail stall. The analysis included data cleaning, exploratory analysis, and visual comparisons of footfall patterns across the locations. The results indicated that one street showed the most consistent and stable foot traffic, making it the most reliable option for a business stall. In contrast, the other two streets displayed greater variability, suggesting they may be less predictable for business planning. The analysis applied statistical techniques and visualizations in R to support evidence-based decision-making related to location selection.
+This assignment involved **analyzing foot traffic data** from three prominent streets in York to identify the most suitable location for setting up a retail stall. The analysis included **data cleaning, exploratory analysis, and visual comparisons of footfall patterns** across the locations. The results indicated that one street showed the most consistent and stable foot traffic, making it the most reliable option for a business stall. In contrast, the other two streets displayed greater variability, suggesting they may be less predictable for business planning. The analysis applied **statistical techniques and visualizations** in R to support evidence-based decision-making related to location selection.
 
 **Files**:
 - [York Footfall Dataset](../assets/Business%20Statistics/Assignment%201/York_Footfall_data.csv)
@@ -96,13 +98,13 @@ This assignment involved analyzing foot traffic data from three prominent street
 
 **Tool used**: R 
 
-This assignment analyzed two datasets to understand factors influencing cardiovascular disease (CVD) prevalence in England and customer satisfaction in retail stores.
+This assignment analyzed two datasets to understand **factors influencing cardiovascular disease (CVD) prevalence in England and customer satisfaction in retail stores**. 
 
-The CVD analysis found that poverty, smoking, overweight prevalence, and wellbeing significantly affect disease rates. Notably, poverty showed a negative association with CVD, meaning higher poverty corresponded to lower disease rates, while smoking, overweight, and lower wellbeing were linked to higher CVD prevalence. Other factors may also play a role and need further investigation.
+The CVD analysis found that **poverty, smoking, overweight prevalence, and wellbeing significantly affect disease rates**. Notably, poverty showed a negative association with CVD, meaning higher poverty corresponded to lower disease rates, while smoking, overweight, and lower wellbeing were linked to higher CVD prevalence. Other factors may also play a role and need further investigation.
 
-The customer satisfaction study showed that staff satisfaction and delivery time strongly impact overall satisfaction. Medium SES stores saw the greatest positive effect. These results highlight the importance of improving delivery efficiency and employee satisfaction, especially in Medium and High SES areas.
+The customer satisfaction study showed that **staff satisfaction and delivery time strongly impact overall satisfaction**. Medium SES stores saw the greatest positive effect. These results highlight the importance of improving delivery efficiency and employee satisfaction, especially in Medium and High SES areas.
 
-Both analyses used R for data cleaning, analysis, and visualization, offering useful insights for public health and retail management strategies.
+Both analyses used **R for data cleaning, analysis, and visualization, offering useful insights for public health and retail management strategies.**
 
 **Files**:
 - [Business Statistics Assignment_2 Code](../assets/Business%20Statistics/Assignment%202/Code/Code_Assignment.Rmd)
