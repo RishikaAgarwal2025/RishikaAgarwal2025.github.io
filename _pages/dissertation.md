@@ -9,7 +9,7 @@ author_profile: false
 My final-year dissertation focused on making Ahmedabad’s Bus Rapid Transit System (BRTS) more efficient, inclusive, and environmentally sustainable. Although BRTS was introduced as a rapid and eco-friendly public transport option, it remains significantly underutilized—especially among students and urban professionals.
 
 **Research Objective**                                                                                                                                                                                                                                                  
-The goal was to understand why BRTS usage is low and to identify what changes—in infrastructure, policy, or user experience—could improve its adoption. I aimed to propose actionable interventions that could encourage a shift from private vehicles to public transport.
+The goal was to understand why BRTS usage is low and to identify what changes in infrastructure, policy, or user experience could improve its adoption. I aimed to propose actionable interventions that could encourage a shift from private vehicles to public transport.
 
 **Methodology**                                                                                                                                                                                                                                                          
 I began with a behavioral survey conducted at Ahmedabad University to understand travel choices, perceptions of BRTS, and barriers to adoption. The findings were then used to simulate six real-world transportation scenarios using SUMO (Simulation of Urban Mobility), an open-source traffic modeling software.
