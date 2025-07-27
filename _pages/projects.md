@@ -9,20 +9,7 @@ author_profile: false
 Below is a curated list of academic and applied projects, covering data analytics, forecasting, optimization, simulation modeling, A/B testing, and business analysis. Each project includes code, datasets, reports, and insights gained.
 
 ---
-## 1. Forecasting Tata Motors' Stock Price using Nifty 50
-
-**Tools used**: Stata, Excel
-
-This project involved building a time series forecasting model to analyze the relationship between Tata Motors’ stock price and the Nifty 50 index. I performed stationarity testing, applied double differencing, and selected the optimal ARIMA model using the Bayesian Information Criterion (BIC). The model, based on annual average closing prices from 2012 to 2022, forecasts a temporary decline in 2024 followed by a long-term upward trend. This work highlights my ability to use statistical modeling techniques to understand macroeconomic influences on firm-level performance.
-
-**Files**:
-- [Forecasting Code](../assets/Time%20series%20econometrics/Forecasting%20code.txt)
-- [Research Paper (PDF)](../assets/Time%20series%20econometrics/Forecasting_stock_market.pdf)
-- [Dataset](../assets/Time%20series%20econometrics/Tata_motors_Nifty50.xlsx)
-
----
-
-## 2. Data Management – SQL Simulation for Subscription Business
+## 1. Data Management – SQL Simulation for Subscription Business
 
 **Tools used**: Python (faker, pandas), SQL
 
@@ -34,7 +21,7 @@ To simulate real-world business scenarios, I designed a relational database for 
 
 ---
 
-## 3. Evaluating a Loan Review Model via A/B Testing
+## 2. Evaluating a Loan Review Model via A/B Testing
 
 **Tools used**: R
 
@@ -44,23 +31,9 @@ This project evaluated a new loan review model using an A/B testing framework wi
 - [HTML Output](/assets/Treatment%20control%20testing/Code/Treatment%20control%20testing.html)
 - [Report (PDF)](/assets/Treatment%20control%20testing/Report/Treatment%20Control%20Testing%20Report.pdf)
 - [Dataset](/assets/Treatment%20control%20testing/Data/Data.csv)
-
+  
 ---
-
-## 4. Pricing Analytics for BuildMax Rentals
-
-**Tools used**: Python (Pyomo), MS PowerPoint  
-
-This project focuses on revenue management and dynamic pricing for BuildMax Rentals to improve equipment pricing and fleet allocation. Using historical rental data and a linear programming model built in Python, we optimized pricing strategies to maximize revenue. The approach considers factors like rental duration, sector-specific demand, and maintenance schedules. By addressing pricing gaps and demand variability, the solution helps BuildMax make smarter, data-driven decisions, stay competitive, and enhance overall business performance.
-
-**Files**:
-- [Python Code](https://github.com/RishikaAgarwal2025/RishikaAgarwal2025.github.io/blob/master/assets/Pricing%20Analytics/Code.py)
-- [Report (PDF)](https://github.com/RishikaAgarwal2025/RishikaAgarwal2025.github.io/blob/master/assets/Pricing%20Analytics/Report.pdf)
-- [Dataset](https://github.com/RishikaAgarwal2025/RishikaAgarwal2025.github.io/blob/master/assets/Pricing%20Analytics/BuildMax_Rentals_Dataset_Updated.xlsx)
-
----
-
-## 5. Analytics in Practice – Brazilian E-commerce Dataset
+## 3. Analytics in Practice – Brazilian E-commerce Dataset
 
 **Tools used**: Python, PowerPoint  
 
@@ -73,8 +46,41 @@ This project aimed to build a predictive model for Nile, a South American eComme
 - [Dataset](../assets/Analysis%20in%20Practice/brazilian-ecommerce-dataset)
 
 ---
+## 4. Pricing Analytics for BuildMax Rentals
 
-## 6. Business Statistics
+**Tools used**: Python (Pyomo), MS PowerPoint  
+
+This project focuses on revenue management and dynamic pricing for BuildMax Rentals to improve equipment pricing and fleet allocation. Using historical rental data and a linear programming model built in Python, we optimized pricing strategies to maximize revenue. The approach considers factors like rental duration, sector-specific demand, and maintenance schedules. By addressing pricing gaps and demand variability, the solution helps BuildMax make smarter, data-driven decisions, stay competitive, and enhance overall business performance.
+
+**Files**:
+- [Python Code](https://github.com/RishikaAgarwal2025/RishikaAgarwal2025.github.io/blob/master/assets/Pricing%20Analytics/Code.py)
+- [Report (PDF)](https://github.com/RishikaAgarwal2025/RishikaAgarwal2025.github.io/blob/master/assets/Pricing%20Analytics/Report.pdf)
+- [Dataset](https://github.com/RishikaAgarwal2025/RishikaAgarwal2025.github.io/blob/master/assets/Pricing%20Analytics/BuildMax_Rentals_Dataset_Updated.xlsx)
+
+---
+## 5. Forecasting Tata Motors' Stock Price using Nifty 50
+
+**Tools used**: Stata, Excel
+
+This project involved building a time series forecasting model to analyze the relationship between Tata Motors’ stock price and the Nifty 50 index. I performed stationarity testing, applied double differencing, and selected the optimal ARIMA model using the Bayesian Information Criterion (BIC). The model, based on annual average closing prices from 2012 to 2022, forecasts a temporary decline in 2024 followed by a long-term upward trend. This work highlights my ability to use statistical modeling techniques to understand macroeconomic influences on firm-level performance.
+
+**Files**:
+- [Forecasting Code](../assets/Time%20series%20econometrics/Forecasting%20code.txt)
+- [Research Paper (PDF)](../assets/Time%20series%20econometrics/Forecasting_stock_market.pdf)
+- [Dataset](../assets/Time%20series%20econometrics/Tata_motors_Nifty50.xlsx)
+
+---
+## 6. Understanding Business for Analysts – Case Study on MyProtein
+
+**Tools used**: MS word, Latex, MS PowerPoint
+
+For this project, I focused on Myprotein and applied the DELTA framework to evaluate its data strategy. I developed an analytical project that included risk analysis, PIDD questions, and a CATWOE analysis to understand business challenges and stakeholder perspectives. The personalised diet and fitness plan proposed leverages Myprotein’s strengths to boost customer engagement through AI-driven personalisation. The DELTA framework revealed that while the company effectively utilises data, it needs to improve integration and scalability for broader impact. Visualising the problem helped clarify project goals, and the risk analysis identified challenges such as AI bias and data privacy concerns. To ensure success, a small-scale pilot with user feedback is recommended before full deployment. This project’s insights aim to guide Myprotein in enhancing its AI initiatives, fostering innovation, and maintaining its position as a leader in the health and fitness industry.
+
+**Files**:
+- [Report (PDF)](../assets/Understanding%20Business%20for%20Analysts/Repoort%20-%20UBFA.pdf)
+
+---
+## 7. Business Statistics
 
 **Assignment 1: Analysis of New York Footfall Data** 
 
@@ -102,14 +108,3 @@ Both analyses used R for data cleaning, analysis, and visualization, offering us
 - [Business Statistics Assignment_2 Code](../assets/Business%20Statistics/Assignment%202/Code/Code_Assignment.Rmd)
 - [Customer Satisfaction Dataset](../assets/Business%20Statistics/Assignment%202/Dataset/cust_satisfaction.csv)
 - [Cardiovascular Disease Dataset](../assets/Business%20Statistics/Assignment%202/Dataset/Cardio_Vascular_Disease.csv)
-
----
-
-## 7. Understanding Business for Analysts – Case Study on MyProtein
-
-**Tools used**: MS word, Latex, MS PowerPoint
-
-For this project, I focused on Myprotein and applied the DELTA framework to evaluate its data strategy. I developed an analytical project that included risk analysis, PIDD questions, and a CATWOE analysis to understand business challenges and stakeholder perspectives. The personalised diet and fitness plan proposed leverages Myprotein’s strengths to boost customer engagement through AI-driven personalisation. The DELTA framework revealed that while the company effectively utilises data, it needs to improve integration and scalability for broader impact. Visualising the problem helped clarify project goals, and the risk analysis identified challenges such as AI bias and data privacy concerns. To ensure success, a small-scale pilot with user feedback is recommended before full deployment. This project’s insights aim to guide Myprotein in enhancing its AI initiatives, fostering innovation, and maintaining its position as a leader in the health and fitness industry.
-
-**Files**:
-- [Report (PDF)](../assets/Understanding%20Business%20for%20Analysts/Repoort%20-%20UBFA.pdf)
