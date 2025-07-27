@@ -13,7 +13,7 @@ Below is a curated list of academic and applied projects, covering data analytic
 
 **Tools used**: Python (faker, pandas), SQL
 
-To simulate real-world business scenarios, I designed a **relational database** for a fictional magazine subscription company. The schema captured customer demographics, subscriptions, payments, and engagement data. Using Python, **realistic synthetic data was generated** to simulate rental patterns, while SQL was used to perform complex queries reflecting real business scenarios.  Insights derived include **churn rates, revenue trends, and customer lifetime value** across different regions and product tiers. This project combines **data engineering and business analytics** to derive actionable insights in data-constrained environments.
+To simulate real-world business scenarios, I designed a **relational database** for a fictional magazine subscription company. The schema captured customer demographics, subscriptions, payments, and engagement data. Using Python, **realistic synthetic data was generated** to simulate rental patterns, while **SQL** was used to perform complex queries reflecting real business scenarios.  Insights derived include **churn rates, revenue trends, and customer lifetime value** across different regions and product tiers. This project combines **data engineering and business analytics** to derive actionable insights in data-constrained environments.
   
 **Files**: 
 - [Faker Python Code](/assets/Data%20Management/Code/Fake%20data%20code.py)
@@ -25,7 +25,7 @@ To simulate real-world business scenarios, I designed a **relational database** 
 
 **Tools used**: R
 
-This project evaluated a new **loan review model** using an **A/B testing framework** within a consumer lending firm. By comparing **error rates (Type I and II)** between treatment (new model) and control (existing system) groups, the analysis showed that the new model significantly **reduced both false approvals and rejections**. The project also identifies areas for improving the experimental design like better group balancing and increasing sample size. It demonstrates practical use of hypothesis testing, experimental data analysis, and clear interpretation of results for business impact.
+This project evaluated a new **loan review model** using an **A/B testing framework** within a consumer lending firm. By comparing **error rates (Type I and II)** between **treatment (new model) and control (existing system) groups**, the analysis showed that the new model significantly **reduced both false approvals and rejections**. The project also identifies areas for improving the experimental design like better group balancing and increasing sample size. It demonstrates practical use of **hypothesis testing, experimental data analysis, and clear interpretation of results for business impact.**
 
 **Files**: 
 - [HTML Output](/assets/Treatment%20control%20testing/Code/Treatment%20control%20testing.html)
@@ -37,7 +37,7 @@ This project evaluated a new **loan review model** using an **A/B testing framew
 
 **Tools used**: Python, PowerPoint  
 
-This project aimed to build a predictive model for Nile, a South American eCommerce platform, to identify customers likely to leave positive reviews. Using Python and machine learning techniques such as **Logistic Regression, SVM, XGBoost, and Gradient Boosting**, customer and order data were analyzed to **support targeted engagement strategies**. After evaluating multiple models, **the Gradient Boosting model** was selected for its performance, though issues with **underprediction and underfitting** were identified. Recommendations included improving data balance and expanding feature sets to enhance predictive accuracy. Visual insights and results were presented using PowerPoint. This project highlights practical skills in **data cleaning, analysis, model building, and performance tuning, with the goal of improving customer retention and platform reputation**. 
+This project aimed to build a **predictive model** for Nile, a South American eCommerce platform, to identify customers likely to leave positive reviews. Using Python and machine learning techniques such as **Logistic Regression, SVM, XGBoost, and Gradient Boosting**, customer and order data were analyzed to **support targeted engagement strategies**. After evaluating multiple models, **the Gradient Boosting model** was selected for its performance, though issues with **underprediction and underfitting** were identified. Recommendations included improving data balance and expanding feature sets to enhance predictive accuracy. Visual insights and results were presented using PowerPoint. This project highlights practical skills in **data cleaning, analysis, model building, and performance tuning, with the goal of improving customer retention and platform reputation**. 
 
 **Files**:
 - [Python Code](../assets/Analysis%20in%20Practice/AIP_code.ipynb)
@@ -50,9 +50,7 @@ This project aimed to build a predictive model for Nile, a South American eComme
 
 **Tools used**: Python (Pyomo), MS PowerPoint  
 
-This project focuses on revenue management and dynamic pricing for BuildMax Rentals to improve equipment pricing and fleet allocation. Using **historical rental data and a linear programming model** built in Python, we **optimized pricing strategies to maximize revenue**. The approach considers factors like **rental duration, sector-specific demand, and maintenance schedules**.
-
-By addressing pricing gaps and demand variability, the solution helps BuildMax make smarter, data-driven decisions, stay competitive, and enhance overall business performance.
+This project focuses on revenue management and dynamic pricing for BuildMax Rentals to improve equipment pricing and fleet allocation. Using **historical rental data and a linear programming model** built in Python, we **optimized pricing strategies to maximize revenue**. The approach considers factors like **rental duration, sector-specific demand, and maintenance schedules**.By addressing pricing gaps and demand variability, the solution helps BuildMax make smarter, data-driven decisions, stay competitive, and enhance overall business performance.
 
 **Files**:
 - [Python Code](https://github.com/RishikaAgarwal2025/RishikaAgarwal2025.github.io/blob/master/assets/Pricing%20Analytics/Code.py)
@@ -64,7 +62,7 @@ By addressing pricing gaps and demand variability, the solution helps BuildMax m
 
 **Tools used**: Stata, Excel
 
-This project involved building a **time series forecasting model** to analyze the relationship between **Tata Motors’ stock price and the Nifty 50 index**. I performed **stationarity testing, applied double differencing, and selected the optimal ARIMA model using the Bayesian Information Criterion (BIC)**. The model, based on annual average closing prices from 2012 to 2022, forecasts a temporary decline in 2024 followed by a long-term upward trend. This work highlights my ability to use statistical modeling techniques to understand macroeconomic influences on firm-level performance.
+This project involved building a **time series forecasting model** to analyze the relationship between **Tata Motors’ stock price and the Nifty 50 index**. I performed **stationarity testing, applied double differencing, and selected the optimal ARIMA model using the Bayesian Information Criterion (BIC)**. The model, based on annual average closing prices from 2012 to 2022, forecasts a temporary decline in 2024 followed by a long-term upward trend. This work highlights my ability to use **statistical modeling techniques** to understand macroeconomic influences on firm-level performance.
 
 **Files**:
 - [Forecasting Code](../assets/Time%20series%20econometrics/Forecasting%20code.txt)
