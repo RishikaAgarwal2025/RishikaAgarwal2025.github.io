@@ -5,44 +5,14 @@ permalink: /dissertation/
 author_profile: false
 ---
 
-**Enhancing Efficiency and Societal Impact of Ahmedabad’s BRTS**                                                                                                                                                                                                           
-My final-year dissertation focused on making Ahmedabad’s Bus Rapid Transit System (BRTS) more efficient, inclusive, and environmentally sustainable. Although BRTS was introduced as a rapid and eco-friendly public transport option, it remains significantly underutilized especially among students and urban professionals.
+##Dynamic Pricing in a Competitive Market with Shared Demand Influenced by Social Media Trends
+My MSc dissertation at Warwick Business School explored how firms can remain profitable and competitive in volatile markets shaped by social-media-driven trends such as those on TikTok. The project developed an agent-based simulation framework integrating econometric demand estimation (OLS regression with reference price and trend effects), Bayesian updating to filter noisy social signals, and custom Q-learning reinforcement learning agents. I applied skills in Python (pandas, numpy, matplotlib, statsmodels), econometrics, Bayesian inference, reinforcement learning, and simulation design to evaluate markdowns, promotions, and adaptive pricing. The results showed that markdown strategies consistently outperformed promotions by stabilising consumer expectations, signalling fairness, and sustaining long-term revenues, while promotions created short-lived sales spikes but eroded trust and profitability. Reinforcement learning achieved superior profitability once trained, but Bayesian smoothing proved essential in enhancing stability and consumer trust by filtering noise from trend shocks. The impact of this research lies in bridging behavioural pricing theory with algorithmic approaches, providing a sequenced roadmap for firms to first use markdowns, then transition to reinforcement learning, and finally integrate Bayesian updating for sustainable competitive advantage, while also highlighting the ethical and policy implications of algorithmic pricing in digital markets.  
 
-**Research Objective**                                                                                                                                                                                                                                                  
-The goal was to understand why BRTS usage is low and to identify what changes in infrastructure, policy, or user experience could improve its adoption. I aimed to propose actionable interventions that could encourage a shift from private vehicles to public transport.
-
-**Methodology**                                                                                                                                                                                                                                                          
-I began with a behavioral survey conducted at Ahmedabad University to understand travel choices, perceptions of BRTS, and barriers to adoption. The findings were then used to simulate six real-world transportation scenarios using **SUMO (Simulation of Urban Mobility)**, an open-source traffic modeling software.
-
-These simulations tested variables such as traffic volume, emissions, waiting times, and the impact of switching to electric buses. Each case compared different combinations of BRTS, AMTS, and private vehicle usage.
-
-**Key Insights**                                                                                                                                                                                                                                                         
-The research revealed that over 60% of respondents preferred private vehicles due to poor last-mile connectivity and time inefficiency in using BRTS. However, if waiting time, safety, and connectivity were improved, a significant number of users expressed willingness to switch.
-
-Simulation results showed a clear reduction in emissions and travel times when public transport was optimized—especially with the introduction of electric buses and integrated corridors.
-
-**Policy Recommendations**                                                                                                                                                                                                                                              
-Based on my findings, I proposed several low-cost, high-impact strategies to increase BRTS usage:
-
-- Introduce free or discounted BRTS rides for students and women
-- Raise parking fees near university areas
-- Add electric carts or rickshaws for last-mile connectivity
-- Convert existing AMTS buses to electric and integrate them into BRTS corridors
-                                                                                                                                                                            
-These recommendations align with Sustainable Development Goals (SDG 11 and SDG 13) by promoting equitable, low-emission urban transportation.
-
-**Tools & Skills Used**                                                                                                                                                                                                                                                 
-I worked with **SUMO for traffic simulation and mobility modeling, SPSS for survey analysis, and Google Forms for public data collection**. The project also involved research in urban transport policy and behavioral insights related to commuting choices.
-
-**Conclusion**                                                                                                                                                                                                                                                          
-This project helped me combine urban planning, human behavior, and data-driven simulation to design practical transport solutions. It strengthened my passion for mobility systems that are sustainable, inclusive, and smart—and deepened my skills in research, policy design, and urban mobility planning.
-
-**Full Dissertation Document**                                                                                                                                                                                                                                         
-For a detailed review of the methodology, data, and simulations, you can access the complete research below:                                                                                                                                                               
- [**View Full Dissertation (PDF)**](/assets/Final_dissertation.pdf)
-
-## Undergraduate Dissertation – Enhancing Efficiency and Societal Impact of Ahmedabad’s BRTS
+[**View Full Undergraduate Dissertation (PDF)**](/assets/Dissertation - Dynamic Pricing.pdf)  
+                                                                                                      
+## Enhancing Efficiency and Societal Impact of Ahmedabad's BRTS: Interventions and Innovations
 My undergraduate dissertation at Ahmedabad University focused on improving the efficiency, inclusivity, and sustainability of Ahmedabad’s Bus Rapid Transit System (BRTS), which despite being introduced as an eco-friendly urban mobility solution remains underutilised. The project combined a behavioural survey with traffic simulations using **SUMO (Simulation of Urban Mobility)** and statistical analysis in SPSS to identify barriers such as poor last-mile connectivity and waiting times. I applied skills in survey design, urban transport policy analysis, data analysis, and traffic modelling to evaluate different transport scenarios, including electric bus adoption and integrated corridors. The results showed that over 60% of respondents preferred private vehicles, but significant willingness to switch emerged when safety, waiting time, and connectivity improved. Simulation results confirmed that optimised public transport with electric buses reduces emissions and travel time, demonstrating clear environmental and social benefits. The impact of this work was to provide actionable policy recommendations—such as discounted student fares, higher parking fees near universities, and last-mile electric mobility integration—that align with the UN Sustainable Development Goals on sustainable cities and climate action, thereby contributing to both academic knowledge and practical strategies for sustainable transport planning.  
 
 [**View Full Undergraduate Dissertation (PDF)**](/assets/Final_dissertation.pdf)  
+
 
