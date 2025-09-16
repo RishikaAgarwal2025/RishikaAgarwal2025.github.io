@@ -11,7 +11,7 @@ permalink: /
     <p style="margin-top: 5px;">MSc Business Analytics | Python, SQL, Tableau | Business Analyst Enthusiast</p>
     <p><strong>Actively seeking roles as a Business Analyst, Data Analyst, or Pricing Analyst</strong></p>
     <div class="links" style="margin-top: 10px;">
-      <a href="/Rishika_Agarwal_CV.pdf" class="btn" target="_blank">CV</a>
+      <a href="/Rishika Agarwal CV.pdf" class="btn" target="_blank">CV</a>
       <a href="https://www.linkedin.com/in/rishika-agarwal-uk" class="btn" target="_blank">LinkedIn</a>
       <a href="https://github.com/RishikaAgarwal2025/Business-Analysis-Portfolio" class="btn" target="_blank">GitHub</a>
       <a href="mailto:rishikaagarwal544@gmail.com" class="btn" target="_blank">Email</a>
