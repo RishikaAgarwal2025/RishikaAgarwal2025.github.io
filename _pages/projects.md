@@ -28,7 +28,7 @@ To simulate real-world business scenarios, I designed a **relational database** 
 This project evaluated a new **loan review model** using an **A/B testing framework** within a consumer lending firm. By comparing **error rates (Type I and II)** between **treatment (new model) and control (existing system) groups**, the analysis showed that the new model significantly **reduced both false approvals and rejections**. The project also identifies areas for improving the experimental design like better group balancing and increasing sample size. It demonstrates practical use of **hypothesis testing, experimental data analysis, and clear interpretation of results for business impact.**
 
 **Files**: 
-- [HTML Output](/assets/Treatment%20control%20testing/Code/Treatment%20control%20testing.html)
+- [HTML Code + Output](/assets/Treatment%20control%20testing/Code/Treatment%20control%20testing.html)
 - [Report (PDF)](/assets/Treatment%20control%20testing/Report/Treatment%20Control%20Testing%20Report.pdf)
 - [Dataset](/assets/Treatment%20control%20testing/Data/Data.csv)
   
