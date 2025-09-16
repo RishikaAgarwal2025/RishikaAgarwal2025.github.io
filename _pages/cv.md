@@ -47,4 +47,4 @@ WageIndicator Foundation, Amsterdam (Remote) | Apr 2023 – Jun 2023
 ---
 
 **Download CV**                                                                                                                                                                                                                                                              
-[Click here to download my CV (PDF)](/Rishika_Agarwal_CV.pdf)
+[Click here to download my CV (PDF)](/Rishika Agarwal CV .pdf)
