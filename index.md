@@ -27,6 +27,6 @@ When I first discovered how a few lines of Python could automate hours of manual
 
 I’m Rishika Agarwal, a Distinction graduate in MSc Business Analytics from the University of Warwick, with a strong foundation in Economics and Mathematics. I bring hands-on experience in Python, SQL, and Tableau, and a proven ability to transform complex, messy data into actionable business insights.
 
-I am actively seeking entry-level opportunities as a Business Analyst, Data Analyst, or Pricing Analyst, where I can apply analytical thinking, technical skills, and structured problem-solving to real-world business challenges.
+I am actively seeking entry-level opportunities as a Business Analyst, or Data Analyst, where I can apply analytical thinking, technical skills, and structured problem-solving to real-world business challenges.
 
 My work reflects a strong blend of analytical rigor and real-world impact. I converted my undergraduate dissertation into a conference paper, “Enhancing Efficiency and Societal Impact of Ahmedabad’s BRTS: Interventions and Innovations”, where I applied data-driven analysis to improve public transport efficiency and societal outcomes. I am also currently collaborating with Dr. Anand Jacob Abraham (IIT) on a conference research paper, strengthening my experience in applied analytics, research methodology, and insight-driven decision-making.
