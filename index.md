@@ -23,10 +23,10 @@ permalink: /
 
 ### 👋 Welcome!
 
-When I first discovered how a few lines of Python could automate hours of manual work, I knew I’d found my path. Since then, I’ve been driven by one question: how can data make smarter business decisions?
+When I first discovered how a few lines of Python could automate hours of manual work, I knew I had found my path. Since then, I’ve been driven by one question: how can data drive smarter, more impactful business decisions?
 
-I’m Rishika Agarwal, currently pursuing an MSc in Business Analytics at the University of Warwick. With a background in Economics and Mathematics, and hands-on skills in Python, SQL, and Tableau, I’ve built solutions that turn messy data into powerful insights.
+I’m Rishika Agarwal, a Distinction graduate in MSc Business Analytics from the University of Warwick, with a strong foundation in Economics and Mathematics. I bring hands-on experience in Python, SQL, and Tableau, and a proven ability to transform complex, messy data into actionable business insights.
 
-Whether it's improving processes, uncovering trends, or driving data-backed decisions, I bring curiosity, structure, and a people-first mindset to every project.
+I am actively seeking entry-level opportunities as a Business Analyst, Data Analyst, or Pricing Analyst, where I can apply analytical thinking, technical skills, and structured problem-solving to real-world business challenges.
 
-Explore my academic journey, analytical projects, teaching experience, and dissertation, all through the navigation bar above. I'm actively seeking full-time opportunities as a Business Analyst, Data Analyst, or Pricing Analyst in dynamic, problem-solving environments.
+My work reflects a strong blend of analytical rigor and real-world impact. I converted my undergraduate dissertation into a conference paper, “Enhancing Efficiency and Societal Impact of Ahmedabad’s BRTS: Interventions and Innovations”, where I applied data-driven analysis to improve public transport efficiency and societal outcomes. I am also currently collaborating with Dr. Anand Jacob Abraham (IIT) on a conference research paper, strengthening my experience in applied analytics, research methodology, and insight-driven decision-making.
